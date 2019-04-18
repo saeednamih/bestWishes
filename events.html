@@ -10,13 +10,37 @@
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
 </head>
 
-<body>
-    <center>
-        <u><a href="home.html">Home!</a></u> |
-        <u><a href="Events.html">My Events!</a></u> |
-        <u><a href="wishes.html">Wishes!</a></u> |
-        <u><a href="about.html">About!</a></u> |
-    </center>
+<body style="background-image:url(imges/background1.png)">
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03"
+            aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <a class="navbar-brand" href="#"></a>
+
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                <li class="nav-item active">
+                    <a class="navbar-brand" href="home.html"> Home |<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item active">
+                    <a class="navbar-brand" href="Events.html">Events |</a>
+                </li>
+                <li class="nav-item">
+                    <a class="navbar-brand" href="wishes.html">Wishes |</a>
+                </li>
+                <li class="nav-item">
+                    <a class="navbar-brand" href="About.html">About |</a>
+                </li>
+
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+               
+                <button class="navbar-brand btn btn-outline-primary my-2 my-sm-0" type="submit">Sign out</button>
+            </form>
+        </div>
+    </nav>
 
     <div class="container-fluid">
 
@@ -37,7 +61,6 @@
                             <option value="React">Baby</option>
                             <option value="Node">Game</option>
                         </select>
-                        <span class="error hidden">*</span>
                     </div>
 
                     <!-- Title -->
@@ -46,10 +69,16 @@
                         <input type="text" class="form-control" id="txtTitle"
                             placeholder="Please Enter Your Event Name" />
                     </div>
-
-                    <!--  When -->
+                    <!-- Title -->
                     <div class="form-group">
-                        <label for="txtTime txtTime">When</label>
+                        <label for="txtLocation">Where</label>
+                        <input type="text" class="form-control" id="txtLocation"
+                            placeholder="Please Enter the location" />
+                    </div>
+
+                    <!--  At -->
+                    <div class="form-group">
+                        <label for="txtTime txtTime">At</label>
                         <input type="date" id="txtDate" />
                         <input type="time" id="txtTime" />
                         <span class="error hidden">*</span>
@@ -62,7 +91,7 @@
                         </div>
                         <div class="custom-file">
                             <input type="file" class="custom-file-input" id="txtImage"
-                                aria-describedby="inputGroupFileAddon01"/>
+                                aria-describedby="inputGroupFileAddon01" />
                             <label class="custom-file-label" for="txtImage">Choose file</label>
                         </div>
                     </div>
@@ -80,7 +109,7 @@
                 </div>
 
             </div>
-            
+
             <!--------------coloumn-2 ------------->
             <div class="col-md-2"></div>
 
@@ -97,6 +126,7 @@
                         </p>
                         <!-- ToDo: send to My Event Gallery -->
                         <button id="sendToMyEvents" class="btn btn-primary btn-block">Send To My Events</button>
+                        <button id="shareMyEvents" class="btn btn-primary btn-block">Share...</button>
                     </div>
                 </div>
             </div>
@@ -132,15 +162,19 @@
             cardText = document.querySelector('.card-preview .card-text'),
             sendToMyEvents = document.querySelector('#sendToMyEvents');
 
+            eventsGallery.addEventListener('click', () => {
+            window.location.href = 'eventsearch.html';
+        });
+        
         sendToMyEvents.addEventListener('click', () => {
-            window.location.href = '/Users/AnwarShams/Documents/Tsofen/Demo/self-sol/00-self-events.html';
+            window.location.href = 'MyEvents.html';
         });
 
         createEventBox.addEventListener('click', () => {
             img.src = txtImage.value;
             cardTitle.innerText = txtTitle.value;
             cardText.innerText = slctCourse.value;
-
+           
             //   add event to events gallery 
             eventsGallery.innerHTML += `<div class="col-md-5 event-preview">
                 <div class="card" style="width: 18rem;">
@@ -163,6 +197,7 @@
             saveToLocalStorage(slctCategory.value, txtTitle.value, txtDate.value, txtPlace.value, txtImage.value);
 
         });
+        
 
 
         const events = [];
