@@ -26,10 +26,10 @@
                     <a class="navbar-brand" href="home.html">   Home |<span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item active">
-                    <a class="navbar-brand" href="Events.html">Events |</a>
+                    <a class="navbar-brand" href="MyEvents.html">Events |</a>
                 </li>
                 <li class="nav-item">
-                    <a class="navbar-brand" href="wishes.html">Wishes |</a>
+                    <a class="navbar-brand" href="eventWishes.html">Wishes |</a>
                 </li>
                 <li class="nav-item">
                     <a class="navbar-brand" href="About.html">About |</a>
@@ -37,8 +37,8 @@
         
             </ul>
             <form class="form-inline my-2 my-lg-0">
-                    <button class="navbar-brand btn btn-outline-primary my-2 my-sm-0" type="submit">Log In</button>
-                <button class="navbar-brand btn btn-outline-primary my-2 my-sm-0" type="submit">Sign Up</button>
+                    <button  id="loginbtn" class="navbar-brand btn btn-outline-primary my-2 my-sm-0" type="submit">Log In</button>
+                <button id="registerbtn" class="navbar-brand btn btn-outline-primary my-2 my-sm-0" type="submit">Sign Up</button>
             </form>
         </div>
     </nav>
@@ -57,7 +57,7 @@
                             <a href="events.html" class="btn btn-lg btn-primary">Create New Event</a>
                         </p>
                         <p class="card-text">
-                            <a href="wishessearch.html" class="btn btn-primary">Add a best wish</a>
+                            <a href="eventsearch.html" class="btn btn-primary">Add a best wish</a>
                         </p>
                         <a class="card-text" href="login.html">Log In</a>
                         </p>
@@ -93,6 +93,23 @@
             <a href="Register.html">Register</a>
         </div>
     </div> -->
+
+    <script>
+
+            const loginbtn = document.querySelector('#loginbtn');
+             const registerbtn = document.querySelector('#registerbtn');
+             
+             const form =document.querySelector('form');
+             loginbtn.addEventListener("click", event => {
+            event.preventDefault();
+            //console.log("aaaa")
+            window.location.href = 'login.html';});
+            registerbtn.addEventListener("click", event => {
+            event.preventDefault();
+            //console.log("aaaa")
+            window.location.href = 'register.html';
+            });
+            </script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
         crossorigin="anonymous"></script>
