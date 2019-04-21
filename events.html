@@ -5,12 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>My Envents</title>
+    <title>My Events</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
 </head>
 
-<body style="background-image:url(imges/background1.png)">
+<body style="background-color:rgb(220, 248, 255)">
 
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03"
@@ -119,7 +119,7 @@
                     <img src="EventsIcon.jpg" class="card-img-top" alt="..." />
                     <div class="card-body">
                         <!-- ToDo: add event title to card title -->
-                        <h5 class="card-title"></h5>
+                        <h5 class="hi"></h5>
                         <!-- ToDo: add event title to card title -->
                         <p class="card-text">
                             <!-- Sorry -->
@@ -168,6 +168,28 @@
         
         sendToMyEvents.addEventListener('click', () => {
             window.location.href = 'MyEvents.html';
+            eventsGallery.innerHTML += `<div class="col-md-5 event-preview">
+                <div class="card" style="width: 18rem;">
+                  <img src="${txtImage.value}" class="card-img-top" alt="..." />
+                  <div class="progress">
+                    <div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0"
+                      aria-valuemax="100">25%</div>
+                  </div>
+                  <div class="card-body">
+                    <h5 class="card-title">${txtTitle}</h5>
+                    <h5 class="card-text">${txtDate}</h5>
+                      
+                    </p>
+                    <!-- ToDo: send to My Event Gallery -->
+                    <button id="sendToMyEvents" class="btn btn-primary btn-block">Send To My Events</button>
+                  </div>
+                </div>
+              </div>`;
+
+
+         
+           
+            
         });
 
         createEventBox.addEventListener('click', () => {

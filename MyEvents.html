@@ -12,7 +12,7 @@
 
 </head>
 
-<body style="background-image:url(imges/background1.png)">
+<body style="background-color:rgb(220, 248, 255)">
 
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03"
@@ -104,6 +104,7 @@
                                      <p>   Apr 18, 2019</p>
                                      <p>   Tel Aviv, Israel  </p>
                                 </p>
+                                
                               </div>
                             </div>
                           </div>
@@ -124,14 +125,33 @@
          const form = document.querySelector('#form1');
          form.addEventListener("submit", event => {
         event.preventDefault();
-        console.log("aaaa")
+        console.log("aaaa");
         window.location.href = 'wishesadd.html';
     });
         //  addBestWish.addEventListener('click', () => {
         //     console.log("bbbb")
         //      window.location.href = 'wishesadd.html';
         //  });
- 
+
+        
+        eventsGallery.innerHTML += `<div class="col-md-5 event-preview">
+                <div class="card" style="width: 18rem;">
+                  <img src="${txtImage.value}" class="card-img-top" alt="..." />
+                  <div class="progress">
+                    <div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0"
+                      aria-valuemax="100">25%</div>
+                  </div>
+                  <div class="card-body">
+                    <h5 class="card-title">${txtTitle}</h5>
+                    <h5 class="card-text">${txtDate}</h5>
+                      
+                    </p>
+                    <!-- ToDo: send to My Event Gallery -->
+                    <button id="sendToMyEvents" class="btn btn-primary btn-block">Send To My Events</button>
+                  </div>
+                </div>
+              </div>`;
+
      
     </script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
