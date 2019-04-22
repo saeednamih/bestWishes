@@ -119,7 +119,7 @@
                     <img src="EventsIcon.jpg" class="card-img-top" alt="..." />
                     <div class="card-body">
                         <!-- ToDo: add event title to card title -->
-                        <h5 class="hi"></h5>
+                        <h5 class="card-title"></h5>
                         <!-- ToDo: add event title to card title -->
                         <p class="card-text">
                             <!-- Sorry -->
@@ -157,9 +157,9 @@
         createEventBox = document.querySelector('#createEventBox');
         eventsGallery = document.querySelector('#eventsGallery'),
             //Card Selector
-            img = document.querySelector('.card-preview img'),
-            cardTitle = document.querySelector('.card-preview .card-title'),
-            cardText = document.querySelector('.card-preview .card-text'),
+            img = document.querySelector('#txtImage'),
+            cardTitle = document.querySelector('#card-title'),
+            cardText = document.querySelector('#card-text'),
             sendToMyEvents = document.querySelector('#sendToMyEvents');
 
             eventsGallery.addEventListener('click', () => {
