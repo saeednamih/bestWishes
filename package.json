@@ -1,0 +1,32 @@
+{
+  "name": "tsofen-wix-wishes",
+  "version": "1.0.0",
+  "description": " Gifs and online greeting cards with quotes, messages, images on all occasionsSend free greeting cards, wishes, ecards, funny animated cards, birthday wishes",
+  "main":"src/App.js",
+
+
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/saeednamih/bestWishes.git"
+  },
+  "author": "[\"saeed namih\",\"aliabuzwayed\",\"\u0016mahmoudAbuNaser\",AliABULIEL\"\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\"\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[D\u001b[D\u001b[D\u001b[C,AnwarShams\"\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\"\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[A\u001b[C\u001b[A\u001b[B\u001b[B\u001b[D\u001b[D]",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/saeednamih/bestWishes/issues"
+  },
+  "homepage": "https://github.com/saeednamih/bestWishes#readme",
+  "devDependencies": {
+    "parcel-bundler": "^1.12.3",
+    "parcel-plugin-asset-copier": "^1.0.0"
+  },
+  "dependencies": {
+    "bootstrap": "^4.3.1",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6"
+  },
+  "assetPath": "public/",
+  "scripts": {
+    "start": "parcel public/index.html -p 3001",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
