@@ -25902,7 +25902,7 @@ function (_React$Component) {
         className: "nav-item"
       }, _react.default.createElement("a", {
         className: "navbar-brand",
-        href: "eventWishes.html"
+        href: "wishessearch.html"
       }, "Wishes |")), _react.default.createElement("li", {
         className: "nav-item"
       }, _react.default.createElement("a", {
@@ -26062,7 +26062,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "54615" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "52884" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

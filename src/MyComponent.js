@@ -20,7 +20,7 @@ export default class MyComponent extends React.Component {
                             <a className="navbar-brand" href="MyEvents.html">Events |</a>
                         </li>
                         <li className="nav-item">
-                            <a className="navbar-brand" href="eventWishes.html">Wishes |</a>
+                            <a className="navbar-brand" href="wishessearch.html">Wishes |</a>
                         </li>
                         <li className="nav-item">
                             <a className="navbar-brand" href="About.html">About |</a>
