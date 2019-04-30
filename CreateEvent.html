@@ -14,21 +14,39 @@
 
 </head>
 
-<body style="background-image:url(imges/background1.png)">
+<body>
 
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01"
-            aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-            <a class="navbar-brand active" href="home.html">Home</a>
-            <a class="navbar-brand" href="Events.html">Events</a>
-            <a class="navbar-brand" href="wishes.html">Wishes</a>
-            <a class="navbar-brand" href="about.html">About</a>
-        </div>
-    </nav>
+            <span class="my-1"style=" font-size: 130%;">Best  <span class="mr-2" style=" font-size: 80%; font-weight: bold;">Wishes</span></span>
+           
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+        
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav mr-auto">
+                <li class="nav-item active ">
+                  <a class="nav-item   btn btn-outline-primary my-1 mr-2"  href="Home.html">Home </a>
+                </li>
+        
+                <li class="nav-item">
+                  <a class="nav-item btn btn-outline-primary  my-1 mr-2"  href="MyEvents.html">Events</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-item btn btn-outline-primary my-1 mr-2" href="MyWishes.html">Wishes</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-item btn btn-outline-primary my-1 mr-2" href="About.html">About</a>
+                </li>
+              </ul>
+              <form class="form-inline my-2 my-lg-0">
+                <button id="loginbtn" class="navbar btn btn-outline-success my-2 mr-2 my-sm-0" type="submit">Log In</button>
+                <button id="registerbtn" class="navbar btn btn-outline-success my-2 mr-2 my-sm-0" type="submit">Sign
+                  Up</button>
+              </form>
+            </div>
+          </nav>
 
         <div class="container-fluid">
 
@@ -75,13 +93,20 @@
                             <span class="error hidden">*</span>
                         </div>
 
-                        <!-- image ---->
                         <div class="form-group">
+                                <label for="where">Where</label>
+                                <input type="text" class="form-control" id="where"
+                                    placeholder="Please Enter The Location" />
+    
+                            </div>
+
+                        <!-- image ---->
+                        <!-- <div class="form-group">
                             <label for="txtImage">Image</label>
                             <input type="text" class="form-control" id="txtImage" placeholder="Image" />
-                          </div>
-        
-                        <!-- <div class="input-group mb-3">
+                          </div> -->
+<!--         
+                        <div class="input-group mb-3">
                             <div class="input-group-prepend">
                                 <span class="input-group-text" id="txtImage">Image</span>
                             </div>
@@ -94,8 +119,8 @@
                                 
                   
                         <!-- Buttons -->
-                        <button id="sendToMyEvents" class="btn btn-primary btn-block">Send To My Events</button>
-
+                        <button id="cerateEvent" class="btn btn-primary btn-block">Cerate Event</button>
+                        <button id="back" class="btn btn-primary btn-block">Back To  My Events</button>
 
                         <!-- <button id="creatEventBox" type="submit" class="btn btn-primary btn-lg btn-block">Creat New
                             Event
@@ -185,43 +210,56 @@
             // });
 
             // createEventBox
-            sendToMyEvents.addEventListener('click', () => {
-             //   img.src = txtImage.value;
-             //   cardTitle.innerText = txtTitle.value;
+            //sendToMyEvents.addEventListener('click', () => {});
+            //  //   img.src = txtImage.value;
+            //  //   cardTitle.innerText = txtTitle.value;
                 
-                //   add event to events gallery 
-                // eventsGallery.innerHTML += `<div class="col-md-5 event-preview">
+            //     //   add event to events gallery 
+            //     // eventsGallery.innerHTML += `<div class="col-md-5 event-preview">
 
-                eventsGallery.innerHTML += `<div class="card" style="width: 18rem;">
+            //     eventsGallery.innerHTML += `<div class="card" style="width: 18rem;">
 
-                  <img src="${txtImage.value}" class="card-img-top" alt="..." />
-                  ]
-                  <div class="card-body">
-                    <h5 class="card-title">${txtTitle}</h5>
-                    <h5 class="card-text">${txtDate}</h5>
+            //       <img src="${txtImage.value}" class="card-img-top" alt="..." />
+            //       ]
+            //       <div class="card-body">
+            //         <h5 class="card-title">${txtTitle}</h5>
+            //         <h5 class="card-text">${txtDate}</h5>
                       
-                    </p>
-                    <!-- ToDo: send to My Event Gallery -->
-                    <button id="sendToMyEvents" class="btn btn-primary btn-block">Send To My Events</button>
-                </div>
-              </div>`;
+            //         </p>
+            //         <!-- ToDo: send to My Event Gallery -->
+            //         <button id="sendToMyEvents" class="btn btn-primary btn-block">Send To My Events</button>
+            //     </div>
+            //   </div>`;
 
-                saveToLocalStorage(slctCategory.value, txtTitle.value, txtDate.value, txtPlace.value, txtImage.value);
+            //     saveToLocalStorage(slctCategory.value, txtTitle.value, txtDate.value, txtPlace.value, txtImage.value);
 
 
+            // });
+
+
+
+            // const events = [];
+
+            // function saveToLocalStorage(category, title, When, place, image) {
+            //     const event = { category, title, when, place, image };
+
+            //     events.push(event);
+
+            //     localStorage.events = JSON.stringify(events);
+            // }
+            const cerateEvent = document.querySelector('#cerateEvent');
+             const back = document.querySelector('#back');
+             
+             const form =document.querySelector('form');
+             cerateEvent.addEventListener("click", event => {
+            event.preventDefault();
+            //console.log("aaaa")
+            window.location.href = 'MyEvents.html';});
+            back.addEventListener("click", event => {
+            event.preventDefault();
+            //console.log("aaaa")
+            window.location.href = 'MyEvents.html';
             });
-
-
-
-            const events = [];
-
-            function saveToLocalStorage(category, title, When, place, image) {
-                const event = { category, title, when, place, image };
-
-                events.push(event);
-
-                localStorage.events = JSON.stringify(events);
-            }
         </script>
 </body>
 
