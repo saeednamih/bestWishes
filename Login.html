@@ -27,63 +27,45 @@
         
     </style>
 </head>
-<link rel="stylesheet" href="homeStyle.css">
 </head>
 
-<body style="background-image:url(imges/background1.png)">
+<body>
 
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03"
-            aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <a class="navbar-brand" href="#"></a>
-
-        <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
-            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-                <li class="nav-item active">
-                    <a class="navbar-brand" href="home.html">   Home |<span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item active">
-                    <a class="navbar-brand" href="Events.html">Events |</a>
-                </li>
-                <li class="nav-item">
-                    <a class="navbar-brand" href="wishes.html">Wishes |</a>
-                </li>
-                <li class="nav-item">
-                    <a class="navbar-brand" href="About.html">About |</a>
-                </li>
-        
-            </ul>
-            <form class="form-inline my-2 my-lg-0">
-                    <!-- <button class="navbar-brand btn btn-outline-primary my-2 my-sm-0" type="submit">Log In</button> -->
-                <button  class=" registerbtn navbar-brand btn btn-outline-primary my-2 my-sm-0" type="submit">Sign Up</button>
-            </form>
-        </div>
-    </nav>
-        <div class="container">
-        <div class="row">
-          <div class="col">
-          </div>
-          <!-- <div class="col-6">
-                <div class="headBar">
-                        <button type="button" class="btn btn-outline-primary">Home</button>
-                        <button type="button" class="btn btn-outline-secondary">Events</button>
-                        <button type="button" class="btn btn-outline-success">Wishes</button>
-                        <button type="button" class="btn btn-outline-info">About</button>
-                        
-                   </div> -->
-          </div>
-          <div class="col">
-                <!-- <button type="button" class="btn btn-success">Join</button>
-                <p>A new user?</p> -->
-          </div>
-        </div>
-      </div>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <span class="my-1"style=" font-size: 130%;">Best  <span class="mr-2" style=" font-size: 80%; font-weight: bold;">Wishes</span></span>
+               
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                  aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+            
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                  <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active ">
+                      <a class="nav-item   btn btn-outline-primary my-1 mr-2"  href="Home.html">Home </a>
+                    </li>
+            
+                    <li class="nav-item">
+                      <a class="nav-item btn btn-outline-primary  my-1 mr-2"  href="MyEvents.html">Events</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-item btn btn-outline-primary my-1 mr-2" href="MyWishes.html">Wishes</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-item btn btn-outline-primary my-1 mr-2" href="About.html">About</a>
+                    </li>
+                  </ul>
+                  <form class="form-inline my-2 my-lg-0">
+                    <button id="loginbtn" class="navbar btn btn-outline-success my-2 mr-2 my-sm-0" type="submit">Log In</button>
+                    <button id="registerbtn" class="navbar btn btn-outline-success my-2 mr-2 my-sm-0" type="submit">Sign
+                      Up</button>
+                  </form>
+                </div>
+              </nav>
       <div class="row">
-            <div class="col">
+            <div class="col-sm-3">
             </div>
-            <div class="col-6">
+            <div class="col-sm-6">
                     <form>
                             <div class="form-group">
                               <label for="exampleInputEmail1">User Name</label>
@@ -95,25 +77,29 @@
                               <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
                             </div>
                             <div class="LoginButton">
-                            <button type="submit" class="btn btn-primary">Login</button>
+                            <button type="submit" class="btn btn-primary">Log In</button>
                             <p></p>
                             <p><button type="submit" class=" registerbtn btn btn-primary">Sign Up</button></p>
                             <p><a href="">I forgot my password</a></p>
                             </div>
                           </form>
             </div>
-            <div class="col">
+            <div class="col-sm-3">
             </div>
           </div>
         </div>
-      <script>
-                   const registerbtn = document.querySelector('.registerbtn');
-             registerbtn.addEventListener("click", event => {
-            event.preventDefault();
-            //console.log("aaaa")
-            window.location.href = 'register.html';
-             });
-      </script>
+        <script>
+            const loginbtn = document.querySelector('#loginbtn');
+            const registerbtn=document.querySelector('#registerbtn');
+              loginbtn.addEventListener("click", event => {
+                event.preventDefault();
+                window.location.href = 'login.html';
+              });
+              registerbtn.addEventListener("click", event => {
+                event.preventDefault();
+                window.location.href = 'register.html';
+              });
+          </script>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>

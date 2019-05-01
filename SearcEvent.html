@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>home</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="homeStyle.css">
+
+</head>
+
+<bod>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <span class="my-1" style=" font-size: 130%;">Best <span class="mr-2"
+        style=" font-size: 80%; font-weight: bold;">Wishes</span></span>
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active ">
+          <a class="nav-item   btn btn-outline-primary my-1 mr-2" href="Home.html">Home </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-item btn btn-outline-primary  my-1 mr-2" href="MyEvents.html">Events</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-item btn btn-outline-primary my-1 mr-2" href="MyWishes.html">Wishes</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-item btn btn-outline-primary my-1 mr-2" href="About.html">About</a>
+        </li>
+      </ul>
+      <form class="form-inline my-2 my-lg-0">
+        <button id="loginbtn" class="navbar btn btn-outline-success my-2 mr-2 my-sm-0" type="submit">Log In</button>
+        <button id="registerbtn" class="navbar btn btn-outline-success my-2 mr-2 my-sm-0" type="submit">Sign
+          Up</button>
+      </form>
+    </div>
+  </nav>
+
+  <div class="container">
+    <form>
+      <div class="form-group row">
+        <div class="col-md-4">
+          <label class="col-form-label mr-2">Search By :</label>
+        </div>
+      </div>
+
+      <div class="form-group row">
+        <div class="col-md">
+          <input type="radio" id="searchById" name="search" aria-label="Radio button for following text input" checked>
+          <label for="eventId" class="col-form-label mr-2">Event ID :</label>
+          <input type="text" id="eventId" placeholder="Event ID">
+        </div>
+      </div>
+      <div class="form-group row">
+
+        <div class="col-md">
+          <input type="radio" id="searchByCat" name="search" aria-label="Radio button for following text input">
+          <label for="category" class="col-form-label mr-1">Category:</label>
+          <select id="category" style="width: 150px" id="0" style="width: 120px" disabled>
+
+            <option>Birthday</option>
+            <option>baby</option>
+            <option>new car</option>
+            <option>new job</option>
+            <option>wedding</option>
+          </select>
+        </div>
+        <div class="col-md">
+          <label for="from" class="col-form-label mr-1">From:</label>
+          <input type="Date" style="width: 150px" id="from" placeholder="from" disabled>
+        </div>
+        <div class="col-md">
+          <label for="to" class="col-form-label mr-1">To:</label>
+          <input type="Date" style="width: 150px" id="to" placeholder="to" disabled>
+        </div>
+        <div class="col-md">
+          <label for="location1" class="col-form-label mr-1">where:</label>
+          <input type="text" id="location1" style="width: 150px" id="where" placeholder="Location" disabled>
+        </div>
+      </div>
+      <div class="form-group row">
+        <button class="btn btn-primary btn-lg ">Filter</button>
+      </div>
+    </form>
+    <center>
+
+      <div class="row-md mb-5"> </div>
+
+      <div class="container">
+        <div class="row">
+
+          <div class="col-sm-2">
+
+          </div>
+          <div class="col-sm-8">
+
+            <div class="table-responsive">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Category</th>
+                    <th scope="col">Event Title </th>
+                    <th scope="col">When</th>
+                    <th scope="col">Where</th>
+
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr onclick="window.location='AddWishToEvent.html';">
+                    <th scope="row">1</th>
+                    <td>wedding</td>
+                    <td Type="date">wedding invitation </td>
+                    <th data-type="date">15/12/2019 </th>
+                    <td>Tel Aviv, Israel</td>
+
+                  </tr>
+
+                  <tr>
+                    <th scope="row">1</th>
+                    <td>----</td>
+                    <td Type="date">Saeed Birthday </td>
+                    <th data-type="date">15/12/2019 </th>
+                    <td>Tsofen Course</td>
+
+                  </tr>
+
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="col-sm-2">
+
+          </div>
+        </div>
+      </div>
+
+      <div class="row-md mb-5"> </div>
+      <div class="row-md mb-5"> </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-sm">
+
+          </div>
+          <div class="col-sm">
+            <div class="col-md">
+              <div class="input-group">
+
+                <button type="button" class="btn btn-outline-secondary waves-effect">
+                  <-previous</button> <div class="col-md-1">
+
+
+              </div>
+
+              <button type="button" class="btn btn-outline-secondary waves-effect">Next -></button>
+
+            </div>
+          </div>
+        </div>
+        <div class="col-sm">
+
+        </div>
+      </div>
+  </div>
+
+
+
+  </center>
+
+  </div>
+  <script>
+
+    
+
+    const Category = document.querySelector('#addBestWish');
+    const addBestWish = document.querySelector('#addBestWish');
+    // const addBestWish = document.querySelector('#addBestWish');
+
+    const loginbtn = document.querySelector('#loginbtn');
+    const registerbtn = document.querySelector('#registerbtn');
+    const from = document.querySelector('#from');
+  const to = document.querySelector('#to');
+  const location1 = document.querySelector('#location1');
+  
+  const category = document.querySelector('#category');
+  const eventId=document.querySelector('#eventId');
+  const searchByCat=document.querySelector('#searchByCat');
+  const searchById=document.querySelector('#searchById');
+
+    loginbtn.addEventListener("click", event => {
+      event.preventDefault();
+      window.location.href = 'login.html';
+    });
+    registerbtn.addEventListener("click", event => {
+      event.preventDefault();
+      window.location.href = 'register.html';
+    });
+
+    // const form = document.querySelector('#form1');
+    // form.addEventListener("submit", event => {
+    //   event.preventDefault();
+    //   window.location.href = 'wishesadd.html';
+
+    //   eventsGallery.innerHTML += `<div class="col-md-5 event-preview">
+    //             <div class="card" style="width: 18rem;">
+    //               <img src="${txtImage.value}" class="card-img-top" alt="..." />
+    //               <div class="progress">
+    //                 <div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0"
+    //                   aria-valuemax="100">25%</div>
+    //               </div>
+    //               <div class="card-body">
+    //                 <h5 class="card-title">${txtTitle}</h5>
+    //                 <h5 class="card-text">${txtDate}</h5>
+                      
+    //                 </p>
+    //                 <!-- ToDo: send to My Event Gallery -->
+    //                 <button id="sendToMyEvents" class="btn btn-primary btn-block">Send To My Events</button>
+    //               </div>
+    //             </div>
+    //           </div>`;
+    // });
+    //  addBestWish.addEventListener('click', () => {
+    //     console.log("bbbb")
+    //      window.location.href = 'wishesadd.html';
+    //  });
+
+    searchByCat.addEventListener('change', function () {
+      if (searchByCat.checked) {
+        change(false);
+      }
+    });
+    searchById.addEventListener('change', function () {
+      if (searchById.checked) {
+        change(true);
+      }
+    });
+    function change(changed) {
+      eventId.disabled = (!changed);
+      category.disabled = changed;
+      to.disabled = changed;
+      from.disabled = changed;
+      location1.disabled = changed;
+    }
+
+  </script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+
+  </body>
+
+</html>

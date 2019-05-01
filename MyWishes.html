@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+  <meta name="generator" content="Jekyll v3.8.5">
+  <title>Album example · Bootstrap</title>
+
+  <link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/album/">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <span class="my-1"style=" font-size: 130%;">Best  <span class="mr-2" style=" font-size: 80%; font-weight: bold;">Wishes</span></span>
+       
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+    
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active ">
+              <a class="nav-item   btn btn-outline-primary my-1 mr-2"  href="Home.html">Home </a>
+            </li>
+    
+            <li class="nav-item">
+              <a class="nav-item btn btn-outline-primary  my-1 mr-2"  href="MyEvents.html">Events</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-item btn btn-outline-primary my-1 mr-2" href="MyWishes.html">Wishes</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-item btn btn-outline-primary my-1 mr-2" href="About.html">About</a>
+            </li>
+          </ul>
+          <form id='form'class="form-inline my-2 my-lg-0">
+            <button id="loginbtn" class="navbar btn btn-outline-success my-2 mr-2 my-sm-0" type="submit">Log In</button>
+            <button id="registerbtn" class="navbar btn btn-outline-success my-2 mr-2 my-sm-0" type="submit">Sign
+              Up</button>
+          </form>
+        </div>
+      </nav>
+
+  <main role="main">
+
+    <section class="jumbotron text-center">
+      <div class="container">
+        <h1 class="jumbotron-heading">My Wishes</h1>
+        <p class="lead text-muted">Something short and leading about the collection below—its contents, the creator,
+          etc. Make it short and sweet, but not too short so folks don’t simply skip over it entirely.</p>
+        <p>
+          <a href="createEvent.html" class="btn btn-primary my-2">Create A New Event</a>
+          <a href="SearcEvent.html" class="btn btn-secondary my-2">Search  Event</a>
+        </p>
+      </div>
+    </section>
+
+    <div class="album py-5 ">
+
+      <div class="container">
+          <form>
+              <div class="form-group row">
+                  <div class="col-md-4">
+                  <label  class="col-form-label mr-2">Search By :</label>
+                  </div>
+              </div>
+              
+        <div class="form-group row">
+            <div class="col-md">
+                <input type="radio" id="searchById" name="search" aria-label="Radio button for following text input" checked>
+            <label for="eventId" class="col-form-label mr-2">Event ID :</label>
+            <input type="text"  id="eventId" placeholder="Event ID">
+            </div>
+        </div>
+        <div class="form-group row">
+          
+            <div class="col-md">
+              <input type="radio" id="searchByCat" name="search" aria-label="Radio button for following text input"> 
+            <label for="category" class="col-form-label mr-1">Category:</label>
+            <select id="category"style="width: 150px" id="0" style="width: 120px" disabled  >
+              
+                <option>Birthday</option>
+                <option>baby</option>
+                <option>new car</option>
+                <option>new job</option>
+                <option>wedding</option>
+              </select>
+            </div>
+            <div class="col-md">
+            <label for="from" class="col-form-label mr-1">From:</label>
+            <input type="Date"style="width: 150px"  id="from" placeholder="from" disabled >
+          </div>
+          <div class="col-md">
+              <label for="to" class="col-form-label mr-1">To:</label>
+              <input type="Date"style="width: 150px"  id="to" placeholder="to" disabled>
+            </div>
+            <div class="col-md">
+            <label for="location1" class="col-form-label mr-1">where:</label>
+            <input type="text" id="location1"  style="width: 150px" id="where" placeholder="Location" disabled>
+            </div>
+        </div>
+        <div class="form-group row">
+        <button class="btn btn-primary btn-lg ">Filter</button>
+        </div>
+      </form>
+
+        <div class="row">
+          <div class="col-md-4">
+            <div class="card mb-4 shadow-sm">
+                <img class="img img-responsive full-width" src="imges\addWish.jpg">
+              <div class="card-body">
+                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
+                  content. This content is a little bit longer.</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                    <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                    <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                  </div>
+                  <small class="text-muted">9 mins</small>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="card mb-4 shadow-sm">
+                <img class="img img-responsive full-width" src="">
+              <div class="card-body">
+                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
+                  content. This content is a little bit longer.</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                    <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                    <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                  </div>
+                  <small class="text-muted">9 mins</small>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="card mb-4 shadow-sm">
+                <img class="img img-responsive full-width" src="">
+              <div class="card-body">
+                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
+                  content. This content is a little bit longer.</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                    <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                    <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                  </div>
+                  <small class="text-muted">9 mins</small>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="card mb-4 shadow-sm">
+                <img class="img img-responsive full-width" src="">
+              <div class="card-body">
+                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
+                  content. This content is a little bit longer.</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                    <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                    <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                  </div>
+                  <small class="text-muted">9 mins</small>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+
+        </div>
+      </div>
+    </div>
+
+  </main>
+ <script>
+  const loginbtn = document.querySelector('#loginbtn');
+  const registerbtn = document.querySelector('#registerbtn');
+  const from = document.querySelector('#from');
+  const to = document.querySelector('#to');
+  const location1 = document.querySelector('#location1');
+  
+  const category = document.querySelector('#category');
+  const eventId=document.querySelector('#eventId');
+  const searchByCat=document.querySelector('#searchByCat');
+  const searchById=document.querySelector('#searchById');
+
+  searchByCat.addEventListener('change',function(){
+    if(searchByCat.checked){
+      change(false);
+    }
+  });
+  searchById.addEventListener('change',function(){
+    if(searchById.checked){
+      change(true);
+    }
+  });
+  function change(changed){
+    eventId.disabled=(!changed);
+    category.disabled=changed;
+    to.disabled=changed;
+    from.disabled=changed;
+    location1.disabled=changed;
+  }
+
+
+  const form = document.querySelector('#form');
+  loginbtn.addEventListener("click", event => {
+    event.preventDefault();
+    window.location.href = 'login.html';
+  });
+  registerbtn.addEventListener("click", event => {
+    event.preventDefault();
+    window.location.href = 'register.html';
+  });
+</script>
+</body>
+
+</html>
