@@ -1,0 +1,62 @@
+================================================
+*ShowEvent1*
+Request:
+{
+  EventID:number
+}
+Response:
+{
+ Events:[{
+  Category: String,
+  Title :string,
+  Date: string,
+  Time:String,
+  Location:String
+ },......],
+ err: {
+   msg: string
+ }
+}
+===============================================
+*ShowEvent2*
+Request:
+{
+  Category: String,
+   Date: string,
+    Time:String,
+     Location:String
+}
+Response:
+{
+ Events:[{
+  Category: String,
+  Title :string,
+  Date: string,
+  Time:String,
+  Location:String
+ },......],
+ err: {
+   msg: string
+ }
+}
+====================================================
+
+*ShowMyEvent*
+Request:
+{
+  userID:number
+}
+Response:
+{
+ Events:[{
+  Category: String,
+  Title :string,
+  Date: string,
+  Time:String,
+  Location:String
+ },......],
+ err: {
+   msg: string
+ }
+}
+======================================================
