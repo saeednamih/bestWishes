@@ -3,6 +3,7 @@
      import NavBarCoponent from './NavBarCoponent';
      import MainComponent from './MainComponent';
      import UpcomingComponent from './UpcomingComponent'
+     import ContentComponent from './ContentComponent'
      import 'bootstrap/dist/css/bootstrap.css';
 
      ReactDOM.render(<NavBarCoponent />,
@@ -14,7 +15,7 @@
             ReactDOM.render(<UpcomingComponent />,
                 document.querySelector('#rightSide'));
 
-                ReactDOM.render(<UpcomingComponent />,
+                ReactDOM.render(<ContentComponent />,
                     document.querySelector('#content'));
 
         

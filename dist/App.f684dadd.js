@@ -26079,6 +26079,92 @@ function (_React$Component) {
 
 var _default = UpcomingComponent;
 exports.default = _default;
+},{"react":"node_modules/react/index.js"}],"src/ContentComponent.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireDefault(require("react"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+var ContentComponent =
+/*#__PURE__*/
+function (_React$Component) {
+  _inherits(ContentComponent, _React$Component);
+
+  function ContentComponent() {
+    _classCallCheck(this, ContentComponent);
+
+    return _possibleConstructorReturn(this, _getPrototypeOf(ContentComponent).apply(this, arguments));
+  }
+
+  _createClass(ContentComponent, [{
+    key: "render",
+    value: function render() {
+      return _react.default.createElement("div", {
+        class: "card text-center",
+        style: {
+          border: '30px solid green'
+        }
+      }, _react.default.createElement("div", {
+        class: "text-center mb-4"
+      }, _react.default.createElement("img", {
+        class: "mb-4 mt-3",
+        src: "./imges/logo1.png",
+        alt: "",
+        width: "110",
+        height: "110    "
+      }), _react.default.createElement("div", {
+        class: "card-body "
+      }, _react.default.createElement("p", {
+        class: "card-text"
+      }, _react.default.createElement("a", {
+        href: "CreateEvent.html",
+        class: "btn btn-lg btn-primary"
+      }, "Create New Event")), _react.default.createElement("p", {
+        class: "card-text"
+      }, _react.default.createElement("a", {
+        href: "SearcEvent.html",
+        class: "btn btn-primary"
+      }, "Add A Best Wish")), _react.default.createElement("a", {
+        class: "card-text",
+        href: "login.html"
+      }, "Log In"), _react.default.createElement("p", {
+        class: "card-text"
+      }, _react.default.createElement("a", {
+        class: "card-text",
+        href: "Register.html"
+      }, "Sign Up")))));
+    }
+  }]);
+
+  return ContentComponent;
+}(_react.default.Component);
+
+var _default = ContentComponent;
+exports.default = _default;
 },{"react":"node_modules/react/index.js"}],"node_modules/parcel-bundler/src/builtins/bundle-url.js":[function(require,module,exports) {
 var bundleURL = null;
 
@@ -26164,6 +26250,8 @@ var _MainComponent = _interopRequireDefault(require("./MainComponent"));
 
 var _UpcomingComponent = _interopRequireDefault(require("./UpcomingComponent"));
 
+var _ContentComponent = _interopRequireDefault(require("./ContentComponent"));
+
 require("bootstrap/dist/css/bootstrap.css");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
@@ -26175,8 +26263,8 @@ _reactDom.default.render(_react.default.createElement(_UpcomingComponent.default
 
 _reactDom.default.render(_react.default.createElement(_UpcomingComponent.default, null), document.querySelector('#rightSide'));
 
-_reactDom.default.render(_react.default.createElement(_UpcomingComponent.default, null), document.querySelector('#content'));
-},{"react-dom":"node_modules/react-dom/index.js","react":"node_modules/react/index.js","./NavBarCoponent":"src/NavBarCoponent.js","./MainComponent":"src/MainComponent.js","./UpcomingComponent":"src/UpcomingComponent.js","bootstrap/dist/css/bootstrap.css":"node_modules/bootstrap/dist/css/bootstrap.css"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+_reactDom.default.render(_react.default.createElement(_ContentComponent.default, null), document.querySelector('#content'));
+},{"react-dom":"node_modules/react-dom/index.js","react":"node_modules/react/index.js","./NavBarCoponent":"src/NavBarCoponent.js","./MainComponent":"src/MainComponent.js","./UpcomingComponent":"src/UpcomingComponent.js","./ContentComponent":"src/ContentComponent.js","bootstrap/dist/css/bootstrap.css":"node_modules/bootstrap/dist/css/bootstrap.css"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -26204,7 +26292,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "53331" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "59018" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
