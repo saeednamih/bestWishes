@@ -25748,79 +25748,7 @@ if ("development" === 'production') {
 } else {
   module.exports = require('./cjs/react-dom.development.js');
 }
-},{"./cjs/react-dom.development.js":"node_modules/react-dom/cjs/react-dom.development.js"}],"node_modules/parcel-bundler/src/builtins/bundle-url.js":[function(require,module,exports) {
-var bundleURL = null;
-
-function getBundleURLCached() {
-  if (!bundleURL) {
-    bundleURL = getBundleURL();
-  }
-
-  return bundleURL;
-}
-
-function getBundleURL() {
-  // Attempt to find the URL of the current script and use that as the base URL
-  try {
-    throw new Error();
-  } catch (err) {
-    var matches = ('' + err.stack).match(/(https?|file|ftp|chrome-extension|moz-extension):\/\/[^)\n]+/g);
-
-    if (matches) {
-      return getBaseURL(matches[0]);
-    }
-  }
-
-  return '/';
-}
-
-function getBaseURL(url) {
-  return ('' + url).replace(/^((?:https?|file|ftp|chrome-extension|moz-extension):\/\/.+)\/[^/]+$/, '$1') + '/';
-}
-
-exports.getBundleURL = getBundleURLCached;
-exports.getBaseURL = getBaseURL;
-},{}],"node_modules/parcel-bundler/src/builtins/css-loader.js":[function(require,module,exports) {
-var bundle = require('./bundle-url');
-
-function updateLink(link) {
-  var newLink = link.cloneNode();
-
-  newLink.onload = function () {
-    link.remove();
-  };
-
-  newLink.href = link.href.split('?')[0] + '?' + Date.now();
-  link.parentNode.insertBefore(newLink, link.nextSibling);
-}
-
-var cssTimeout = null;
-
-function reloadCSS() {
-  if (cssTimeout) {
-    return;
-  }
-
-  cssTimeout = setTimeout(function () {
-    var links = document.querySelectorAll('link[rel="stylesheet"]');
-
-    for (var i = 0; i < links.length; i++) {
-      if (bundle.getBaseURL(links[i].href) === bundle.getBundleURL()) {
-        updateLink(links[i]);
-      }
-    }
-
-    cssTimeout = null;
-  }, 50);
-}
-
-module.exports = reloadCSS;
-},{"./bundle-url":"node_modules/parcel-bundler/src/builtins/bundle-url.js"}],"node_modules/bootstrap/dist/css/bootstrap.css":[function(require,module,exports) {
-var reloadCSS = require('_css_loader');
-
-module.hot.dispose(reloadCSS);
-module.hot.accept(reloadCSS);
-},{"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js"}],"src/MyComponent.js":[function(require,module,exports) {
+},{"./cjs/react-dom.development.js":"node_modules/react-dom/cjs/react-dom.development.js"}],"src/NavBarCoponent.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -25829,8 +25757,6 @@ Object.defineProperty(exports, "__esModule", {
 exports.default = void 0;
 
 var _react = _interopRequireDefault(require("react"));
-
-require("bootstrap/dist/css/bootstrap.css");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -25852,81 +25778,88 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
 
-var MyComponent =
+var NavBarCoponent =
 /*#__PURE__*/
 function (_React$Component) {
-  _inherits(MyComponent, _React$Component);
+  _inherits(NavBarCoponent, _React$Component);
 
-  function MyComponent() {
-    _classCallCheck(this, MyComponent);
+  function NavBarCoponent() {
+    _classCallCheck(this, NavBarCoponent);
 
-    return _possibleConstructorReturn(this, _getPrototypeOf(MyComponent).apply(this, arguments));
+    return _possibleConstructorReturn(this, _getPrototypeOf(NavBarCoponent).apply(this, arguments));
   }
 
-  _createClass(MyComponent, [{
+  _createClass(NavBarCoponent, [{
     key: "render",
     value: function render() {
       return _react.default.createElement("nav", {
-        className: "navbar navbar-expand-lg navbar-light bg-light"
-      }, _react.default.createElement("button", {
-        className: "navbar-toggler",
+        class: "navbar navbar-expand-lg navbar-light bg-light"
+      }, _react.default.createElement("span", {
+        class: "my-1",
+        style: {
+          fontSize: '130%'
+        }
+      }, "Best  ", _react.default.createElement("span", {
+        class: "mr-2",
+        style: {
+          fontSize: '80%',
+          fontWeight: 'bold'
+        }
+      }, "Wishes")), _react.default.createElement("button", {
+        class: "navbar-toggler",
         type: "button",
         "data-toggle": "collapse",
-        "data-target": "#navbarTogglerDemo03",
-        "aria-controls": "navbarTogglerDemo03",
+        "data-target": "#navbarSupportedContent",
+        "aria-controls": "navbarSupportedContent",
         "aria-expanded": "false",
         "aria-label": "Toggle navigation"
       }, _react.default.createElement("span", {
-        className: "navbar-toggler-icon"
-      })), _react.default.createElement("a", {
-        className: "navbar-brand",
-        href: "#"
-      }), _react.default.createElement("div", {
-        className: "collapse navbar-collapse",
-        id: "navbarTogglerDemo03"
+        class: "navbar-toggler-icon"
+      })), _react.default.createElement("div", {
+        class: "collapse navbar-collapse",
+        id: "navbarSupportedContent"
       }, _react.default.createElement("ul", {
-        className: "navbar-nav mr-auto mt-2 mt-lg-0"
+        class: "navbar-nav mr-auto"
       }, _react.default.createElement("li", {
-        className: "nav-item active"
+        class: "nav-item active "
       }, _react.default.createElement("a", {
-        className: "navbar-brand",
-        href: "home.html"
-      }, " Home |", _react.default.createElement("span", {
-        className: "sr-only"
-      }, "(current)"))), _react.default.createElement("li", {
-        className: "nav-item active"
+        class: "nav-item   btn btn-outline-primary my-1 mr-2",
+        href: "Home.html"
+      }, "Home ")), _react.default.createElement("li", {
+        class: "nav-item"
       }, _react.default.createElement("a", {
-        className: "navbar-brand",
+        class: "nav-item btn btn-outline-primary  my-1 mr-2",
         href: "MyEvents.html"
-      }, "Events |")), _react.default.createElement("li", {
-        className: "nav-item"
+      }, "Events")), _react.default.createElement("li", {
+        class: "nav-item"
       }, _react.default.createElement("a", {
-        className: "navbar-brand",
-        href: "wishessearch.html"
-      }, "Wishes |")), _react.default.createElement("li", {
-        className: "nav-item"
+        class: "nav-item btn btn-outline-primary my-1 mr-2",
+        href: "MyWishes.html"
+      }, "Wishes")), _react.default.createElement("li", {
+        class: "nav-item"
       }, _react.default.createElement("a", {
-        className: "navbar-brand",
+        class: "nav-item btn btn-outline-primary my-1 mr-2",
         href: "About.html"
-      }, "About |"))), _react.default.createElement("form", {
-        className: "form-inline my-2 my-lg-0"
+      }, "About"))), _react.default.createElement("form", {
+        class: "form-inline my-2 my-lg-0"
       }, _react.default.createElement("button", {
         id: "loginbtn",
-        className: "navbar-brand btn btn-outline-primary my-2 my-sm-0",
+        class: "navbar btn btn-outline-success my-2 mr-2 my-sm-0",
         type: "submit"
       }, "Log In"), _react.default.createElement("button", {
         id: "registerbtn",
-        className: "navbar-brand btn btn-outline-primary my-2 my-sm-0",
+        class: "navbar btn btn-outline-success my-2 mr-2 my-sm-0",
         type: "submit"
       }, "Sign Up"))));
     }
   }]);
 
-  return MyComponent;
+  return NavBarCoponent;
 }(_react.default.Component);
 
-exports.default = MyComponent;
-},{"react":"node_modules/react/index.js","bootstrap/dist/css/bootstrap.css":"node_modules/bootstrap/dist/css/bootstrap.css"}],"src/MainComponent.js":[function(require,module,exports) {
+var _default = NavBarCoponent;
+exports.default = _default;
+},{"react":"node_modules/react/index.js"}],"src/MainComponent.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -26015,14 +25948,86 @@ function (_React$Component) {
 }(_react.default.Component);
 
 exports.default = MainComponent;
-},{"react":"node_modules/react/index.js"}],"src/App.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js"}],"node_modules/parcel-bundler/src/builtins/bundle-url.js":[function(require,module,exports) {
+var bundleURL = null;
+
+function getBundleURLCached() {
+  if (!bundleURL) {
+    bundleURL = getBundleURL();
+  }
+
+  return bundleURL;
+}
+
+function getBundleURL() {
+  // Attempt to find the URL of the current script and use that as the base URL
+  try {
+    throw new Error();
+  } catch (err) {
+    var matches = ('' + err.stack).match(/(https?|file|ftp|chrome-extension|moz-extension):\/\/[^)\n]+/g);
+
+    if (matches) {
+      return getBaseURL(matches[0]);
+    }
+  }
+
+  return '/';
+}
+
+function getBaseURL(url) {
+  return ('' + url).replace(/^((?:https?|file|ftp|chrome-extension|moz-extension):\/\/.+)\/[^/]+$/, '$1') + '/';
+}
+
+exports.getBundleURL = getBundleURLCached;
+exports.getBaseURL = getBaseURL;
+},{}],"node_modules/parcel-bundler/src/builtins/css-loader.js":[function(require,module,exports) {
+var bundle = require('./bundle-url');
+
+function updateLink(link) {
+  var newLink = link.cloneNode();
+
+  newLink.onload = function () {
+    link.remove();
+  };
+
+  newLink.href = link.href.split('?')[0] + '?' + Date.now();
+  link.parentNode.insertBefore(newLink, link.nextSibling);
+}
+
+var cssTimeout = null;
+
+function reloadCSS() {
+  if (cssTimeout) {
+    return;
+  }
+
+  cssTimeout = setTimeout(function () {
+    var links = document.querySelectorAll('link[rel="stylesheet"]');
+
+    for (var i = 0; i < links.length; i++) {
+      if (bundle.getBaseURL(links[i].href) === bundle.getBundleURL()) {
+        updateLink(links[i]);
+      }
+    }
+
+    cssTimeout = null;
+  }, 50);
+}
+
+module.exports = reloadCSS;
+},{"./bundle-url":"node_modules/parcel-bundler/src/builtins/bundle-url.js"}],"node_modules/bootstrap/dist/css/bootstrap.css":[function(require,module,exports) {
+var reloadCSS = require('_css_loader');
+
+module.hot.dispose(reloadCSS);
+module.hot.accept(reloadCSS);
+},{"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js"}],"src/App.js":[function(require,module,exports) {
 "use strict";
 
 var _reactDom = _interopRequireDefault(require("react-dom"));
 
 var _react = _interopRequireDefault(require("react"));
 
-var _MyComponent = _interopRequireDefault(require("./MyComponent"));
+var _NavBarCoponent = _interopRequireDefault(require("./NavBarCoponent"));
 
 var _MainComponent = _interopRequireDefault(require("./MainComponent"));
 
@@ -26031,10 +26036,8 @@ require("bootstrap/dist/css/bootstrap.css");
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 //browser
-_reactDom.default.render(_react.default.createElement(_MyComponent.default, null), document.querySelector('nav'));
-
-_reactDom.default.render(_react.default.createElement(_MainComponent.default, null), document.querySelector('#mainSection'));
-},{"react-dom":"node_modules/react-dom/index.js","react":"node_modules/react/index.js","./MyComponent":"src/MyComponent.js","./MainComponent":"src/MainComponent.js","bootstrap/dist/css/bootstrap.css":"node_modules/bootstrap/dist/css/bootstrap.css"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+_reactDom.default.render(_react.default.createElement(_NavBarCoponent.default, null), document.querySelector('#navBar'));
+},{"react-dom":"node_modules/react-dom/index.js","react":"node_modules/react/index.js","./NavBarCoponent":"src/NavBarCoponent.js","./MainComponent":"src/MainComponent.js","bootstrap/dist/css/bootstrap.css":"node_modules/bootstrap/dist/css/bootstrap.css"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -26062,7 +26065,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "57161" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50925" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

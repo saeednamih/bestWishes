@@ -1,132 +1,444 @@
+=================================================================
+*Login*
 
+=================================================================
+Request:
 
+	{
 
--add event-
+  	username:string,
+      
+  password:string
+	}
 
-request:{
+Response:
+	{
+
+	 user:{
+
+	 	isExists: boolean,
+		 fname: string,
+
+  		avatar: string,
+
+  		userId: number/string/token
+ 	},
+
+ 	err:{
+
+		msg: string
+ 
+	}
+
+	}
+=================================================================
+*SignUp*
+=================================================================
+Request:
+{
+
+  	firstName:String,
+      
+  lastName:String,
+	birthDate:String,
+	gender:String,
+	username:String,
+	password:String
+	}
+
+Response:
+	{
+
+	 user:{
+
+	 	isExists: boolean,
+		 fname: string,
+
+  		avatar: string,
+
+  		userId: number/string/token
+ 	},
 
-*userid:string,
+ 	err:{
+
+		msg: string
+ 
+	}
+
+	}
+====================================================================
+*Create new Event* after creating new event ,we returned to myEvents!!!!!!!!!!!!!
+====================================================================
+Request:
+{
 
-title:string,
-
-place:string,
-
-date:string,
-
-catagory:string,
-
-content:string
-
-
-
-}
-
-
-
-
-Response:{
-
-event:{
-
-
-    status:bool
-},
-
-
-error:{
-
-
-    msg:string
-}
-
-
-
-}
-
-
-
--update event-
-
-request:{
-
-*userid:string,
-
-*eventid:string
-
-
-
-}
-
-
-
-
-Response:{
-
-event:{
-
-title:string,
-
-place:string,
-
-date:string,
-
-catagory:string,
-
-status:bool
-
-},
-
-error:{
-
-
-    msg:string
-}
-
-
-
-
-
-}
-
-
-
-
-
-
--delete event-
-
-request:{
-
-*userid:string,
-
-*event id:string,
-
-date:string,
-
-catagory:string,
-
-
-
-}
-
-
-
-
-Response:{
-
-event:{
-
-
-    status:bool
-},
-
-
-error:{
-
-
-    msg:string
-}
-
-
-
-}
+  	gategory:String,
+      
+  title:String,
+	Date:String,
+	Time:String,
+	Location:String,
+	}
+
+Response:
+	{
+
+	 event:[{
+
+	 	eventId:number,
+		gategory:String,
+      
+  	title:String,
+		Date:String,
+		Time:String,
+		Location:String,
+		},...
+		]
+ 	},
+
+ 	err:{
+
+		msg: string
+ 
+	}
+
+	}
+========================================================================
+*Edit Event*
+========================================================================
+Request:
+{
+
+	eventId:number,
+	gategory:String,
+	Title:String,
+	Date:String,
+	Time:String,
+	Location:String
+	}
+
+Response:
+	{
+
+	 sucess{
+		msg: string
+ 
+ 	},
+
+ 	err:{
+
+		msg: string
+ 
+	}
+
+	}
+======================================================================
+*delete Event*
+======================================================================
+Request:
+{
+
+	eventId:number
+	}
+
+Response:
+	{
+
+	 sucess{
+		msg: string
+ 
+ 	},
+
+ 	err:{
+
+		msg: string
+ 
+	}
+
+	}
+
+======================================================================
+*searchEvent* by id
+======================================================================
+Request:
+{
+
+	eventId:number
+	}
+
+Response:
+	{
+
+	 event:{
+
+	 	eventId:number,
+		gategory:String,
+      
+  	title:String,
+		from:String,
+		to:String,
+		Location:String,
+		}
+	}
+ 	err:{
+
+		msg: string
+ 
+	}
+
+	}
+==========================================================================
+*searchEvent* by details
+==========================================================================
+Request:
+{
+
+  	gategory:String,
+      
+  title:String,
+	from:String,
+	to:String,
+	Location:String,
+	}
+
+Response:
+	{
+
+	 event:[{
+		gategory:String,
+      
+  	title:String,
+		Date:String,
+		Time:String,
+		Location:String,
+		},...
+		]
+ 	},
+
+ 	err:{
+
+		msg: string
+ 
+	}
+
+	}
+===============================================================================
+*show my Event*
+===============================================================================
+Request:
+{
+
+	username:string
+	}
+
+Response:
+	{
+
+	 event:[{
+		gategory:String,
+      
+  	title:String,
+		Date:String,
+		Time:String,
+		Location:String,
+		},...
+		]
+ 	},
+
+ 	err:{
+
+		msg: string
+ 
+	}
+
+	}
+===============================================================================
+===============================================================================
+33333
+====================================================================
+*Create new Event* after creating new event ,we returned to myEvents!!!!!!!!!!!!!
+====================================================================
+Request:
+{
+
+  	gategory:String,
+      
+  title:String,
+	Date:String,
+	Time:String,
+	Location:String,
+	}
+
+Response:
+	{
+
+	 event:[{
+
+	 	eventId:number,
+		gategory:String,
+      
+  	title:String,
+		Date:String,
+		Time:String,
+		Location:String,
+		},...
+		]
+ 	},
+
+ 	err:{
+
+		msg: string
+ 
+	}
+
+	}
+=================================================================================
+*Edit Event*
+==================================================================================
+Request:
+{
+
+	gategory:String,
+	Title:String,
+	Date:String,
+	Time:String,
+	Location:String
+	}
+
+Response:
+	{
+
+	 sucess{
+		msg: string
+ 
+ 	},
+
+ 	err:{
+
+		msg: string
+ 
+	}
+
+	}
+======================================================================
+*delete Event*
+======================================================================
+Request:
+{
+
+	eventId:number
+	}
+
+Response:
+	{
+
+	 sucess{
+		msg: string
+ 
+ 	},
+
+ 	err:{
+
+		msg: string
+ 
+	}
+
+	}
+
+======================================================================
+*searchEvent* by id
+======================================================================
+Request:
+{
+
+	eventId:number
+	}
+
+Response:
+	{
+
+	 event:{
+
+	 	eventId:number,
+		gategory:String,
+      
+  	title:String,
+		from:String,
+		to:String,
+		Location:String,
+		}
+	}
+ 	err:{
+
+		msg: string
+ 
+	}
+
+	}
+==========================================================================
+*searchEvent* by details
+==========================================================================
+Request:
+{
+
+  	gategory:String,
+      
+  title:String,
+	from:String,
+	to:String,
+	Location:String,
+	}
+
+Response:
+	{
+
+	 event:[{
+		gategory:String,
+      
+  	title:String,
+		Date:String,
+		Time:String,
+		Location:String,
+		},...
+		]
+ 	},
+
+ 	err:{
+
+		msg: string
+ 
+	}
+
+	}
+===============================================================================
+*show my Event*
+===============================================================================
+Request:
+{
+
+	username:string
+	}
+
+Response:
+	{
+
+	 event:[{
+		gategory:String,
+      
+  	title:String,
+		Date:String,
+		Time:String,
+		Location:String,
+		},...
+		]
+ 	},
+
+ 	err:{
+
+		msg: string
+ 
+	}
+
+	}
+===============================================================================
+===============================================================================
