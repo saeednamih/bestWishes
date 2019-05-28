@@ -26126,7 +26126,7 @@ function (_React$Component) {
       return _react.default.createElement("div", {
         class: "card text-center",
         style: {
-          border: '30px solid green'
+          border: '1px solid grew'
         }
       }, _react.default.createElement("div", {
         class: "text-center mb-4"

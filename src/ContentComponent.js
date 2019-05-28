@@ -2,7 +2,7 @@ import React from 'react'
 class ContentComponent extends React.Component{
     render(){
         return(
-            <div class="card text-center"style={ {border: '30px solid green'} }>
+            <div class="card text-center"style={ {border: '1px solid grew'} }>
             <div class="text-center mb-4">
               <img class="mb-4 mt-3" src="./imges/logo1.png" alt="" width="110" height="110    "/>
               <div class="card-body ">
