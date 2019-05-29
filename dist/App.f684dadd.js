@@ -30197,7 +30197,7 @@ function (_React$Component) {
 
 var _default = ContentComponent;
 exports.default = _default;
-},{"react":"node_modules/react/index.js","./UpcomingComponent":"src/UpcomingComponent.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js"}],"src/MyEventComponent.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","./UpcomingComponent":"src/UpcomingComponent.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js"}],"src/EventComponent.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -30206,6 +30206,86 @@ Object.defineProperty(exports, "__esModule", {
 exports.default = void 0;
 
 var _react = _interopRequireDefault(require("react"));
+
+var _reactRouterDom = require("react-router-dom");
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+var EventComponent =
+/*#__PURE__*/
+function (_React$Component) {
+  _inherits(EventComponent, _React$Component);
+
+  function EventComponent() {
+    _classCallCheck(this, EventComponent);
+
+    return _possibleConstructorReturn(this, _getPrototypeOf(EventComponent).apply(this, arguments));
+  }
+
+  _createClass(EventComponent, [{
+    key: "render",
+    value: function render() {
+      return _react.default.createElement("div", {
+        class: "col-md-4"
+      }, _react.default.createElement("div", {
+        class: "card mb-4 shadow-sm"
+      }, _react.default.createElement("img", {
+        class: "img img-responsive full-width",
+        src: ".\\assets\\imges\\addWish.jpg"
+      }), _react.default.createElement("div", {
+        class: "card-body"
+      }, _react.default.createElement("p", {
+        class: "card-text"
+      }, "This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer."), _react.default.createElement("div", {
+        class: "d-flex justify-content-between align-items-center"
+      }, _react.default.createElement("div", {
+        class: "btn-group"
+      }, _react.default.createElement("button", {
+        type: "button",
+        class: "btn btn-sm btn-outline-secondary"
+      }, "View"), _react.default.createElement("button", {
+        type: "button",
+        class: "btn btn-sm btn-outline-secondary"
+      }, "Edit")), _react.default.createElement("small", {
+        class: "text-muted"
+      }, "9 mins")))));
+    }
+  }]);
+
+  return EventComponent;
+}(_react.default.Component);
+
+var _default = EventComponent;
+exports.default = _default;
+},{"react":"node_modules/react/index.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js"}],"src/MyEventComponent.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireDefault(require("react"));
+
+var _EventComponent = _interopRequireDefault(require("./EventComponent"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -30241,7 +30321,7 @@ function (_React$Component) {
   _createClass(MyEventComponent, [{
     key: "render",
     value: function render() {
-      return _react.default.createElement("section", {
+      return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement("section", {
         class: "jumbotron text-center"
       }, _react.default.createElement("div", {
         class: "container"
@@ -30255,7 +30335,9 @@ function (_React$Component) {
       }, "Create A New Event"), _react.default.createElement("a", {
         href: "SearcEvent.html",
         class: "btn btn-secondary my-2"
-      }, "Search  Event"))));
+      }, "Search  Event")))), _react.default.createElement("div", {
+        class: "row"
+      }, _react.default.createElement(_EventComponent.default, null)));
     }
   }]);
 
@@ -30264,7 +30346,7 @@ function (_React$Component) {
 
 var _default = MyEventComponent;
 exports.default = _default;
-},{"react":"node_modules/react/index.js"}],"node_modules/parcel-bundler/src/builtins/bundle-url.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","./EventComponent":"src/EventComponent.js"}],"node_modules/parcel-bundler/src/builtins/bundle-url.js":[function(require,module,exports) {
 var bundleURL = null;
 
 function getBundleURLCached() {
@@ -30485,6 +30567,8 @@ exports.default = void 0;
 
 var _react = _interopRequireDefault(require("react"));
 
+var _reactRouterDom = require("react-router-dom");
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
@@ -30576,13 +30660,17 @@ function (_React$Component) {
         class: "form-control",
         id: "where",
         placeholder: "Please Enter The Location"
-      })), _react.default.createElement("button", {
+      })), _react.default.createElement(_reactRouterDom.NavLink, {
+        to: "/MyEvents"
+      }, _react.default.createElement("button", {
         id: "cerateEvent",
         class: "btn btn-primary btn-block"
-      }, "Cerate Event"), _react.default.createElement("button", {
+      }, "Cerate Event")), _react.default.createElement(_reactRouterDom.NavLink, {
+        to: "/MyEvents"
+      }, _react.default.createElement("button", {
         id: "back",
         class: "btn btn-primary btn-block"
-      }, "Back To  My Events"))), _react.default.createElement("div", {
+      }, "Back To  My Events")))), _react.default.createElement("div", {
         class: "col-md-2 event-preview"
       })), _react.default.createElement("div", {
         class: "row mt"
@@ -30598,7 +30686,7 @@ function (_React$Component) {
 
 var _default = CreateEventComponent;
 exports.default = _default;
-},{"react":"node_modules/react/index.js"}],"src/CreateWishComponent.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js"}],"src/CreateWishComponent.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
