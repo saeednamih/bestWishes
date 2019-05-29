@@ -6,7 +6,7 @@
      import ContentComponent from './ContentComponent'
      import MyEventComponent from './MyEventComponent'
      import 'bootstrap/dist/css/bootstrap.css';
-
+    import SearchComponent from './SearchComponent'
      ReactDOM.render(<NavBarCoponent />,
          document.querySelector('#navBar'));
 
@@ -21,6 +21,10 @@
                 
                 // ReactDOM.render(<MyEventComponent />,
                 //     document.querySelector('#content'));
+
+                     ReactDOM.render(<SearchComponent />,
+                    document.querySelector('#content'));
+
 
 
         
