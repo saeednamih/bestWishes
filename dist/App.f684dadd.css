@@ -10036,5 +10036,54 @@ a.text-dark:hover, a.text-dark:focus {
   }
 }
 
+.headBar {
+    text-align: center;
+  }
+  #JoinButton {
+    margin-right: 60px;
+  }
+  .form-group {
+    margin-top: 20px;
+  }
+  .LoginButton {
+    float: right;
+    margin-top: 50px;
+  }
+  .row {
+    margin-top: 40px;
+  }
+  .my-1{
+    font-size: 130%;
+  }
+  .mr-2{
+    font-size: 80%;
+    font-weight: bold;
+  }
+
+        .headBar{
+            text-align: center;
+        }
+        #JoinButton{
+            margin-right: 60px;
+        }
+        .form-group{
+            margin-top: 20px;
+        }
+        .LoginButton{
+            float: right;
+            margin-top: 50px;
+            
+        }
+        .row{
+            margin-top: 40px;
+        }
+        .my-1{
+            font-size: 130%;
+        }
+        .mr-2{
+            font-size: 80%; font-weight: bold;
+        }
+        
+
 
 /*# sourceMappingURL=/App.f684dadd.css.map */

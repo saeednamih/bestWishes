@@ -10,6 +10,8 @@
     import CreateEventComponent from './CreateEventComponent'
     import CreateWishComponent from './CreateWishComponent'
     import ShowingCreateWish from './ShowingCreateWishComponent'
+    import RegisterPageComponent from './RegisterPageComponent'
+    import LoginPageComponent from './LoginPageComponent'
 
      ReactDOM.render(<NavBarCoponent />,
          document.querySelector('#navBar'));
@@ -32,9 +34,10 @@
                     // ReactDOM.render(<CreateEventComponent />,
                     //     document.querySelector('#content'));
 
-                        ReactDOM.render(<ShowingCreateWish />,
+                        ReactDOM.render(<RegisterPageComponent />,
                             document.querySelector('#content'));
-
+                            ReactDOM.render(<LoginPageComponent />,
+                                document.querySelector('#content'));
                         
 
         
