@@ -26787,6 +26787,148 @@ function (_React$Component) {
 
 var _default = ShowingCreateWish;
 exports.default = _default;
+},{"react":"node_modules/react/index.js"}],"src/AddWishToEventComponent.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireDefault(require("react"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+var AddWishToEventComponent =
+/*#__PURE__*/
+function (_React$Component) {
+  _inherits(AddWishToEventComponent, _React$Component);
+
+  function AddWishToEventComponent() {
+    _classCallCheck(this, AddWishToEventComponent);
+
+    return _possibleConstructorReturn(this, _getPrototypeOf(AddWishToEventComponent).apply(this, arguments));
+  }
+
+  _createClass(AddWishToEventComponent, [{
+    key: "render",
+    value: function render() {
+      return _react.default.createElement("div", {
+        class: "container"
+      }, _react.default.createElement("form", {
+        id: "form1"
+      }, _react.default.createElement("div", {
+        class: "form-group row mt-5"
+      }, _react.default.createElement("label", {
+        for: "inputPassword",
+        class: "col-sm-2 col-form-label"
+      }, "Title"), _react.default.createElement("div", {
+        class: "col-sm-10"
+      }, _react.default.createElement("input", {
+        type: "text",
+        readonly: true,
+        class: "form-control",
+        id: "inputPassword",
+        placeholder: "title",
+        value: "wedding invitation"
+      }))), _react.default.createElement("div", {
+        class: "form-group row"
+      }, _react.default.createElement("label", {
+        for: "inputPassword",
+        class: "col-sm-2 col-form-label"
+      }, "When"), _react.default.createElement("div", {
+        class: "col-sm-10"
+      }, _react.default.createElement("input", {
+        type: "text",
+        readonly: true,
+        class: "form-control",
+        id: "inputPassword",
+        placeholder: "date",
+        value: "Thursday  Apr 18, 2019"
+      }))), _react.default.createElement("div", {
+        class: "form-group row"
+      }, _react.default.createElement("label", {
+        for: "inputPassword",
+        class: "col-sm-2 col-form-label"
+      }, "Where"), _react.default.createElement("div", {
+        class: "col-sm-10"
+      }, _react.default.createElement("input", {
+        type: "text",
+        readonly: true,
+        class: "form-control",
+        id: "inputPassword",
+        value: "Tel Aviv, Israel"
+      }))), _react.default.createElement("button", {
+        id: "addBestWish",
+        class: "btn btn-primary"
+      }, "Add a Best Wish")), _react.default.createElement("div", {
+        id: "students-gallery",
+        class: "row mt-5"
+      }, _react.default.createElement("div", {
+        class: "col-sm-3"
+      }, _react.default.createElement("div", {
+        class: "card",
+        style: {
+          width: "18rem"
+        }
+      }, _react.default.createElement("img", {
+        src: "imges\\wishW.jpg",
+        class: "card-img-top",
+        alt: "..."
+      }), _react.default.createElement("div", {
+        class: "card-body"
+      }, _react.default.createElement("h5", {
+        class: "card-title"
+      }, "saeed "), _react.default.createElement("p", {
+        class: "card-text"
+      }, "Congratulations on your wedding day, Each of you is very special in your own way. Together you are even more special, May your love will never be perishable!")))), _react.default.createElement("div", {
+        class: "col-sm-1"
+      }), _react.default.createElement("div", {
+        class: "col-sm-3"
+      }, _react.default.createElement("div", {
+        class: "card",
+        style: {
+          width: "18rem"
+        }
+      }, _react.default.createElement("img", {
+        src: "imges\\wishW.jpg",
+        class: "card-img-top",
+        alt: "..."
+      }), _react.default.createElement("div", {
+        class: "card-body"
+      }, _react.default.createElement("h5", {
+        class: "card-title"
+      }, "saeed "), _react.default.createElement("p", {
+        class: "card-text"
+      }, "Congratulations on your wedding day, Each of you is very special in your own way. Together you are even more special, May your love will never be perishable!"))))), _react.default.createElement("div", {
+        class: "col-1"
+      }));
+    }
+  }]);
+
+  return AddWishToEventComponent;
+}(_react.default.Component);
+
+var _default = AddWishToEventComponent;
+exports.default = _default;
 },{"react":"node_modules/react/index.js"}],"src/App.js":[function(require,module,exports) {
 "use strict";
 
@@ -26814,9 +26956,65 @@ var _CreateWishComponent = _interopRequireDefault(require("./CreateWishComponent
 
 var _ShowingCreateWishComponent = _interopRequireDefault(require("./ShowingCreateWishComponent"));
 
+var _AddWishToEventComponent = _interopRequireDefault(require("./AddWishToEventComponent"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-//browser
+function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+var App =
+/*#__PURE__*/
+function (_React$Component) {
+  _inherits(App, _React$Component);
+
+  function App() {
+    _classCallCheck(this, App);
+
+    return _possibleConstructorReturn(this, _getPrototypeOf(App).apply(this, arguments));
+  }
+
+  _createClass(App, [{
+    key: "render",
+    value: function render() {
+      _react.default.createElement(BrowserRouter, null, _react.default.createElement("div", null, _react.default.createElement(NavLink, {
+        to: "/"
+      }, "Home"), _react.default.createElement(NavLink, {
+        to: "/about"
+      }, "About"), _react.default.createElement(NavLink, {
+        to: "/contact"
+      }, "Contact"), _react.default.createElement(Route, {
+        exact: true,
+        path: "/",
+        component: Home
+      }), _react.default.createElement(Route, {
+        path: "/about",
+        component: About
+      }), _react.default.createElement(Route, {
+        path: "/contact",
+        component: Contact
+      })));
+    }
+  }]);
+
+  return App;
+}(_react.default.Component);
+
 _reactDom.default.render(_react.default.createElement(_NavBarCoponent.default, null), document.querySelector('#navBar'));
 
 _reactDom.default.render(_react.default.createElement(_UpcomingComponent.default, null), document.querySelector('#leftSide'));
@@ -26829,10 +27027,12 @@ _reactDom.default.render(_react.default.createElement(_UpcomingComponent.default
 //     document.querySelector('#content'));
 // ReactDOM.render(<CreateEventComponent />,
 //     document.querySelector('#content'));
+// ReactDOM.render(<ShowingCreateWish />,
+//     document.querySelector('#content'));
 
 
-_reactDom.default.render(_react.default.createElement(_ShowingCreateWishComponent.default, null), document.querySelector('#content'));
-},{"react-dom":"node_modules/react-dom/index.js","react":"node_modules/react/index.js","./NavBarCoponent":"src/NavBarCoponent.js","./MainComponent":"src/MainComponent.js","./UpcomingComponent":"src/UpcomingComponent.js","./ContentComponent":"src/ContentComponent.js","./MyEventComponent":"src/MyEventComponent.js","bootstrap/dist/css/bootstrap.css":"node_modules/bootstrap/dist/css/bootstrap.css","./SearchComponent":"src/SearchComponent.js","./CreateEventComponent":"src/CreateEventComponent.js","./CreateWishComponent":"src/CreateWishComponent.js","./ShowingCreateWishComponent":"src/ShowingCreateWishComponent.js"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+_reactDom.default.render(_react.default.createElement(_AddWishToEventComponent.default, null), document.querySelector('#content'));
+},{"react-dom":"node_modules/react-dom/index.js","react":"node_modules/react/index.js","./NavBarCoponent":"src/NavBarCoponent.js","./MainComponent":"src/MainComponent.js","./UpcomingComponent":"src/UpcomingComponent.js","./ContentComponent":"src/ContentComponent.js","./MyEventComponent":"src/MyEventComponent.js","bootstrap/dist/css/bootstrap.css":"node_modules/bootstrap/dist/css/bootstrap.css","./SearchComponent":"src/SearchComponent.js","./CreateEventComponent":"src/CreateEventComponent.js","./CreateWishComponent":"src/CreateWishComponent.js","./ShowingCreateWishComponent":"src/ShowingCreateWishComponent.js","./AddWishToEventComponent":"src/AddWishToEventComponent.js"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -26860,7 +27060,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "63573" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "65168" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

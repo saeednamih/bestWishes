@@ -10,7 +10,24 @@
     import CreateEventComponent from './CreateEventComponent'
     import CreateWishComponent from './CreateWishComponent'
     import ShowingCreateWish from './ShowingCreateWishComponent'
+    import AddWishToEventComponent  from './AddWishToEventComponent'
 
+
+    class App extends React.Component{
+        render(){
+            <BrowserRouter>
+            <div>
+            <NavLink to="/">Home</NavLink>
+            <NavLink to="/about">About</NavLink>
+            <NavLink to="/contact">Contact</NavLink>
+            <Route exact path="/" component={Home} />
+            <Route path="/about" component={About} />
+            <Route path="/contact" component={Contact} />
+            </div>
+            </BrowserRouter>
+        }
+
+    }
      ReactDOM.render(<NavBarCoponent />,
          document.querySelector('#navBar'));
 
@@ -32,9 +49,12 @@
                     // ReactDOM.render(<CreateEventComponent />,
                     //     document.querySelector('#content'));
 
-                        ReactDOM.render(<ShowingCreateWish />,
-                            document.querySelector('#content'));
+                        // ReactDOM.render(<ShowingCreateWish />,
+                        //     document.querySelector('#content'));
 
+                            ReactDOM.render(<AddWishToEventComponent />,
+                                document.querySelector('#content'));
+                            
                         
 
         
