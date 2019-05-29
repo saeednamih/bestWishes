@@ -1,5 +1,6 @@
 import React from 'react'
 import EventComponent  from './EventComponent'
+import {getUserEventsByUserID} from './statics/Api'
 class MyEventComponent extends React.Component {
   render() {
     return (
