@@ -26165,6 +26165,73 @@ function (_React$Component) {
 
 var _default = ContentComponent;
 exports.default = _default;
+},{"react":"node_modules/react/index.js"}],"src/MyEventComponent.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireDefault(require("react"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+var MyEventComponent =
+/*#__PURE__*/
+function (_React$Component) {
+  _inherits(MyEventComponent, _React$Component);
+
+  function MyEventComponent() {
+    _classCallCheck(this, MyEventComponent);
+
+    return _possibleConstructorReturn(this, _getPrototypeOf(MyEventComponent).apply(this, arguments));
+  }
+
+  _createClass(MyEventComponent, [{
+    key: "render",
+    value: function render() {
+      return _react.default.createElement("section", {
+        class: "jumbotron text-center"
+      }, _react.default.createElement("div", {
+        class: "container"
+      }, _react.default.createElement("h1", {
+        class: "jumbotron-heading"
+      }, "My Events"), _react.default.createElement("p", {
+        class: "lead text-muted"
+      }, "Something short and leading about the collection below\u2014its contents, the creator, etc. Make it short and sweet, but not too short so folks don\u2019t simply skip over it entirely."), _react.default.createElement("p", null, _react.default.createElement("a", {
+        href: "createEvent.html",
+        class: "btn btn-primary my-2"
+      }, "Create A New Event"), _react.default.createElement("a", {
+        href: "SearcEvent.html",
+        class: "btn btn-secondary my-2"
+      }, "Search  Event"))));
+    }
+  }]);
+
+  return MyEventComponent;
+}(_react.default.Component);
+
+var _default = MyEventComponent;
+exports.default = _default;
 },{"react":"node_modules/react/index.js"}],"node_modules/parcel-bundler/src/builtins/bundle-url.js":[function(require,module,exports) {
 var bundleURL = null;
 
@@ -26252,6 +26319,8 @@ var _UpcomingComponent = _interopRequireDefault(require("./UpcomingComponent"));
 
 var _ContentComponent = _interopRequireDefault(require("./ContentComponent"));
 
+var _MyEventComponent = _interopRequireDefault(require("./MyEventComponent"));
+
 require("bootstrap/dist/css/bootstrap.css");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
@@ -26261,10 +26330,11 @@ _reactDom.default.render(_react.default.createElement(_NavBarCoponent.default, n
 
 _reactDom.default.render(_react.default.createElement(_UpcomingComponent.default, null), document.querySelector('#leftSide'));
 
-_reactDom.default.render(_react.default.createElement(_UpcomingComponent.default, null), document.querySelector('#rightSide'));
-
-_reactDom.default.render(_react.default.createElement(_ContentComponent.default, null), document.querySelector('#content'));
-},{"react-dom":"node_modules/react-dom/index.js","react":"node_modules/react/index.js","./NavBarCoponent":"src/NavBarCoponent.js","./MainComponent":"src/MainComponent.js","./UpcomingComponent":"src/UpcomingComponent.js","./ContentComponent":"src/ContentComponent.js","bootstrap/dist/css/bootstrap.css":"node_modules/bootstrap/dist/css/bootstrap.css"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+_reactDom.default.render(_react.default.createElement(_UpcomingComponent.default, null), document.querySelector('#rightSide')); // ReactDOM.render(<ContentComponent />,
+//     document.querySelector('#content'));
+// ReactDOM.render(<MyEventComponent />,
+//     document.querySelector('#content'));
+},{"react-dom":"node_modules/react-dom/index.js","react":"node_modules/react/index.js","./NavBarCoponent":"src/NavBarCoponent.js","./MainComponent":"src/MainComponent.js","./UpcomingComponent":"src/UpcomingComponent.js","./ContentComponent":"src/ContentComponent.js","./MyEventComponent":"src/MyEventComponent.js","bootstrap/dist/css/bootstrap.css":"node_modules/bootstrap/dist/css/bootstrap.css"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
