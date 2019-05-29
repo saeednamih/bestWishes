@@ -1,4 +1,6 @@
 import React from 'react'
+import {NavLink} from 'react-router-dom'
+
 class NavBarCoponent extends React.Component{
     render(){
         return(
@@ -13,23 +15,27 @@ class NavBarCoponent extends React.Component{
 <div class="collapse navbar-collapse" id="navbarSupportedContent">
   <ul class="navbar-nav mr-auto">
     <li class="nav-item active ">
-      <a class="nav-item   btn btn-outline-primary my-1 mr-2"  href="Home.html">Home </a>
+      <NavLink  to='/' class="nav-item   btn btn-outline-primary my-1 mr-2">Home</NavLink> 
     </li>
 
     <li class="nav-item">
-      <a class="nav-item btn btn-outline-primary  my-1 mr-2"  href="MyEvents.html">Events</a>
+      <NavLink to='/MyEvents' class="nav-item btn btn-outline-primary  my-1 mr-2">Events </NavLink>
     </li>
     <li class="nav-item">
-      <a class="nav-item btn btn-outline-primary my-1 mr-2" href="MyWishes.html">Wishes</a>
+      <NavLink to="/MyWishes" class="nav-item btn btn-outline-primary my-1 mr-2">Wishes</NavLink>
     </li>
     <li class="nav-item">
-      <a class="nav-item btn btn-outline-primary my-1 mr-2" href="About.html">About</a>
+      <NavLink to="/About" class="nav-item btn btn-outline-primary my-1 mr-2" >About</NavLink>
     </li>
   </ul>
   <form class="form-inline my-2 my-lg-0">
-    <button id="loginbtn" class="navbar btn btn-outline-success my-2 mr-2 my-sm-0" type="submit">Log In</button>
+  <NavLink to="/Login">
+  <button id="loginbtn" class="navbar btn btn-outline-success my-2 mr-2 my-sm-0" type="submit">Log In</button>
+  </NavLink> 
+  <NavLink to="/Register">
     <button id="registerbtn" class="navbar btn btn-outline-success my-2 mr-2 my-sm-0" type="submit">Sign
       Up</button>
+      </NavLink> 
   </form>
 </div>
 </nav>

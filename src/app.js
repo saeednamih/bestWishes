@@ -12,32 +12,28 @@
     import ShowingCreateWish from './ShowingCreateWishComponent'
     import RegisterPageComponent from './RegisterPageComponent'
     import LoginPageComponent from './LoginPageComponent'
+    import MyWishesComponent from './MyWishesComponent'
+    import {BrowserRouter,Route,Switch} from 'react-router-dom'
+        class App extends React.Component{
+            render(){
+                return(
+                    <BrowserRouter>
+                    <NavBarCoponent/>
+                    <Switch>
+                    <Route exact path="/" component={ContentComponent} />
+                    <Route  path="/CreateNewEvent" component={CreateEventComponent} />
+                    <Route  path="/SearchEvent" component={SearchComponent} />
+                    <Route  path="/Login" component={LoginPageComponent} />
+                    <Route  path="/Register" component={RegisterPageComponent} />
+                    <Route  path="/MyEvents" component={MyEventComponent} />
+                    <Route  path="/MyWishes" component={MyWishesComponent } />
+                    <Route  path="/About" component={ContentComponent} />
+                    </Switch>
+                    </BrowserRouter>
+                );
+            }
+        }
 
-     ReactDOM.render(<NavBarCoponent />,
-         document.querySelector('#navBar'));
-
-         ReactDOM.render(<UpcomingComponent />,
-            document.querySelector('#leftSide'));
-
-            ReactDOM.render(<UpcomingComponent />,
-                document.querySelector('#rightSide'));
-
-                // ReactDOM.render(<ContentComponent />,
-                //     document.querySelector('#content'));
-                
-                // ReactDOM.render(<MyEventComponent />,
-                //     document.querySelector('#content'));
-
-                // ReactDOM.render(<SearchComponent />,
-                //     document.querySelector('#content'));
-                    
-                    // ReactDOM.render(<CreateEventComponent />,
-                    //     document.querySelector('#content'));
-
-                        ReactDOM.render(<RegisterPageComponent />,
-                            document.querySelector('#content'));
-                            ReactDOM.render(<LoginPageComponent />,
-                                document.querySelector('#content'));
                         
 
-        
+        ReactDOM.render(<App/>,document.querySelector("#navBar"));

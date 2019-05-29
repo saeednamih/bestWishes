@@ -2,9 +2,7 @@
   "name": "tsofen-wix-wishes",
   "version": "1.0.0",
   "description": " Gifs and online greeting cards with quotes, messages, images on all occasionsSend free greeting cards, wishes, ecards, funny animated cards, birthday wishes",
-  "main":"src/App.js",
-
-
+  "main": "src/App.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/saeednamih/bestWishes.git"
@@ -22,7 +20,9 @@
   "dependencies": {
     "bootstrap": "^4.3.1",
     "react": "^16.8.6",
-    "react-dom": "^16.8.6"
+    "react-dom": "^16.8.6",
+    "react-router": "^5.0.0",
+    "react-router-dom": "^5.0.0"
   },
   "assetPath": "assets/",
   "scripts": {
