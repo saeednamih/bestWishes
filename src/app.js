@@ -8,6 +8,7 @@
      import 'bootstrap/dist/css/bootstrap.css';
     import SearchComponent from './SearchComponent'
     import CreateEventComponent from './CreateEventComponent'
+    import CreateWishComponent from './CreateWishComponent'
 
      ReactDOM.render(<NavBarCoponent />,
          document.querySelector('#navBar'));
@@ -27,9 +28,12 @@
                 // ReactDOM.render(<SearchComponent />,
                 //     document.querySelector('#content'));
                     
-                    ReactDOM.render(<CreateEventComponent />,
-                        document.querySelector('#content'));
+                    // ReactDOM.render(<CreateEventComponent />,
+                    //     document.querySelector('#content'));
 
+                        ReactDOM.render(<CreateWishComponent />,
+                            document.querySelector('#content'));
 
+                        
 
         
