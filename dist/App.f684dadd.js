@@ -26787,7 +26787,258 @@ function (_React$Component) {
 
 var _default = ShowingCreateWish;
 exports.default = _default;
-},{"react":"node_modules/react/index.js"}],"src/App.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js"}],"src/RegisterPageComponent.css":[function(require,module,exports) {
+var reloadCSS = require('_css_loader');
+
+module.hot.dispose(reloadCSS);
+module.hot.accept(reloadCSS);
+},{"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js"}],"src/RegisterPageComponent.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireDefault(require("react"));
+
+require("./RegisterPageComponent.css");
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+var RegisterPageComponent =
+/*#__PURE__*/
+function (_React$Component) {
+  _inherits(RegisterPageComponent, _React$Component);
+
+  function RegisterPageComponent() {
+    _classCallCheck(this, RegisterPageComponent);
+
+    return _possibleConstructorReturn(this, _getPrototypeOf(RegisterPageComponent).apply(this, arguments));
+  }
+
+  _createClass(RegisterPageComponent, [{
+    key: "render",
+    value: function render() {
+      return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement("div", {
+        className: "row"
+      }, _react.default.createElement("div", {
+        className: "col-sm-3 "
+      }), _react.default.createElement("div", {
+        className: "col-sm-6"
+      }, _react.default.createElement("form", null, _react.default.createElement("div", {
+        className: "row"
+      }, _react.default.createElement("div", {
+        className: "col"
+      }, _react.default.createElement("input", {
+        type: "text",
+        className: "form-control",
+        placeholder: "First name"
+      })), _react.default.createElement("div", {
+        className: "col"
+      }, _react.default.createElement("input", {
+        type: "text",
+        className: "form-control",
+        placeholder: "Last name"
+      }))), _react.default.createElement("div", {
+        className: "form-group"
+      }, _react.default.createElement("label", {
+        htmlFor: "exampleInputEmail1"
+      }, "Birth Date:"), _react.default.createElement("input", {
+        type: "date",
+        className: "form-control",
+        id: "exampleInputDate",
+        "aria-describedby": "Date"
+      })), _react.default.createElement("div", {
+        className: "form form-group"
+      }, _react.default.createElement("label", null, "Gender:"), _react.default.createElement("div", {
+        className: "form-check form-check-inline"
+      }, _react.default.createElement("input", {
+        className: "form-check-input",
+        type: "radio",
+        name: "inlineRadioOptions",
+        id: "inlineRadio1",
+        value: "option1"
+      }), _react.default.createElement("label", {
+        className: "form-check-label",
+        htmlFor: "inlineRadio1"
+      }, "Male")), _react.default.createElement("div", {
+        className: "form-check form-check-inline"
+      }, _react.default.createElement("input", {
+        className: "form-check-input",
+        type: "radio",
+        name: "inlineRadioOptions",
+        id: "inlineRadio2",
+        value: "option2"
+      }), _react.default.createElement("label", {
+        className: "form-check-label",
+        htmlFor: "inlineRadio2"
+      }, "Female")), _react.default.createElement("div", {
+        className: "form-check form-check-inline"
+      }, _react.default.createElement("input", {
+        className: "form-check-input",
+        type: "radio",
+        name: "inlineRadioOptions",
+        id: "inlineRadio3",
+        value: "option3"
+      }), _react.default.createElement("label", {
+        className: "form-check-label",
+        htmlFor: "inlineRadio3"
+      }, "Other"))), _react.default.createElement("div", {
+        className: "form-group"
+      }, _react.default.createElement("label", {
+        htmlFor: "exampleInputEmail1"
+      }, "User Name"), _react.default.createElement("input", {
+        type: "email",
+        className: "form-control",
+        id: "exampleInputEmail1",
+        "aria-describedby": "emailHelp",
+        placeholder: "Enter email or user Name"
+      }), _react.default.createElement("small", {
+        id: "emailHelp",
+        className: "form-text text-muted"
+      }, "We'll never share your email with anyone else.")), _react.default.createElement("div", {
+        className: "form-group"
+      }, _react.default.createElement("label", {
+        htmlFor: "exampleInputPassword1"
+      }, "Password"), _react.default.createElement("input", {
+        type: "password",
+        className: "form-control",
+        id: "exampleInputPassword1",
+        placeholder: "Password"
+      })), _react.default.createElement("div", {
+        className: "LoginButton"
+      }, _react.default.createElement("button", {
+        type: "submit",
+        className: "btn btn-primary"
+      }, "Sign Up")))), _react.default.createElement("div", {
+        className: "col"
+      })));
+    }
+  }]);
+
+  return RegisterPageComponent;
+}(_react.default.Component);
+
+exports.default = RegisterPageComponent;
+},{"react":"node_modules/react/index.js","./RegisterPageComponent.css":"src/RegisterPageComponent.css"}],"src/LoginPageComponent.css":[function(require,module,exports) {
+var reloadCSS = require('_css_loader');
+
+module.hot.dispose(reloadCSS);
+module.hot.accept(reloadCSS);
+},{"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js"}],"src/LoginPageComponent.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireDefault(require("react"));
+
+require("./LoginPageComponent.css");
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+var LoginPageComponent =
+/*#__PURE__*/
+function (_React$Component) {
+  _inherits(LoginPageComponent, _React$Component);
+
+  function LoginPageComponent() {
+    _classCallCheck(this, LoginPageComponent);
+
+    return _possibleConstructorReturn(this, _getPrototypeOf(LoginPageComponent).apply(this, arguments));
+  }
+
+  _createClass(LoginPageComponent, [{
+    key: "render",
+    value: function render() {
+      return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement("div", {
+        className: "row"
+      }, _react.default.createElement("div", {
+        className: "col-sm-3"
+      }), _react.default.createElement("div", {
+        className: "col-sm-6"
+      }, _react.default.createElement("form", null, _react.default.createElement("div", {
+        className: "form-group"
+      }, _react.default.createElement("label", {
+        htmlFor: "exampleInputEmail1"
+      }, "User Name"), _react.default.createElement("input", {
+        type: "email",
+        className: "form-control",
+        id: "exampleInputEmail1",
+        "aria-describedby": "emailHelp",
+        placeholder: "Enter email or user Name"
+      }), _react.default.createElement("small", {
+        id: "emailHelp",
+        className: "form-text text-muted"
+      }, "We'll never share your email with anyone else.")), _react.default.createElement("div", {
+        className: "form-group"
+      }, _react.default.createElement("label", {
+        htmlFor: "exampleInputPassword1"
+      }, "Password"), _react.default.createElement("input", {
+        type: "password",
+        className: "form-control",
+        id: "exampleInputPassword1",
+        placeholder: "Password"
+      })), _react.default.createElement("div", {
+        className: "LoginButton"
+      }, _react.default.createElement("button", {
+        type: "submit",
+        className: "btn btn-primary"
+      }, "Log In"), _react.default.createElement("p", null), _react.default.createElement("p", null, _react.default.createElement("button", {
+        type: "submit",
+        className: " registerbtn btn btn-primary"
+      }, "Sign Up")), _react.default.createElement("p", null, _react.default.createElement("a", {
+        href: ""
+      }, "I forgot my password"))))), _react.default.createElement("div", {
+        className: "col-sm-3"
+      })));
+    }
+  }]);
+
+  return LoginPageComponent;
+}(_react.default.Component);
+
+exports.default = LoginPageComponent;
+},{"react":"node_modules/react/index.js","./LoginPageComponent.css":"src/LoginPageComponent.css"}],"src/App.js":[function(require,module,exports) {
 "use strict";
 
 var _reactDom = _interopRequireDefault(require("react-dom"));
@@ -26814,6 +27065,10 @@ var _CreateWishComponent = _interopRequireDefault(require("./CreateWishComponent
 
 var _ShowingCreateWishComponent = _interopRequireDefault(require("./ShowingCreateWishComponent"));
 
+var _RegisterPageComponent = _interopRequireDefault(require("./RegisterPageComponent"));
+
+var _LoginPageComponent = _interopRequireDefault(require("./LoginPageComponent"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 //browser
@@ -26831,8 +27086,10 @@ _reactDom.default.render(_react.default.createElement(_UpcomingComponent.default
 //     document.querySelector('#content'));
 
 
-_reactDom.default.render(_react.default.createElement(_ShowingCreateWishComponent.default, null), document.querySelector('#content'));
-},{"react-dom":"node_modules/react-dom/index.js","react":"node_modules/react/index.js","./NavBarCoponent":"src/NavBarCoponent.js","./MainComponent":"src/MainComponent.js","./UpcomingComponent":"src/UpcomingComponent.js","./ContentComponent":"src/ContentComponent.js","./MyEventComponent":"src/MyEventComponent.js","bootstrap/dist/css/bootstrap.css":"node_modules/bootstrap/dist/css/bootstrap.css","./SearchComponent":"src/SearchComponent.js","./CreateEventComponent":"src/CreateEventComponent.js","./CreateWishComponent":"src/CreateWishComponent.js","./ShowingCreateWishComponent":"src/ShowingCreateWishComponent.js"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+_reactDom.default.render(_react.default.createElement(_RegisterPageComponent.default, null), document.querySelector('#content'));
+
+_reactDom.default.render(_react.default.createElement(_LoginPageComponent.default, null), document.querySelector('#content'));
+},{"react-dom":"node_modules/react-dom/index.js","react":"node_modules/react/index.js","./NavBarCoponent":"src/NavBarCoponent.js","./MainComponent":"src/MainComponent.js","./UpcomingComponent":"src/UpcomingComponent.js","./ContentComponent":"src/ContentComponent.js","./MyEventComponent":"src/MyEventComponent.js","bootstrap/dist/css/bootstrap.css":"node_modules/bootstrap/dist/css/bootstrap.css","./SearchComponent":"src/SearchComponent.js","./CreateEventComponent":"src/CreateEventComponent.js","./CreateWishComponent":"src/CreateWishComponent.js","./ShowingCreateWishComponent":"src/ShowingCreateWishComponent.js","./RegisterPageComponent":"src/RegisterPageComponent.js","./LoginPageComponent":"src/LoginPageComponent.js"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -26860,7 +27117,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "63573" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "64639" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
