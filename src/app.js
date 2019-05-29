@@ -9,6 +9,7 @@
     import SearchComponent from './SearchComponent'
     import CreateEventComponent from './CreateEventComponent'
     import CreateWishComponent from './CreateWishComponent'
+    import ShowingCreateWish from './ShowingCreateWishComponent'
 
      ReactDOM.render(<NavBarCoponent />,
          document.querySelector('#navBar'));
@@ -31,7 +32,7 @@
                     // ReactDOM.render(<CreateEventComponent />,
                     //     document.querySelector('#content'));
 
-                        ReactDOM.render(<CreateWishComponent />,
+                        ReactDOM.render(<ShowingCreateWish />,
                             document.querySelector('#content'));
 
                         

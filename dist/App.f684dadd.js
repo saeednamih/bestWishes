@@ -26706,6 +26706,87 @@ function (_React$Component) {
 
 var _default = CreateWishComponent;
 exports.default = _default;
+},{"react":"node_modules/react/index.js"}],"src/ShowingCreateWishComponent.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireDefault(require("react"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+var ShowingCreateWish =
+/*#__PURE__*/
+function (_React$Component) {
+  _inherits(ShowingCreateWish, _React$Component);
+
+  function ShowingCreateWish() {
+    _classCallCheck(this, ShowingCreateWish);
+
+    return _possibleConstructorReturn(this, _getPrototypeOf(ShowingCreateWish).apply(this, arguments));
+  }
+
+  _createClass(ShowingCreateWish, [{
+    key: "render",
+    value: function render() {
+      return _react.default.createElement("div", {
+        class: "container"
+      }, _react.default.createElement("div", {
+        class: "row"
+      }, _react.default.createElement("div", {
+        class: "col-sm"
+      }, _react.default.createElement("div", {
+        class: "col-md-2"
+      }), _react.default.createElement("div", {
+        class: "col-md-5"
+      }, _react.default.createElement("div", {
+        class: "card",
+        style: {
+          width: '18re'
+        }
+      }, _react.default.createElement("img", {
+        id: "imgURL",
+        class: "img img-responsive full-width",
+        src: "..asset/imges/addWish.jpg"
+      }), _react.default.createElement("div", {
+        class: "card-body"
+      }, _react.default.createElement("h5", {
+        id: "fromCard",
+        class: "card-title"
+      }, "wedding invitation "), _react.default.createElement("p", {
+        class: "card-text"
+      }, _react.default.createElement("p", {
+        id: "wishing"
+      }, " Thursday"))))))));
+    }
+  }]);
+
+  return ShowingCreateWish;
+}(_react.default.Component);
+
+var _default = ShowingCreateWish;
+exports.default = _default;
 },{"react":"node_modules/react/index.js"}],"src/App.js":[function(require,module,exports) {
 "use strict";
 
@@ -26731,6 +26812,8 @@ var _CreateEventComponent = _interopRequireDefault(require("./CreateEventCompone
 
 var _CreateWishComponent = _interopRequireDefault(require("./CreateWishComponent"));
 
+var _ShowingCreateWishComponent = _interopRequireDefault(require("./ShowingCreateWishComponent"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 //browser
@@ -26748,8 +26831,8 @@ _reactDom.default.render(_react.default.createElement(_UpcomingComponent.default
 //     document.querySelector('#content'));
 
 
-_reactDom.default.render(_react.default.createElement(_CreateWishComponent.default, null), document.querySelector('#content'));
-},{"react-dom":"node_modules/react-dom/index.js","react":"node_modules/react/index.js","./NavBarCoponent":"src/NavBarCoponent.js","./MainComponent":"src/MainComponent.js","./UpcomingComponent":"src/UpcomingComponent.js","./ContentComponent":"src/ContentComponent.js","./MyEventComponent":"src/MyEventComponent.js","bootstrap/dist/css/bootstrap.css":"node_modules/bootstrap/dist/css/bootstrap.css","./SearchComponent":"src/SearchComponent.js","./CreateEventComponent":"src/CreateEventComponent.js","./CreateWishComponent":"src/CreateWishComponent.js"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+_reactDom.default.render(_react.default.createElement(_ShowingCreateWishComponent.default, null), document.querySelector('#content'));
+},{"react-dom":"node_modules/react-dom/index.js","react":"node_modules/react/index.js","./NavBarCoponent":"src/NavBarCoponent.js","./MainComponent":"src/MainComponent.js","./UpcomingComponent":"src/UpcomingComponent.js","./ContentComponent":"src/ContentComponent.js","./MyEventComponent":"src/MyEventComponent.js","bootstrap/dist/css/bootstrap.css":"node_modules/bootstrap/dist/css/bootstrap.css","./SearchComponent":"src/SearchComponent.js","./CreateEventComponent":"src/CreateEventComponent.js","./CreateWishComponent":"src/CreateWishComponent.js","./ShowingCreateWishComponent":"src/ShowingCreateWishComponent.js"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
