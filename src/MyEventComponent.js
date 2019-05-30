@@ -2,6 +2,19 @@ import React from 'react'
 import EventComponent  from './EventComponent'
 import {getUserEventsByUserID} from './statics/Api'
 class MyEventComponent extends React.Component {
+  constructor(){
+    super()
+    this.state={
+      events:[]
+    }
+  }
+  componentDidMount(){
+
+    this.setState({
+      events:getUserEventsByUserID(1)
+    })
+    console.log(this.state.events);
+  }
   render() {
     return (
       <>
@@ -18,7 +31,17 @@ class MyEventComponent extends React.Component {
         </section>
 
         <div class="row">
-        <EventComponent/>
+            {/* {this.state.MyEvents.map(i =>
+                   <EventComponent />
+            )} */}
+
+              {/* {this.state.myEvents.map((i) =>{
+                                <EventComponent />
+               } )} */}
+               {
+                      this.state.events.map(event =>  <EventComponent />)
+               }
+
         </div>
       </>
     )

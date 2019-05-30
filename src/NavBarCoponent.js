@@ -29,6 +29,7 @@ class NavBarCoponent extends React.Component{
     </li>
   </ul>
   <form class="form-inline my-2 my-lg-0">
+  <label>sdsasadadd</label>
   <NavLink to="/Login">
   <button id="loginbtn" class="navbar btn btn-outline-success my-2 mr-2 my-sm-0" type="submit">Log In</button>
   </NavLink> 
