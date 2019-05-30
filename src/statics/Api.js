@@ -240,8 +240,9 @@ const getUserWishesByUserID = (userId) => {
 const getUserEventsByUserID = (userId) => {
     return new Promise(resolve => {
         setTimeout(() => {
-            const userEvents = Users.filter(user => (user.userId == userId))[0].events;
-            resolve(userEvents);
+            const events = Users.filter(user => (user.userId == userId))[0].events;
+            resolve(events);
+            console.log(events)
         }, 500);
     })
 
@@ -270,7 +271,28 @@ const getEvent = id => {
     });
 }
 const getUsers = () => {
-    return JSON.parse(localStorage.getItem('users'));
+    return Users;
+}
+const checkUser = (userName, password) => {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            if (userName == 'saeed@gmail.com') {
+                resolve({
+                    status: {
+                        code: 200
+                    },
+                    userId: 1
+                });
+            } else {
+                resolve({
+                    status: {
+                        code: 404
+                    },
+                    error: 'Invalid username or password'
+                });
+            }
+        }, 1000);
+    })
 }
 
 export {
@@ -279,6 +301,7 @@ export {
     getEvents,
     getEvent,
     getUserEventsByUserID,
-    getUserWishesByUserID
+    getUserWishesByUserID,
+    checkUser
 };
 
