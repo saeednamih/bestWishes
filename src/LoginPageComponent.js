@@ -1,62 +1,66 @@
 import React from 'react';
-import  {getUsers, checkUser} from './statics/Api'
+import { getUsers, checkUser } from './statics/Api'
 import './LoginPageComponent.css';
-
+import { Form, Button, Col, Row, Card } from 'react-bootstrap'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faUser } from '@fortawesome/free-solid-svg-icons'
+import { faEye } from '@fortawesome/free-solid-svg-icons'
+import  BestWishes from '../assets/imges/BestWishes.png'
 export default class LoginPageComponent extends React.Component {
-    constructor(){
+    constructor() {
         super()
-        this.onSubmit=this.onSubmit.bind(this);
+        this.onSubmit = this.onSubmit.bind(this);
         this.onInputChange = this.onInputChange.bind(this);
-        this.state={
-            username:'',
-            password:''
+        this.state = {
+            email: '',
+            password: ''
         }
     }
     // componentDidMount(){
     //     this.setState.users=;
     //     console.log(this.state.users)
     // }
-    onSubmit(event){
+    onSubmit(event) {
         event.preventDefault();
 
-        const {username, password} = this.state;
-
-        checkUser(username, password)
-        .then(result => {
-            if(result.status.code == 200){
-                alert(`Hello userId  ${result.userId}`);
-            }else{
-                alert(result.status.error)
-            }
-        })
+        const { email, password } = this.state;
+        console.log(email)
+        checkUser(email, password)
+            .then(result => {
+                if (result.status.code == 200) {
+                    alert(`Hello userId  ${result.userId}`);
+                } else {
+                    alert(result.status.error)
+                }
+            })
 
     }
 
-    onInputChange({ target: { name, value } }){
+    onInputChange({ target: { name, value } }) {
         this.setState({
-            [name]:value
+            [name]: value
         });
-        console.log(name, value);
+        // console.log(name, value);
     }
 
     render() {
         return (
             <>
-                  <div className="row">
+                {/* <div className="row">
                     <div className="col-sm-3">
                     </div>
                     <div className="col-sm-6">
-                        <form  onSubmit={this.onSubmit}>
+                        <form onSubmit={this.onSubmit}>
                             <div className="form-group">
                                 <label htmlFor="email">User Name</label>
-                                <input type="email" name="username" className="form-control"  aria-describedby="emailHelp"
-                                    placeholder="Enter email or user Name"  onChange={this.onInputChange}/>
+                                <input type="email" name="username" className="form-control" aria-describedby="emailHelp"
+                                    placeholder="Enter email or user Name" onChange={this.onInputChange} />
                                 <small id="emailHelp" className="form-text text-muted">We'll never share your email with anyone else.</small>
                             </div>
                             <div className="form-group">
                                 <label htmlFor="exampleInputPassword1">Password</label>
-                                <input type="password" name="password"  password="userName" className="form-control" placeholder="Password"
-                                onChange={this.onInputChange} />
+                                <input type="password" name="password" password="userName" className="form-control" placeholder="Password"
+                                    onChange={this.onInputChange} />
                             </div>
                             <div className="LoginButton">
                                 <button type="submit" className="btn btn-primary">Log In</button>
@@ -68,9 +72,74 @@ export default class LoginPageComponent extends React.Component {
                     </div>
                     <div className="col-sm-3">
                     </div>
-                </div>
+                </div> */}
+                <Row>
+                    <Col></Col>
+                    <Col>
+                    <Card style={{ width: '18rem' }}>
+                    <Card.Img variant="top" src={BestWishes}/>
+                    <Card.Body>
+                        <Card.Title>Log In</Card.Title>
+                        <Card.Text>
+                        <Form onSubmit={this.onSubmit}>
+                                <Form.Row>
+                                    <Form.Group controlId="formBasicEmail">
+                                        <Form.Label> 
+                                             <FontAwesomeIcon icon={faUser} />    Email address</Form.Label>
+                                     
+                                        <Form.Control
+                          name="email"
+                          placeholder="Enter your Email"
+                          aria-label="Enter your Email"
+                          defaultValue={this.state.email.value}
+                          onBlur={this.onInputChange}
+                        />
+                                        <Form.Text className="text-muted">
+                                            We'll never share your email with anyone else.
+          
+                             </Form.Text>
+                                    </Form.Group>
+                                </Form.Row>
+                                <Form.Row>
+                                    <Form.Group controlId="formBasicPassword">
+                                        <Form.Label> <FontAwesomeIcon icon={faEye} /> Password</Form.Label>
+                                                                            
+                                        <Form.Control
+                          name="password"
+                          placeholder="password"
+                          aria-label="password"
+                          defaultValue={this.state.password.value}
+                          onBlur={this.onInputChange}
+                        />
+                                    </Form.Group>
+                                </Form.Row>
+                                <Form.Row>
+                                    <Form.Group controlId="formBasicChecbox">
+                                        <Form.Check type="checkbox" label="Check me out" />
+                                    </Form.Group>
+                                </Form.Row>
+                                <Row>
+                        <Button variant="primary" type="submit">Log In</Button>
+                        </Row>
+                        <Row  style={{marginTop:'10px'}}>
+                        <Button variant="primary" type="submit">Sign Up</Button>
+                        </Row>
+                            </Form>
+                        </Card.Text>
 
+                        <p><a href="">I forgot my password</a></p>
+                    </Card.Body>
+                </Card>
+                    </Col>
+
+                    <Col></Col>
+                </Row>
+
+               
+           
             </>
+
+
         );
     }
 }

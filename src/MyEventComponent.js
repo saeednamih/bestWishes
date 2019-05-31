@@ -8,13 +8,13 @@ class MyEventComponent extends React.Component {
       events:[]
     }
   }
-  componentDidMount(){
+  // componentDidMount(){
 
-    this.setState({
-      events:getUserEventsByUserID(1)
-    })
-    console.log(this.state.events);
-  }
+  //   this.setState({
+  //     events:getUserEventsByUserID(1)
+  //   })
+  //   console.log(this.state.events);
+  // }
   render() {
     return (
       <>
@@ -30,19 +30,7 @@ class MyEventComponent extends React.Component {
           </div>
         </section>
 
-        <div class="row">
-            {/* {this.state.MyEvents.map(i =>
-                   <EventComponent />
-            )} */}
 
-              {/* {this.state.myEvents.map((i) =>{
-                                <EventComponent />
-               } )} */}
-               {
-                      this.state.events.map(event =>  <EventComponent />)
-               }
-
-        </div>
       </>
     )
   }

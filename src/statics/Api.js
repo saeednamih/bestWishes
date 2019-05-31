@@ -276,7 +276,7 @@ const getUsers = () => {
 const checkUser = (userName, password) => {
     return new Promise((resolve, reject) => {
         setTimeout(() => {
-            if (userName == 'saeed@gmail.com') {
+            if (userName == 'saeed@gmail.com' && password=='123456') {
                 resolve({
                     status: {
                         code: 200
