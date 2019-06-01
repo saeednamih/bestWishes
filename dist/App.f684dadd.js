@@ -32268,15 +32268,17 @@ function (_React$Component) {
       events: []
     };
     return _this;
-  } // componentDidMount(){
-  //   this.setState({
-  //     events:getUserEventsByUserID(1)
-  //   })
-  //   console.log(this.state.events);
-  // }
-
+  }
 
   _createClass(MyEventComponent, [{
+    key: "componentDidMount",
+    value: function componentDidMount() {
+      this.setState({
+        events: (0, _Api.getUserEventsByUserID)(1)
+      });
+      console.log(this.state.events);
+    }
+  }, {
     key: "render",
     value: function render() {
       return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement("section", {
@@ -33495,7 +33497,7 @@ exports.default = _default;
 },{"@babel/runtime/helpers/esm/extends":"node_modules/react-bootstrap/node_modules/@babel/runtime/helpers/esm/extends.js","@babel/runtime/helpers/esm/objectWithoutPropertiesLoose":"node_modules/react-bootstrap/node_modules/@babel/runtime/helpers/esm/objectWithoutPropertiesLoose.js","react":"node_modules/react/index.js","./SelectableContext":"node_modules/react-bootstrap/es/SelectableContext.js"}],"node_modules/@babel/runtime/helpers/interopRequireDefault.js":[function(require,module,exports) {
 function _interopRequireDefault(obj) {
   return obj && obj.__esModule ? obj : {
-    default: obj
+    "default": obj
   };
 }
 
@@ -58075,7 +58077,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "62246" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "60488" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

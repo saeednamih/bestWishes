@@ -8,13 +8,12 @@ class MyEventComponent extends React.Component {
       events:[]
     }
   }
-  // componentDidMount(){
-
-  //   this.setState({
-  //     events:getUserEventsByUserID(1)
-  //   })
-  //   console.log(this.state.events);
-  // }
+   componentDidMount(){
+    this.setState({
+      events:getUserEventsByUserID(1)
+    })
+    console.log(this.state.events);
+  }
   render() {
     return (
       <>
