@@ -8,17 +8,9 @@ class MyEventComponent extends React.Component {
       events:[]
     }
   }
-<<<<<<< HEAD
   async componentDidMount(){
     const result =await myEvents();
     console.log(result);
-=======
-   componentDidMount(){
-    this.setState({
-      events:getUserEventsByUserID(1)
-    })
-    console.log(this.state.events);
->>>>>>> master
   }
   render() {
     return (
