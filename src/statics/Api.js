@@ -1,6 +1,7 @@
 
 import React from 'react';
 import axios from "axios";
+const URL = 'http://localhost:3080';
 
 const events = [
     {
@@ -276,7 +277,7 @@ const getUsers = () => {
 const checkUser = (userName, password) => {
     return new Promise((resolve, reject) => {
         setTimeout(() => {
-            if (userName == 'saeed@gmail.com' && password=='123456') {
+            if (userName == 'saeed@gmail.com' && password == '123456') {
                 resolve({
                     status: {
                         code: 200
@@ -294,7 +295,23 @@ const checkUser = (userName, password) => {
         }, 1000);
     })
 }
-
+const login = async (email, password) => {
+try {
+        const result =await  axios.post(URL + '/login', {
+            email,
+            password
+        });
+        const { data } = result;
+        if (data.status.code == 200) {
+            return { userId: data.userId }
+        } else {
+            return { erorr: data.error }
+        }
+    } catch (error) {
+    console.dir("login error:"+error)
+    return {error}
+    }
+}
 export {
     getUsers,
     getWishes,
@@ -302,6 +319,7 @@ export {
     getEvent,
     getUserEventsByUserID,
     getUserWishesByUserID,
-    checkUser
+    checkUser,
+    login
 };
 

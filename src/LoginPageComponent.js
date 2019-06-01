@@ -1,5 +1,5 @@
 import React from 'react';
-import { getUsers, checkUser } from './statics/Api'
+import { getUsers, login } from './statics/Api'
 import './LoginPageComponent.css';
 import { Form, Button, Col, Row, Card } from 'react-bootstrap'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -16,24 +16,13 @@ export default class LoginPageComponent extends React.Component {
             password: ''
         }
     }
-    // componentDidMount(){
-    //     this.setState.users=;
-    //     console.log(this.state.users)
-    // }
-    onSubmit(event) {
+
+    async onSubmit(event) {
         event.preventDefault();
+        const {email,password}=this.state
+        const result= await login(this.state.email, this.state.password);
 
-        const { email, password } = this.state;
-        console.log(email)
-        checkUser(email, password)
-            .then(result => {
-                if (result.status.code == 200) {
-                    alert(`Hello userId  ${result.userId}`);
-                } else {
-                    alert(result.status.error)
-                }
-            })
-
+       console.log(result.userId);
     }
 
     onInputChange({ target: { name, value } }) {
