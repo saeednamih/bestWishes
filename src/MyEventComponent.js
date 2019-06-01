@@ -1,6 +1,6 @@
 import React from 'react'
 import EventComponent  from './EventComponent'
-import {getUserEventsByUserID} from './statics/Api'
+import { getUsers, myEvents } from './statics/Api'
 class MyEventComponent extends React.Component {
   constructor(){
     super()
@@ -8,13 +8,10 @@ class MyEventComponent extends React.Component {
       events:[]
     }
   }
-  // componentDidMount(){
-
-  //   this.setState({
-  //     events:getUserEventsByUserID(1)
-  //   })
-  //   console.log(this.state.events);
-  // }
+  async componentDidMount(){
+    const result =await myEvents();
+    console.log(result);
+  }
   render() {
     return (
       <>

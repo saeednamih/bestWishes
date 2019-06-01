@@ -312,8 +312,27 @@ try {
     return {error}
     }
 }
+const myEvents= async()=>{
+    try{
+        const result= await axios.get(URL+'/events',{
+            headers:{
+                
+                Authorization: 'Bearer userId:a3c66333-9016-42a9-a5d2-fa432bda0519'
+            }
+        });
+        const{data}=result;
+            return data;
+    }catch(error){
+        console.dir(error);
+        return { error };
+    }
+
+
+}
+
 export {
     getUsers,
+    myEvents,
     getWishes,
     getEvents,
     getEvent,

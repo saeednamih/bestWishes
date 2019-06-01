@@ -30264,76 +30264,7 @@ function (_React$Component) {
 
 var _default = ContentComponent;
 exports.default = _default;
-},{"@babel/runtime/helpers/classCallCheck":"node_modules/@babel/runtime/helpers/classCallCheck.js","@babel/runtime/helpers/createClass":"node_modules/@babel/runtime/helpers/createClass.js","@babel/runtime/helpers/possibleConstructorReturn":"node_modules/@babel/runtime/helpers/possibleConstructorReturn.js","@babel/runtime/helpers/getPrototypeOf":"node_modules/@babel/runtime/helpers/getPrototypeOf.js","@babel/runtime/helpers/inherits":"node_modules/@babel/runtime/helpers/inherits.js","react":"node_modules/react/index.js","./UpcomingComponent":"src/UpcomingComponent.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js"}],"src/EventComponent.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-var _classCallCheck2 = _interopRequireDefault(require("@babel/runtime/helpers/classCallCheck"));
-
-var _createClass2 = _interopRequireDefault(require("@babel/runtime/helpers/createClass"));
-
-var _possibleConstructorReturn2 = _interopRequireDefault(require("@babel/runtime/helpers/possibleConstructorReturn"));
-
-var _getPrototypeOf2 = _interopRequireDefault(require("@babel/runtime/helpers/getPrototypeOf"));
-
-var _inherits2 = _interopRequireDefault(require("@babel/runtime/helpers/inherits"));
-
-var _react = _interopRequireDefault(require("react"));
-
-var _reactRouterDom = require("react-router-dom");
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var EventComponent =
-/*#__PURE__*/
-function (_React$Component) {
-  (0, _inherits2.default)(EventComponent, _React$Component);
-
-  function EventComponent() {
-    (0, _classCallCheck2.default)(this, EventComponent);
-    return (0, _possibleConstructorReturn2.default)(this, (0, _getPrototypeOf2.default)(EventComponent).call(this));
-  }
-
-  (0, _createClass2.default)(EventComponent, [{
-    key: "render",
-    value: function render() {
-      // const {title,catagory,date,where}=this.props.event
-      return _react.default.createElement("div", {
-        class: "col-md-4"
-      }, _react.default.createElement("div", {
-        class: "card mb-4 shadow-sm"
-      }, _react.default.createElement("img", {
-        class: "img img-responsive full-width",
-        src: ".\\assets\\imges\\addWish.jpg"
-      }), _react.default.createElement("div", {
-        class: "card-body"
-      }, _react.default.createElement("p", {
-        class: "card-text"
-      }, "Aaaa"), _react.default.createElement("div", {
-        class: "d-flex justify-content-between align-items-center"
-      }, _react.default.createElement("div", {
-        class: "btn-group"
-      }, _react.default.createElement("button", {
-        type: "button",
-        class: "btn btn-sm btn-outline-secondary"
-      }, "View"), _react.default.createElement("button", {
-        type: "button",
-        class: "btn btn-sm btn-outline-secondary"
-      }, "Edit")), _react.default.createElement("small", {
-        class: "text-muted"
-      }, "9 mins")))));
-    }
-  }]);
-  return EventComponent;
-}(_react.default.Component);
-
-var _default = EventComponent;
-exports.default = _default;
-},{"@babel/runtime/helpers/classCallCheck":"node_modules/@babel/runtime/helpers/classCallCheck.js","@babel/runtime/helpers/createClass":"node_modules/@babel/runtime/helpers/createClass.js","@babel/runtime/helpers/possibleConstructorReturn":"node_modules/@babel/runtime/helpers/possibleConstructorReturn.js","@babel/runtime/helpers/getPrototypeOf":"node_modules/@babel/runtime/helpers/getPrototypeOf.js","@babel/runtime/helpers/inherits":"node_modules/@babel/runtime/helpers/inherits.js","react":"node_modules/react/index.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js"}],"node_modules/regenerator-runtime/runtime.js":[function(require,module,exports) {
+},{"@babel/runtime/helpers/classCallCheck":"node_modules/@babel/runtime/helpers/classCallCheck.js","@babel/runtime/helpers/createClass":"node_modules/@babel/runtime/helpers/createClass.js","@babel/runtime/helpers/possibleConstructorReturn":"node_modules/@babel/runtime/helpers/possibleConstructorReturn.js","@babel/runtime/helpers/getPrototypeOf":"node_modules/@babel/runtime/helpers/getPrototypeOf.js","@babel/runtime/helpers/inherits":"node_modules/@babel/runtime/helpers/inherits.js","react":"node_modules/react/index.js","./UpcomingComponent":"src/UpcomingComponent.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js"}],"node_modules/regenerator-runtime/runtime.js":[function(require,module,exports) {
 /**
  * Copyright (c) 2014-present, Facebook, Inc.
  *
@@ -31102,7 +31033,76 @@ function _asyncToGenerator(fn) {
 }
 
 module.exports = _asyncToGenerator;
-},{}],"node_modules/axios/lib/helpers/bind.js":[function(require,module,exports) {
+},{}],"src/EventComponent.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _classCallCheck2 = _interopRequireDefault(require("@babel/runtime/helpers/classCallCheck"));
+
+var _createClass2 = _interopRequireDefault(require("@babel/runtime/helpers/createClass"));
+
+var _possibleConstructorReturn2 = _interopRequireDefault(require("@babel/runtime/helpers/possibleConstructorReturn"));
+
+var _getPrototypeOf2 = _interopRequireDefault(require("@babel/runtime/helpers/getPrototypeOf"));
+
+var _inherits2 = _interopRequireDefault(require("@babel/runtime/helpers/inherits"));
+
+var _react = _interopRequireDefault(require("react"));
+
+var _reactRouterDom = require("react-router-dom");
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var EventComponent =
+/*#__PURE__*/
+function (_React$Component) {
+  (0, _inherits2.default)(EventComponent, _React$Component);
+
+  function EventComponent() {
+    (0, _classCallCheck2.default)(this, EventComponent);
+    return (0, _possibleConstructorReturn2.default)(this, (0, _getPrototypeOf2.default)(EventComponent).call(this));
+  }
+
+  (0, _createClass2.default)(EventComponent, [{
+    key: "render",
+    value: function render() {
+      // const {title,catagory,date,where}=this.props.event
+      return _react.default.createElement("div", {
+        class: "col-md-4"
+      }, _react.default.createElement("div", {
+        class: "card mb-4 shadow-sm"
+      }, _react.default.createElement("img", {
+        class: "img img-responsive full-width",
+        src: ".\\assets\\imges\\addWish.jpg"
+      }), _react.default.createElement("div", {
+        class: "card-body"
+      }, _react.default.createElement("p", {
+        class: "card-text"
+      }, "Aaaa"), _react.default.createElement("div", {
+        class: "d-flex justify-content-between align-items-center"
+      }, _react.default.createElement("div", {
+        class: "btn-group"
+      }, _react.default.createElement("button", {
+        type: "button",
+        class: "btn btn-sm btn-outline-secondary"
+      }, "View"), _react.default.createElement("button", {
+        type: "button",
+        class: "btn btn-sm btn-outline-secondary"
+      }, "Edit")), _react.default.createElement("small", {
+        class: "text-muted"
+      }, "9 mins")))));
+    }
+  }]);
+  return EventComponent;
+}(_react.default.Component);
+
+var _default = EventComponent;
+exports.default = _default;
+},{"@babel/runtime/helpers/classCallCheck":"node_modules/@babel/runtime/helpers/classCallCheck.js","@babel/runtime/helpers/createClass":"node_modules/@babel/runtime/helpers/createClass.js","@babel/runtime/helpers/possibleConstructorReturn":"node_modules/@babel/runtime/helpers/possibleConstructorReturn.js","@babel/runtime/helpers/getPrototypeOf":"node_modules/@babel/runtime/helpers/getPrototypeOf.js","@babel/runtime/helpers/inherits":"node_modules/@babel/runtime/helpers/inherits.js","react":"node_modules/react/index.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js"}],"node_modules/axios/lib/helpers/bind.js":[function(require,module,exports) {
 'use strict';
 
 module.exports = function bind(fn, thisArg) {
@@ -32753,7 +32753,7 @@ module.exports = require('./lib/axios');
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.login = exports.checkUser = exports.getUserWishesByUserID = exports.getUserEventsByUserID = exports.getEvent = exports.getEvents = exports.getWishes = exports.getUsers = void 0;
+exports.login = exports.checkUser = exports.getUserWishesByUserID = exports.getUserEventsByUserID = exports.getEvent = exports.getEvents = exports.getWishes = exports.myEvents = exports.getUsers = void 0;
 
 var _regenerator = _interopRequireDefault(require("@babel/runtime/regenerator"));
 
@@ -33113,6 +33113,53 @@ function () {
 }();
 
 exports.login = login;
+
+var myEvents =
+/*#__PURE__*/
+function () {
+  var _ref2 = (0, _asyncToGenerator2.default)(
+  /*#__PURE__*/
+  _regenerator.default.mark(function _callee2() {
+    var result, data;
+    return _regenerator.default.wrap(function _callee2$(_context2) {
+      while (1) {
+        switch (_context2.prev = _context2.next) {
+          case 0:
+            _context2.prev = 0;
+            _context2.next = 3;
+            return _axios.default.get(URL + '/events', {
+              headers: {
+                Authorization: 'Bearer userId:a3c66333-9016-42a9-a5d2-fa432bda0519'
+              }
+            });
+
+          case 3:
+            result = _context2.sent;
+            data = result.data;
+            return _context2.abrupt("return", data);
+
+          case 8:
+            _context2.prev = 8;
+            _context2.t0 = _context2["catch"](0);
+            console.dir(_context2.t0);
+            return _context2.abrupt("return", {
+              error: _context2.t0
+            });
+
+          case 12:
+          case "end":
+            return _context2.stop();
+        }
+      }
+    }, _callee2, null, [[0, 8]]);
+  }));
+
+  return function myEvents() {
+    return _ref2.apply(this, arguments);
+  };
+}();
+
+exports.myEvents = myEvents;
 },{"@babel/runtime/regenerator":"node_modules/@babel/runtime/regenerator/index.js","@babel/runtime/helpers/asyncToGenerator":"node_modules/@babel/runtime/helpers/asyncToGenerator.js","react":"node_modules/react/index.js","axios":"node_modules/axios/index.js"}],"src/MyEventComponent.js":[function(require,module,exports) {
 "use strict";
 
@@ -33120,6 +33167,10 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.default = void 0;
+
+var _regenerator = _interopRequireDefault(require("@babel/runtime/regenerator"));
+
+var _asyncToGenerator2 = _interopRequireDefault(require("@babel/runtime/helpers/asyncToGenerator"));
 
 var _classCallCheck2 = _interopRequireDefault(require("@babel/runtime/helpers/classCallCheck"));
 
@@ -33153,15 +33204,41 @@ function (_React$Component) {
       events: []
     };
     return _this;
-  } // componentDidMount(){
-  //   this.setState({
-  //     events:getUserEventsByUserID(1)
-  //   })
-  //   console.log(this.state.events);
-  // }
-
+  }
 
   (0, _createClass2.default)(MyEventComponent, [{
+    key: "componentDidMount",
+    value: function () {
+      var _componentDidMount = (0, _asyncToGenerator2.default)(
+      /*#__PURE__*/
+      _regenerator.default.mark(function _callee() {
+        var result;
+        return _regenerator.default.wrap(function _callee$(_context) {
+          while (1) {
+            switch (_context.prev = _context.next) {
+              case 0:
+                _context.next = 2;
+                return (0, _Api.myEvents)();
+
+              case 2:
+                result = _context.sent;
+                console.log(result);
+
+              case 4:
+              case "end":
+                return _context.stop();
+            }
+          }
+        }, _callee);
+      }));
+
+      function componentDidMount() {
+        return _componentDidMount.apply(this, arguments);
+      }
+
+      return componentDidMount;
+    }()
+  }, {
     key: "render",
     value: function render() {
       return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement("section", {
@@ -33186,7 +33263,7 @@ function (_React$Component) {
 
 var _default = MyEventComponent;
 exports.default = _default;
-},{"@babel/runtime/helpers/classCallCheck":"node_modules/@babel/runtime/helpers/classCallCheck.js","@babel/runtime/helpers/createClass":"node_modules/@babel/runtime/helpers/createClass.js","@babel/runtime/helpers/possibleConstructorReturn":"node_modules/@babel/runtime/helpers/possibleConstructorReturn.js","@babel/runtime/helpers/getPrototypeOf":"node_modules/@babel/runtime/helpers/getPrototypeOf.js","@babel/runtime/helpers/inherits":"node_modules/@babel/runtime/helpers/inherits.js","react":"node_modules/react/index.js","./EventComponent":"src/EventComponent.js","./statics/Api":"src/statics/Api.js"}],"node_modules/parcel-bundler/src/builtins/bundle-url.js":[function(require,module,exports) {
+},{"@babel/runtime/regenerator":"node_modules/@babel/runtime/regenerator/index.js","@babel/runtime/helpers/asyncToGenerator":"node_modules/@babel/runtime/helpers/asyncToGenerator.js","@babel/runtime/helpers/classCallCheck":"node_modules/@babel/runtime/helpers/classCallCheck.js","@babel/runtime/helpers/createClass":"node_modules/@babel/runtime/helpers/createClass.js","@babel/runtime/helpers/possibleConstructorReturn":"node_modules/@babel/runtime/helpers/possibleConstructorReturn.js","@babel/runtime/helpers/getPrototypeOf":"node_modules/@babel/runtime/helpers/getPrototypeOf.js","@babel/runtime/helpers/inherits":"node_modules/@babel/runtime/helpers/inherits.js","react":"node_modules/react/index.js","./EventComponent":"src/EventComponent.js","./statics/Api":"src/statics/Api.js"}],"node_modules/parcel-bundler/src/builtins/bundle-url.js":[function(require,module,exports) {
 var bundleURL = null;
 
 function getBundleURLCached() {
@@ -58891,7 +58968,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "60488" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "51858" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
