@@ -51920,474 +51920,7 @@ function (_React$Component) {
 
 var _default = SearchComponent;
 exports.default = _default;
-},{"@babel/runtime/helpers/defineProperty":"node_modules/@babel/runtime/helpers/defineProperty.js","@babel/runtime/helpers/classCallCheck":"node_modules/@babel/runtime/helpers/classCallCheck.js","@babel/runtime/helpers/createClass":"node_modules/@babel/runtime/helpers/createClass.js","@babel/runtime/helpers/possibleConstructorReturn":"node_modules/@babel/runtime/helpers/possibleConstructorReturn.js","@babel/runtime/helpers/getPrototypeOf":"node_modules/@babel/runtime/helpers/getPrototypeOf.js","@babel/runtime/helpers/inherits":"node_modules/@babel/runtime/helpers/inherits.js","react":"node_modules/react/index.js"}],"src/CreateEventComponent.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-var _classCallCheck2 = _interopRequireDefault(require("@babel/runtime/helpers/classCallCheck"));
-
-var _createClass2 = _interopRequireDefault(require("@babel/runtime/helpers/createClass"));
-
-var _possibleConstructorReturn2 = _interopRequireDefault(require("@babel/runtime/helpers/possibleConstructorReturn"));
-
-var _getPrototypeOf2 = _interopRequireDefault(require("@babel/runtime/helpers/getPrototypeOf"));
-
-var _inherits2 = _interopRequireDefault(require("@babel/runtime/helpers/inherits"));
-
-var _react = _interopRequireDefault(require("react"));
-
-var _reactRouterDom = require("react-router-dom");
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var CreateEventComponent =
-/*#__PURE__*/
-function (_React$Component) {
-  (0, _inherits2.default)(CreateEventComponent, _React$Component);
-
-  function CreateEventComponent() {
-    (0, _classCallCheck2.default)(this, CreateEventComponent);
-    return (0, _possibleConstructorReturn2.default)(this, (0, _getPrototypeOf2.default)(CreateEventComponent).apply(this, arguments));
-  }
-
-  (0, _createClass2.default)(CreateEventComponent, [{
-    key: "render",
-    value: function render() {
-      return _react.default.createElement("div", {
-        class: "container-fluid"
-      }, _react.default.createElement("div", {
-        class: "row mt-5"
-      }, _react.default.createElement("div", {
-        class: "col-md-2"
-      }), _react.default.createElement("div", {
-        class: "col-md-8"
-      }, _react.default.createElement("div", null, _react.default.createElement("div", {
-        class: "form-group"
-      }, _react.default.createElement("label", {
-        for: "slctCategory"
-      }, "Category"), _react.default.createElement("select", {
-        class: "form-control",
-        id: "slctCategory"
-      }, _react.default.createElement("option", {
-        value: ""
-      }, "Select Category"), _react.default.createElement("option", {
-        value: "Angular"
-      }, "Birthday"), _react.default.createElement("option", {
-        value: "JavaScript"
-      }, "Wedding"), _react.default.createElement("option", {
-        value: "React"
-      }, "Baby"), _react.default.createElement("option", {
-        value: "Node"
-      }, "Game")), _react.default.createElement("span", {
-        class: "error hidden"
-      }, "*")), _react.default.createElement("div", {
-        class: "form-group"
-      }, _react.default.createElement("label", {
-        for: "txtTitle"
-      }, "Title"), _react.default.createElement("input", {
-        type: "text",
-        class: "form-control",
-        id: "txtTitle",
-        placeholder: "Please Enter Your Event Name"
-      })), _react.default.createElement("div", {
-        class: "form-group"
-      }, _react.default.createElement("label", {
-        for: "txtTime txtTime"
-      }, "When"), _react.default.createElement("input", {
-        type: "date",
-        id: "txtDate"
-      }), _react.default.createElement("input", {
-        type: "time",
-        id: "txtTime"
-      }), _react.default.createElement("span", {
-        class: "error hidden"
-      }, "*")), _react.default.createElement("div", {
-        class: "form-group"
-      }, _react.default.createElement("label", {
-        for: "where"
-      }, "Where"), _react.default.createElement("input", {
-        type: "text",
-        class: "form-control",
-        id: "where",
-        placeholder: "Please Enter The Location"
-      })), _react.default.createElement(_reactRouterDom.NavLink, {
-        to: "/MyEvents"
-      }, _react.default.createElement("button", {
-        id: "cerateEvent",
-        class: "btn btn-primary btn-block"
-      }, "Cerate Event")), _react.default.createElement(_reactRouterDom.NavLink, {
-        to: "/MyEvents"
-      }, _react.default.createElement("button", {
-        id: "back",
-        class: "btn btn-primary btn-block"
-      }, "Back To  My Events")))), _react.default.createElement("div", {
-        class: "col-md-2 event-preview"
-      })), _react.default.createElement("div", {
-        class: "row mt"
-      }, _react.default.createElement("div", {
-        id: "eventsGallery",
-        class: "container-fluid"
-      })));
-    }
-  }]);
-  return CreateEventComponent;
-}(_react.default.Component);
-
-var _default = CreateEventComponent;
-exports.default = _default;
-},{"@babel/runtime/helpers/classCallCheck":"node_modules/@babel/runtime/helpers/classCallCheck.js","@babel/runtime/helpers/createClass":"node_modules/@babel/runtime/helpers/createClass.js","@babel/runtime/helpers/possibleConstructorReturn":"node_modules/@babel/runtime/helpers/possibleConstructorReturn.js","@babel/runtime/helpers/getPrototypeOf":"node_modules/@babel/runtime/helpers/getPrototypeOf.js","@babel/runtime/helpers/inherits":"node_modules/@babel/runtime/helpers/inherits.js","react":"node_modules/react/index.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js"}],"src/CreateWishComponent.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-var _classCallCheck2 = _interopRequireDefault(require("@babel/runtime/helpers/classCallCheck"));
-
-var _createClass2 = _interopRequireDefault(require("@babel/runtime/helpers/createClass"));
-
-var _possibleConstructorReturn2 = _interopRequireDefault(require("@babel/runtime/helpers/possibleConstructorReturn"));
-
-var _getPrototypeOf2 = _interopRequireDefault(require("@babel/runtime/helpers/getPrototypeOf"));
-
-var _inherits2 = _interopRequireDefault(require("@babel/runtime/helpers/inherits"));
-
-var _react = _interopRequireDefault(require("react"));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var CreateWishComponent =
-/*#__PURE__*/
-function (_React$Component) {
-  (0, _inherits2.default)(CreateWishComponent, _React$Component);
-
-  function CreateWishComponent() {
-    (0, _classCallCheck2.default)(this, CreateWishComponent);
-    return (0, _possibleConstructorReturn2.default)(this, (0, _getPrototypeOf2.default)(CreateWishComponent).apply(this, arguments));
-  }
-
-  (0, _createClass2.default)(CreateWishComponent, [{
-    key: "render",
-    value: function render() {
-      return _react.default.createElement("div", {
-        class: "col-sm"
-      }, _react.default.createElement("div", {
-        class: "container"
-      }, _react.default.createElement("div", {
-        class: "row"
-      }, _react.default.createElement("div", {
-        class: "col-sm"
-      }, _react.default.createElement("form", {
-        class: "text-center border border-light p-5"
-      }, _react.default.createElement("div", {
-        class: "container"
-      }, _react.default.createElement("div", {
-        class: "row"
-      }, _react.default.createElement("div", {
-        class: "col-sm"
-      }, _react.default.createElement("div", {
-        class: "row"
-      }), _react.default.createElement("div", {
-        class: "row"
-      }, _react.default.createElement("label", {
-        for: "fromtext"
-      }, "From:")), _react.default.createElement("div", {
-        class: "row mb-5"
-      }), _react.default.createElement("div", {
-        class: "row"
-      }, _react.default.createElement("label", {
-        for: "fromtext"
-      }, "Wishing you :")), _react.default.createElement("div", {
-        class: "row mb-5"
-      }), _react.default.createElement("div", {
-        class: "row  mb-5"
-      }), _react.default.createElement("div", {
-        class: "row  mb-5"
-      }), _react.default.createElement("div", {
-        class: "row  mb-5"
-      }), _react.default.createElement("div", {
-        class: "row  mb-5"
-      }), _react.default.createElement("div", {
-        class: "row"
-      }, _react.default.createElement("label", {
-        for: "ImgURL"
-      }, "ImgURL:"))), _react.default.createElement("div", {
-        class: "col-sm"
-      }, _react.default.createElement("div", {
-        class: "row"
-      }, _react.default.createElement("input", {
-        type: "text",
-        id: "fromtext",
-        class: "form-control mb-4",
-        style: {
-          width: '17rem'
-        },
-        placeholder: "Please enter your name "
-      })), _react.default.createElement("div", {
-        class: "row"
-      }), _react.default.createElement("div", {
-        class: "row mb-5"
-      }, _react.default.createElement("textarea", {
-        class: "form-control rounded-0",
-        id: "wishingtxt",
-        rows: "10",
-        placeholder: ""
-      })), _react.default.createElement("div", {
-        class: "row mb-5"
-      }, _react.default.createElement("input", {
-        type: "text",
-        id: "ImgURL",
-        class: "form-control mb-4",
-        placeholder: "ImgURL "
-      })))), _react.default.createElement("div", {
-        class: "container"
-      }, _react.default.createElement("div", {
-        class: "row"
-      }, _react.default.createElement("div", {
-        class: "col-sm"
-      }), _react.default.createElement("div", {
-        class: "col-sm"
-      }), _react.default.createElement("div", {
-        class: "col-sm"
-      }, _react.default.createElement("button", {
-        id: "sendWish",
-        class: "btn btn-info ",
-        style: {
-          width: '18rem'
-        },
-        type: "submit"
-      }, "Add wish"))))))))));
-    }
-  }]);
-  return CreateWishComponent;
-}(_react.default.Component);
-
-var _default = CreateWishComponent;
-exports.default = _default;
-},{"@babel/runtime/helpers/classCallCheck":"node_modules/@babel/runtime/helpers/classCallCheck.js","@babel/runtime/helpers/createClass":"node_modules/@babel/runtime/helpers/createClass.js","@babel/runtime/helpers/possibleConstructorReturn":"node_modules/@babel/runtime/helpers/possibleConstructorReturn.js","@babel/runtime/helpers/getPrototypeOf":"node_modules/@babel/runtime/helpers/getPrototypeOf.js","@babel/runtime/helpers/inherits":"node_modules/@babel/runtime/helpers/inherits.js","react":"node_modules/react/index.js"}],"src/ShowingCreateWishComponent.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-var _classCallCheck2 = _interopRequireDefault(require("@babel/runtime/helpers/classCallCheck"));
-
-var _createClass2 = _interopRequireDefault(require("@babel/runtime/helpers/createClass"));
-
-var _possibleConstructorReturn2 = _interopRequireDefault(require("@babel/runtime/helpers/possibleConstructorReturn"));
-
-var _getPrototypeOf2 = _interopRequireDefault(require("@babel/runtime/helpers/getPrototypeOf"));
-
-var _inherits2 = _interopRequireDefault(require("@babel/runtime/helpers/inherits"));
-
-var _react = _interopRequireDefault(require("react"));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var ShowingCreateWish =
-/*#__PURE__*/
-function (_React$Component) {
-  (0, _inherits2.default)(ShowingCreateWish, _React$Component);
-
-  function ShowingCreateWish() {
-    (0, _classCallCheck2.default)(this, ShowingCreateWish);
-    return (0, _possibleConstructorReturn2.default)(this, (0, _getPrototypeOf2.default)(ShowingCreateWish).apply(this, arguments));
-  }
-
-  (0, _createClass2.default)(ShowingCreateWish, [{
-    key: "render",
-    value: function render() {
-      return _react.default.createElement("div", {
-        class: "container"
-      }, _react.default.createElement("div", {
-        class: "row"
-      }, _react.default.createElement("div", {
-        class: "col-sm"
-      }, _react.default.createElement("div", {
-        class: "col-md-2"
-      }), _react.default.createElement("div", {
-        class: "col-md-5"
-      }, _react.default.createElement("div", {
-        class: "card",
-        style: {
-          width: '18re'
-        }
-      }, _react.default.createElement("img", {
-        id: "imgURL",
-        class: "img img-responsive full-width",
-        src: "..asset/imges/addWish.jpg"
-      }), _react.default.createElement("div", {
-        class: "card-body"
-      }, _react.default.createElement("h5", {
-        id: "fromCard",
-        class: "card-title"
-      }, "wedding invitation "), _react.default.createElement("p", {
-        class: "card-text"
-      }, _react.default.createElement("p", {
-        id: "wishing"
-      }, " Thursday"))))))));
-    }
-  }]);
-  return ShowingCreateWish;
-}(_react.default.Component);
-
-var _default = ShowingCreateWish;
-exports.default = _default;
-},{"@babel/runtime/helpers/classCallCheck":"node_modules/@babel/runtime/helpers/classCallCheck.js","@babel/runtime/helpers/createClass":"node_modules/@babel/runtime/helpers/createClass.js","@babel/runtime/helpers/possibleConstructorReturn":"node_modules/@babel/runtime/helpers/possibleConstructorReturn.js","@babel/runtime/helpers/getPrototypeOf":"node_modules/@babel/runtime/helpers/getPrototypeOf.js","@babel/runtime/helpers/inherits":"node_modules/@babel/runtime/helpers/inherits.js","react":"node_modules/react/index.js"}],"src/RegisterPageComponent.css":[function(require,module,exports) {
-var reloadCSS = require('_css_loader');
-
-module.hot.dispose(reloadCSS);
-module.hot.accept(reloadCSS);
-},{"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js"}],"src/RegisterPageComponent.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-var _classCallCheck2 = _interopRequireDefault(require("@babel/runtime/helpers/classCallCheck"));
-
-var _createClass2 = _interopRequireDefault(require("@babel/runtime/helpers/createClass"));
-
-var _possibleConstructorReturn2 = _interopRequireDefault(require("@babel/runtime/helpers/possibleConstructorReturn"));
-
-var _getPrototypeOf2 = _interopRequireDefault(require("@babel/runtime/helpers/getPrototypeOf"));
-
-var _inherits2 = _interopRequireDefault(require("@babel/runtime/helpers/inherits"));
-
-var _react = _interopRequireDefault(require("react"));
-
-require("./RegisterPageComponent.css");
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var RegisterPageComponent =
-/*#__PURE__*/
-function (_React$Component) {
-  (0, _inherits2.default)(RegisterPageComponent, _React$Component);
-
-  function RegisterPageComponent() {
-    (0, _classCallCheck2.default)(this, RegisterPageComponent);
-    return (0, _possibleConstructorReturn2.default)(this, (0, _getPrototypeOf2.default)(RegisterPageComponent).apply(this, arguments));
-  }
-
-  (0, _createClass2.default)(RegisterPageComponent, [{
-    key: "render",
-    value: function render() {
-      return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement("div", {
-        className: "row"
-      }, _react.default.createElement("div", {
-        className: "col-sm-3 "
-      }), _react.default.createElement("div", {
-        className: "col-sm-6"
-      }, _react.default.createElement("form", null, _react.default.createElement("div", {
-        className: "row"
-      }, _react.default.createElement("div", {
-        className: "col"
-      }, _react.default.createElement("input", {
-        type: "text",
-        className: "form-control",
-        placeholder: "First name"
-      })), _react.default.createElement("div", {
-        className: "col"
-      }, _react.default.createElement("input", {
-        type: "text",
-        className: "form-control",
-        placeholder: "Last name"
-      }))), _react.default.createElement("div", {
-        className: "form-group"
-      }, _react.default.createElement("label", {
-        htmlFor: "exampleInputEmail1"
-      }, "Birth Date:"), _react.default.createElement("input", {
-        type: "date",
-        className: "form-control",
-        id: "exampleInputDate",
-        "aria-describedby": "Date"
-      })), _react.default.createElement("div", {
-        className: "form form-group"
-      }, _react.default.createElement("label", null, "Gender:"), _react.default.createElement("div", {
-        className: "form-check form-check-inline"
-      }, _react.default.createElement("input", {
-        className: "form-check-input",
-        type: "radio",
-        name: "inlineRadioOptions",
-        id: "inlineRadio1",
-        value: "option1"
-      }), _react.default.createElement("label", {
-        className: "form-check-label",
-        htmlFor: "inlineRadio1"
-      }, "Male")), _react.default.createElement("div", {
-        className: "form-check form-check-inline"
-      }, _react.default.createElement("input", {
-        className: "form-check-input",
-        type: "radio",
-        name: "inlineRadioOptions",
-        id: "inlineRadio2",
-        value: "option2"
-      }), _react.default.createElement("label", {
-        className: "form-check-label",
-        htmlFor: "inlineRadio2"
-      }, "Female")), _react.default.createElement("div", {
-        className: "form-check form-check-inline"
-      }, _react.default.createElement("input", {
-        className: "form-check-input",
-        type: "radio",
-        name: "inlineRadioOptions",
-        id: "inlineRadio3",
-        value: "option3"
-      }), _react.default.createElement("label", {
-        className: "form-check-label",
-        htmlFor: "inlineRadio3"
-      }, "Other"))), _react.default.createElement("div", {
-        className: "form-group"
-      }, _react.default.createElement("label", {
-        htmlFor: "exampleInputEmail1"
-      }, "User Name"), _react.default.createElement("input", {
-        type: "email",
-        className: "form-control",
-        id: "exampleInputEmail1",
-        "aria-describedby": "emailHelp",
-        placeholder: "Enter email or user Name"
-      }), _react.default.createElement("small", {
-        id: "emailHelp",
-        className: "form-text text-muted"
-      }, "We'll never share your email with anyone else.")), _react.default.createElement("div", {
-        className: "form-group"
-      }, _react.default.createElement("label", {
-        htmlFor: "exampleInputPassword1"
-      }, "Password"), _react.default.createElement("input", {
-        type: "password",
-        className: "form-control",
-        id: "exampleInputPassword1",
-        placeholder: "Password"
-      })), _react.default.createElement("div", {
-        className: "LoginButton"
-      }, _react.default.createElement("button", {
-        type: "submit",
-        className: "btn btn-primary"
-      }, "Sign Up")))), _react.default.createElement("div", {
-        className: "col"
-      })));
-    }
-  }]);
-  return RegisterPageComponent;
-}(_react.default.Component);
-
-exports.default = RegisterPageComponent;
-},{"@babel/runtime/helpers/classCallCheck":"node_modules/@babel/runtime/helpers/classCallCheck.js","@babel/runtime/helpers/createClass":"node_modules/@babel/runtime/helpers/createClass.js","@babel/runtime/helpers/possibleConstructorReturn":"node_modules/@babel/runtime/helpers/possibleConstructorReturn.js","@babel/runtime/helpers/getPrototypeOf":"node_modules/@babel/runtime/helpers/getPrototypeOf.js","@babel/runtime/helpers/inherits":"node_modules/@babel/runtime/helpers/inherits.js","react":"node_modules/react/index.js","./RegisterPageComponent.css":"src/RegisterPageComponent.css"}],"src/LoginPageComponent.css":[function(require,module,exports) {
-var reloadCSS = require('_css_loader');
-
-module.hot.dispose(reloadCSS);
-module.hot.accept(reloadCSS);
-},{"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js"}],"node_modules/@fortawesome/fontawesome-svg-core/index.es.js":[function(require,module,exports) {
+},{"@babel/runtime/helpers/defineProperty":"node_modules/@babel/runtime/helpers/defineProperty.js","@babel/runtime/helpers/classCallCheck":"node_modules/@babel/runtime/helpers/classCallCheck.js","@babel/runtime/helpers/createClass":"node_modules/@babel/runtime/helpers/createClass.js","@babel/runtime/helpers/possibleConstructorReturn":"node_modules/@babel/runtime/helpers/possibleConstructorReturn.js","@babel/runtime/helpers/getPrototypeOf":"node_modules/@babel/runtime/helpers/getPrototypeOf.js","@babel/runtime/helpers/inherits":"node_modules/@babel/runtime/helpers/inherits.js","react":"node_modules/react/index.js"}],"node_modules/@fortawesome/fontawesome-svg-core/index.es.js":[function(require,module,exports) {
 var global = arguments[3];
 "use strict";
 
@@ -61831,7 +61364,536 @@ var _iconsCache = {
   faYinYang: faYinYang
 };
 exports.fas = _iconsCache;
-},{}],"assets/imges/BestWishes.png":[function(require,module,exports) {
+},{}],"src/CreateEventComponent.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _classCallCheck2 = _interopRequireDefault(require("@babel/runtime/helpers/classCallCheck"));
+
+var _createClass2 = _interopRequireDefault(require("@babel/runtime/helpers/createClass"));
+
+var _possibleConstructorReturn2 = _interopRequireDefault(require("@babel/runtime/helpers/possibleConstructorReturn"));
+
+var _getPrototypeOf2 = _interopRequireDefault(require("@babel/runtime/helpers/getPrototypeOf"));
+
+var _inherits2 = _interopRequireDefault(require("@babel/runtime/helpers/inherits"));
+
+var _react = _interopRequireDefault(require("react"));
+
+var _reactRouterDom = require("react-router-dom");
+
+var _reactBootstrap = require("react-bootstrap");
+
+var _reactFontawesome = require("@fortawesome/react-fontawesome");
+
+var _freeSolidSvgIcons = require("@fortawesome/free-solid-svg-icons");
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var CreateEventComponent =
+/*#__PURE__*/
+function (_React$Component) {
+  (0, _inherits2.default)(CreateEventComponent, _React$Component);
+
+  function CreateEventComponent() {
+    (0, _classCallCheck2.default)(this, CreateEventComponent);
+    return (0, _possibleConstructorReturn2.default)(this, (0, _getPrototypeOf2.default)(CreateEventComponent).apply(this, arguments));
+  }
+
+  (0, _createClass2.default)(CreateEventComponent, [{
+    key: "render",
+    value: function render() {
+      // return (
+      //     <div class="container-fluid">
+      //         <div class="row mt-5">
+      //             <div class="col-md-2">
+      //             </div>
+      //             <div class="col-md-8">
+      //                 <div>
+      //                     <div class="form-group">
+      //                         <label for="slctCategory">Category</label>
+      //                         <select class="form-control" id="slctCategory">
+      //                             <option value="">Select Category</option>
+      //                             <option value="Angular">Birthday</option>
+      //                             <option value="JavaScript">Wedding</option>
+      //                             <option value="React">Baby</option>
+      //                             <option value="Node">Game</option>
+      //                         </select>
+      //                         <span class="error hidden">*</span>
+      //                     </div>
+      //                     <div class="form-group">
+      //                         <label for="txtTitle">Title</label>
+      //                         <input type="text" class="form-control" id="txtTitle"
+      //                             placeholder="Please Enter Your Event Name" />
+      //                     </div>
+      //                     <div class="form-group">
+      //                         <label for="txtTime txtTime">When</label>
+      //                         <input type="date" id="txtDate" />
+      //                         <input type="time" id="txtTime" />
+      //                         <span class="error hidden">*</span>
+      //                     </div>
+      //                     <div class="form-group">
+      //                         <label for="where">Where</label>
+      //                         <input type="text" class="form-control" id="where"
+      //                             placeholder="Please Enter The Location" />
+      //                     </div>
+      //                     <NavLink to='/MyEvents'>
+      //                         <button id="cerateEvent" class="btn btn-primary btn-block">Cerate Event</button>
+      //                     </NavLink>
+      //                     <NavLink to='/MyEvents'>
+      //                         <button id="back" class="btn btn-primary btn-block">Back To  My Events</button>
+      //                     </NavLink>
+      //                 </div>
+      //             </div>
+      //             <div class="col-md-2 event-preview">
+      //             </div>
+      //         </div>
+      //         <div class="row mt">
+      //             <div id="eventsGallery" class="container-fluid">
+      //             </div>
+      //         </div>
+      //     </div>
+      // );
+      return _react.default.createElement(_reactBootstrap.Container, null, _react.default.createElement(_reactBootstrap.Row, null, _react.default.createElement(_reactBootstrap.Col, {
+        md: {
+          span: 3,
+          offset: 3
+        }
+      }, _react.default.createElement("h4", null, "Create New Event"), _react.default.createElement("hr", null))), _react.default.createElement(_reactBootstrap.Form, {
+        onSubmit: this.onSubmit
+      }, _react.default.createElement(_reactBootstrap.Form.Row, null, _react.default.createElement(_reactBootstrap.Form.Group, {
+        as: _reactBootstrap.Col,
+        md: "4",
+        controlId: "formControlTitle"
+      }, _react.default.createElement(_reactBootstrap.Form.Label, null, "Title"), _react.default.createElement(_reactBootstrap.InputGroup, {
+        className: "mb-3"
+      }, _react.default.createElement(_reactBootstrap.InputGroup.Prepend, null, _react.default.createElement(_reactBootstrap.InputGroup.Text, null, _react.default.createElement(_reactFontawesome.FontAwesomeIcon, {
+        icon: _freeSolidSvgIcons.faGift
+      }))), _react.default.createElement(_reactBootstrap.Form.Control, null))), _react.default.createElement(_reactBootstrap.Form.Group, {
+        as: _reactBootstrap.Col,
+        md: "4",
+        controlId: "formControlCategory"
+      }, _react.default.createElement(_reactBootstrap.Form.Label, null, "Category"), _react.default.createElement(_reactBootstrap.InputGroup, {
+        className: "mb-3"
+      }, _react.default.createElement(_reactBootstrap.InputGroup.Prepend, null, _react.default.createElement(_reactBootstrap.InputGroup.Text, null, _react.default.createElement(_reactFontawesome.FontAwesomeIcon, {
+        icon: _freeSolidSvgIcons.faSearch
+      }))), _react.default.createElement(_reactBootstrap.Form.Control, null)))), _react.default.createElement(_reactBootstrap.Form.Row, null, _react.default.createElement(_reactBootstrap.Form.Group, {
+        as: _reactBootstrap.Col,
+        md: "4",
+        controlId: "formControlStratDate"
+      }, _react.default.createElement(_reactBootstrap.Form.Label, null, "Start Date"), _react.default.createElement(_reactBootstrap.InputGroup, {
+        className: "mb-3"
+      }, _react.default.createElement(_reactBootstrap.InputGroup.Prepend, null, _react.default.createElement(_reactBootstrap.InputGroup.Text, null, _react.default.createElement(_reactFontawesome.FontAwesomeIcon, {
+        icon: _freeSolidSvgIcons.faCalendar
+      }))), _react.default.createElement(_reactBootstrap.Form.Control, {
+        type: "Date"
+      }))), _react.default.createElement(_reactBootstrap.Form.Group, {
+        as: _reactBootstrap.Col,
+        md: "4",
+        controlId: "formControlStartTime"
+      }, _react.default.createElement(_reactBootstrap.Form.Label, null, "StratTime"), _react.default.createElement(_reactBootstrap.InputGroup, {
+        className: "mb-3"
+      }, _react.default.createElement(_reactBootstrap.InputGroup.Prepend, null, _react.default.createElement(_reactBootstrap.InputGroup.Text, null, _react.default.createElement(_reactFontawesome.FontAwesomeIcon, {
+        icon: _freeSolidSvgIcons.faClock
+      }))), _react.default.createElement(_reactBootstrap.Form.Control, {
+        type: "time"
+      })))), _react.default.createElement(_reactBootstrap.Form.Row, null, _react.default.createElement(_reactBootstrap.Form.Group, {
+        as: _reactBootstrap.Col,
+        md: "4",
+        controlId: "formControlEndDate"
+      }, _react.default.createElement(_reactBootstrap.Form.Label, null, "End Date"), _react.default.createElement(_reactBootstrap.InputGroup, {
+        className: "mb-3"
+      }, _react.default.createElement(_reactBootstrap.InputGroup.Prepend, null, _react.default.createElement(_reactBootstrap.InputGroup.Text, null, _react.default.createElement(_reactFontawesome.FontAwesomeIcon, {
+        icon: _freeSolidSvgIcons.faCalendar
+      }))), _react.default.createElement(_reactBootstrap.Form.Control, {
+        type: "Date"
+      }))), _react.default.createElement(_reactBootstrap.Form.Group, {
+        as: _reactBootstrap.Col,
+        md: "4",
+        controlId: "formControlEndTime"
+      }, _react.default.createElement(_reactBootstrap.Form.Label, null, "End Time"), _react.default.createElement(_reactBootstrap.InputGroup, {
+        className: "mb-3"
+      }, _react.default.createElement(_reactBootstrap.InputGroup.Prepend, null, _react.default.createElement(_reactBootstrap.InputGroup.Text, null, _react.default.createElement(_reactFontawesome.FontAwesomeIcon, {
+        icon: _freeSolidSvgIcons.faClock
+      }))), _react.default.createElement(_reactBootstrap.Form.Control, {
+        type: "time"
+      })))), _react.default.createElement(_reactBootstrap.Form.Row, null, _react.default.createElement(_reactBootstrap.Form.Group, {
+        as: _reactBootstrap.Col,
+        md: "6",
+        controlId: "formControlStartDate"
+      }, _react.default.createElement(_reactBootstrap.Form.Label, null, "Location"), _react.default.createElement(_reactBootstrap.InputGroup, {
+        className: "mb-3"
+      }, _react.default.createElement(_reactBootstrap.InputGroup.Prepend, null, _react.default.createElement(_reactBootstrap.InputGroup.Text, null, _react.default.createElement(_reactFontawesome.FontAwesomeIcon, {
+        icon: _freeSolidSvgIcons.faLocationArrow
+      }))), _react.default.createElement(_reactBootstrap.Form.Control, null))), _react.default.createElement(_reactBootstrap.Col, {
+        md: "4"
+      }, _react.default.createElement(_reactBootstrap.Button, {
+        style: {
+          marginTop: '51px'
+        },
+        variant: "primary",
+        type: "submit"
+      }, "Submit")))));
+    }
+  }]);
+  return CreateEventComponent;
+}(_react.default.Component);
+
+var _default = CreateEventComponent;
+exports.default = _default;
+},{"@babel/runtime/helpers/classCallCheck":"node_modules/@babel/runtime/helpers/classCallCheck.js","@babel/runtime/helpers/createClass":"node_modules/@babel/runtime/helpers/createClass.js","@babel/runtime/helpers/possibleConstructorReturn":"node_modules/@babel/runtime/helpers/possibleConstructorReturn.js","@babel/runtime/helpers/getPrototypeOf":"node_modules/@babel/runtime/helpers/getPrototypeOf.js","@babel/runtime/helpers/inherits":"node_modules/@babel/runtime/helpers/inherits.js","react":"node_modules/react/index.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js","react-bootstrap":"node_modules/react-bootstrap/es/index.js","@fortawesome/react-fontawesome":"node_modules/@fortawesome/react-fontawesome/index.es.js","@fortawesome/free-solid-svg-icons":"node_modules/@fortawesome/free-solid-svg-icons/index.es.js"}],"src/CreateWishComponent.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _classCallCheck2 = _interopRequireDefault(require("@babel/runtime/helpers/classCallCheck"));
+
+var _createClass2 = _interopRequireDefault(require("@babel/runtime/helpers/createClass"));
+
+var _possibleConstructorReturn2 = _interopRequireDefault(require("@babel/runtime/helpers/possibleConstructorReturn"));
+
+var _getPrototypeOf2 = _interopRequireDefault(require("@babel/runtime/helpers/getPrototypeOf"));
+
+var _inherits2 = _interopRequireDefault(require("@babel/runtime/helpers/inherits"));
+
+var _react = _interopRequireDefault(require("react"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var CreateWishComponent =
+/*#__PURE__*/
+function (_React$Component) {
+  (0, _inherits2.default)(CreateWishComponent, _React$Component);
+
+  function CreateWishComponent() {
+    (0, _classCallCheck2.default)(this, CreateWishComponent);
+    return (0, _possibleConstructorReturn2.default)(this, (0, _getPrototypeOf2.default)(CreateWishComponent).apply(this, arguments));
+  }
+
+  (0, _createClass2.default)(CreateWishComponent, [{
+    key: "render",
+    value: function render() {
+      return _react.default.createElement("div", {
+        class: "col-sm"
+      }, _react.default.createElement("div", {
+        class: "container"
+      }, _react.default.createElement("div", {
+        class: "row"
+      }, _react.default.createElement("div", {
+        class: "col-sm"
+      }, _react.default.createElement("form", {
+        class: "text-center border border-light p-5"
+      }, _react.default.createElement("div", {
+        class: "container"
+      }, _react.default.createElement("div", {
+        class: "row"
+      }, _react.default.createElement("div", {
+        class: "col-sm"
+      }, _react.default.createElement("div", {
+        class: "row"
+      }), _react.default.createElement("div", {
+        class: "row"
+      }, _react.default.createElement("label", {
+        for: "fromtext"
+      }, "From:")), _react.default.createElement("div", {
+        class: "row mb-5"
+      }), _react.default.createElement("div", {
+        class: "row"
+      }, _react.default.createElement("label", {
+        for: "fromtext"
+      }, "Wishing you :")), _react.default.createElement("div", {
+        class: "row mb-5"
+      }), _react.default.createElement("div", {
+        class: "row  mb-5"
+      }), _react.default.createElement("div", {
+        class: "row  mb-5"
+      }), _react.default.createElement("div", {
+        class: "row  mb-5"
+      }), _react.default.createElement("div", {
+        class: "row  mb-5"
+      }), _react.default.createElement("div", {
+        class: "row"
+      }, _react.default.createElement("label", {
+        for: "ImgURL"
+      }, "ImgURL:"))), _react.default.createElement("div", {
+        class: "col-sm"
+      }, _react.default.createElement("div", {
+        class: "row"
+      }, _react.default.createElement("input", {
+        type: "text",
+        id: "fromtext",
+        class: "form-control mb-4",
+        style: {
+          width: '17rem'
+        },
+        placeholder: "Please enter your name "
+      })), _react.default.createElement("div", {
+        class: "row"
+      }), _react.default.createElement("div", {
+        class: "row mb-5"
+      }, _react.default.createElement("textarea", {
+        class: "form-control rounded-0",
+        id: "wishingtxt",
+        rows: "10",
+        placeholder: ""
+      })), _react.default.createElement("div", {
+        class: "row mb-5"
+      }, _react.default.createElement("input", {
+        type: "text",
+        id: "ImgURL",
+        class: "form-control mb-4",
+        placeholder: "ImgURL "
+      })))), _react.default.createElement("div", {
+        class: "container"
+      }, _react.default.createElement("div", {
+        class: "row"
+      }, _react.default.createElement("div", {
+        class: "col-sm"
+      }), _react.default.createElement("div", {
+        class: "col-sm"
+      }), _react.default.createElement("div", {
+        class: "col-sm"
+      }, _react.default.createElement("button", {
+        id: "sendWish",
+        class: "btn btn-info ",
+        style: {
+          width: '18rem'
+        },
+        type: "submit"
+      }, "Add wish"))))))))));
+    }
+  }]);
+  return CreateWishComponent;
+}(_react.default.Component);
+
+var _default = CreateWishComponent;
+exports.default = _default;
+},{"@babel/runtime/helpers/classCallCheck":"node_modules/@babel/runtime/helpers/classCallCheck.js","@babel/runtime/helpers/createClass":"node_modules/@babel/runtime/helpers/createClass.js","@babel/runtime/helpers/possibleConstructorReturn":"node_modules/@babel/runtime/helpers/possibleConstructorReturn.js","@babel/runtime/helpers/getPrototypeOf":"node_modules/@babel/runtime/helpers/getPrototypeOf.js","@babel/runtime/helpers/inherits":"node_modules/@babel/runtime/helpers/inherits.js","react":"node_modules/react/index.js"}],"src/ShowingCreateWishComponent.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _classCallCheck2 = _interopRequireDefault(require("@babel/runtime/helpers/classCallCheck"));
+
+var _createClass2 = _interopRequireDefault(require("@babel/runtime/helpers/createClass"));
+
+var _possibleConstructorReturn2 = _interopRequireDefault(require("@babel/runtime/helpers/possibleConstructorReturn"));
+
+var _getPrototypeOf2 = _interopRequireDefault(require("@babel/runtime/helpers/getPrototypeOf"));
+
+var _inherits2 = _interopRequireDefault(require("@babel/runtime/helpers/inherits"));
+
+var _react = _interopRequireDefault(require("react"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var ShowingCreateWish =
+/*#__PURE__*/
+function (_React$Component) {
+  (0, _inherits2.default)(ShowingCreateWish, _React$Component);
+
+  function ShowingCreateWish() {
+    (0, _classCallCheck2.default)(this, ShowingCreateWish);
+    return (0, _possibleConstructorReturn2.default)(this, (0, _getPrototypeOf2.default)(ShowingCreateWish).apply(this, arguments));
+  }
+
+  (0, _createClass2.default)(ShowingCreateWish, [{
+    key: "render",
+    value: function render() {
+      return _react.default.createElement("div", {
+        class: "container"
+      }, _react.default.createElement("div", {
+        class: "row"
+      }, _react.default.createElement("div", {
+        class: "col-sm"
+      }, _react.default.createElement("div", {
+        class: "col-md-2"
+      }), _react.default.createElement("div", {
+        class: "col-md-5"
+      }, _react.default.createElement("div", {
+        class: "card",
+        style: {
+          width: '18re'
+        }
+      }, _react.default.createElement("img", {
+        id: "imgURL",
+        class: "img img-responsive full-width",
+        src: "..asset/imges/addWish.jpg"
+      }), _react.default.createElement("div", {
+        class: "card-body"
+      }, _react.default.createElement("h5", {
+        id: "fromCard",
+        class: "card-title"
+      }, "wedding invitation "), _react.default.createElement("p", {
+        class: "card-text"
+      }, _react.default.createElement("p", {
+        id: "wishing"
+      }, " Thursday"))))))));
+    }
+  }]);
+  return ShowingCreateWish;
+}(_react.default.Component);
+
+var _default = ShowingCreateWish;
+exports.default = _default;
+},{"@babel/runtime/helpers/classCallCheck":"node_modules/@babel/runtime/helpers/classCallCheck.js","@babel/runtime/helpers/createClass":"node_modules/@babel/runtime/helpers/createClass.js","@babel/runtime/helpers/possibleConstructorReturn":"node_modules/@babel/runtime/helpers/possibleConstructorReturn.js","@babel/runtime/helpers/getPrototypeOf":"node_modules/@babel/runtime/helpers/getPrototypeOf.js","@babel/runtime/helpers/inherits":"node_modules/@babel/runtime/helpers/inherits.js","react":"node_modules/react/index.js"}],"src/RegisterPageComponent.css":[function(require,module,exports) {
+var reloadCSS = require('_css_loader');
+
+module.hot.dispose(reloadCSS);
+module.hot.accept(reloadCSS);
+},{"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js"}],"src/RegisterPageComponent.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _classCallCheck2 = _interopRequireDefault(require("@babel/runtime/helpers/classCallCheck"));
+
+var _createClass2 = _interopRequireDefault(require("@babel/runtime/helpers/createClass"));
+
+var _possibleConstructorReturn2 = _interopRequireDefault(require("@babel/runtime/helpers/possibleConstructorReturn"));
+
+var _getPrototypeOf2 = _interopRequireDefault(require("@babel/runtime/helpers/getPrototypeOf"));
+
+var _inherits2 = _interopRequireDefault(require("@babel/runtime/helpers/inherits"));
+
+var _react = _interopRequireDefault(require("react"));
+
+require("./RegisterPageComponent.css");
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var RegisterPageComponent =
+/*#__PURE__*/
+function (_React$Component) {
+  (0, _inherits2.default)(RegisterPageComponent, _React$Component);
+
+  function RegisterPageComponent() {
+    (0, _classCallCheck2.default)(this, RegisterPageComponent);
+    return (0, _possibleConstructorReturn2.default)(this, (0, _getPrototypeOf2.default)(RegisterPageComponent).apply(this, arguments));
+  }
+
+  (0, _createClass2.default)(RegisterPageComponent, [{
+    key: "render",
+    value: function render() {
+      return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement("div", {
+        className: "row"
+      }, _react.default.createElement("div", {
+        className: "col-sm-3 "
+      }), _react.default.createElement("div", {
+        className: "col-sm-6"
+      }, _react.default.createElement("form", null, _react.default.createElement("div", {
+        className: "row"
+      }, _react.default.createElement("div", {
+        className: "col"
+      }, _react.default.createElement("input", {
+        type: "text",
+        className: "form-control",
+        placeholder: "First name"
+      })), _react.default.createElement("div", {
+        className: "col"
+      }, _react.default.createElement("input", {
+        type: "text",
+        className: "form-control",
+        placeholder: "Last name"
+      }))), _react.default.createElement("div", {
+        className: "form-group"
+      }, _react.default.createElement("label", {
+        htmlFor: "exampleInputEmail1"
+      }, "Birth Date:"), _react.default.createElement("input", {
+        type: "date",
+        className: "form-control",
+        id: "exampleInputDate",
+        "aria-describedby": "Date"
+      })), _react.default.createElement("div", {
+        className: "form form-group"
+      }, _react.default.createElement("label", null, "Gender:"), _react.default.createElement("div", {
+        className: "form-check form-check-inline"
+      }, _react.default.createElement("input", {
+        className: "form-check-input",
+        type: "radio",
+        name: "inlineRadioOptions",
+        id: "inlineRadio1",
+        value: "option1"
+      }), _react.default.createElement("label", {
+        className: "form-check-label",
+        htmlFor: "inlineRadio1"
+      }, "Male")), _react.default.createElement("div", {
+        className: "form-check form-check-inline"
+      }, _react.default.createElement("input", {
+        className: "form-check-input",
+        type: "radio",
+        name: "inlineRadioOptions",
+        id: "inlineRadio2",
+        value: "option2"
+      }), _react.default.createElement("label", {
+        className: "form-check-label",
+        htmlFor: "inlineRadio2"
+      }, "Female")), _react.default.createElement("div", {
+        className: "form-check form-check-inline"
+      }, _react.default.createElement("input", {
+        className: "form-check-input",
+        type: "radio",
+        name: "inlineRadioOptions",
+        id: "inlineRadio3",
+        value: "option3"
+      }), _react.default.createElement("label", {
+        className: "form-check-label",
+        htmlFor: "inlineRadio3"
+      }, "Other"))), _react.default.createElement("div", {
+        className: "form-group"
+      }, _react.default.createElement("label", {
+        htmlFor: "exampleInputEmail1"
+      }, "User Name"), _react.default.createElement("input", {
+        type: "email",
+        className: "form-control",
+        id: "exampleInputEmail1",
+        "aria-describedby": "emailHelp",
+        placeholder: "Enter email or user Name"
+      }), _react.default.createElement("small", {
+        id: "emailHelp",
+        className: "form-text text-muted"
+      }, "We'll never share your email with anyone else.")), _react.default.createElement("div", {
+        className: "form-group"
+      }, _react.default.createElement("label", {
+        htmlFor: "exampleInputPassword1"
+      }, "Password"), _react.default.createElement("input", {
+        type: "password",
+        className: "form-control",
+        id: "exampleInputPassword1",
+        placeholder: "Password"
+      })), _react.default.createElement("div", {
+        className: "LoginButton"
+      }, _react.default.createElement("button", {
+        type: "submit",
+        className: "btn btn-primary"
+      }, "Sign Up")))), _react.default.createElement("div", {
+        className: "col"
+      })));
+    }
+  }]);
+  return RegisterPageComponent;
+}(_react.default.Component);
+
+exports.default = RegisterPageComponent;
+},{"@babel/runtime/helpers/classCallCheck":"node_modules/@babel/runtime/helpers/classCallCheck.js","@babel/runtime/helpers/createClass":"node_modules/@babel/runtime/helpers/createClass.js","@babel/runtime/helpers/possibleConstructorReturn":"node_modules/@babel/runtime/helpers/possibleConstructorReturn.js","@babel/runtime/helpers/getPrototypeOf":"node_modules/@babel/runtime/helpers/getPrototypeOf.js","@babel/runtime/helpers/inherits":"node_modules/@babel/runtime/helpers/inherits.js","react":"node_modules/react/index.js","./RegisterPageComponent.css":"src/RegisterPageComponent.css"}],"src/LoginPageComponent.css":[function(require,module,exports) {
+var reloadCSS = require('_css_loader');
+
+module.hot.dispose(reloadCSS);
+module.hot.accept(reloadCSS);
+},{"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js"}],"assets/imges/BestWishes.png":[function(require,module,exports) {
 module.exports = "/BestWishes.8e6890aa.png";
 },{}],"src/LoginPageComponent.js":[function(require,module,exports) {
 "use strict";
@@ -62173,7 +62235,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "60200" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49901" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
