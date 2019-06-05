@@ -12,7 +12,7 @@ class EventsCard extends React.Component {
         const publishDate=15/5/2019
         return (
             <>
-   <Card className="text-center">
+   <Card  as={Col} className="text-center">
     <Card.Body>
       <Card.Title>Title: {title}</Card.Title>
       <Card.Text>
