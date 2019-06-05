@@ -1,10 +1,57 @@
 import React from 'react'
 import {NavLink} from 'react-router-dom'
+import { Navbar,Nav,NavDropdown ,CardColumns, ToggleButton, Button, Container, Row, Dropdown, ButtonToolbar, Form, Col, InputGroup, FormControl } from 'react-bootstrap'
+import './NavBarStyle.css'
 
 class NavBarCoponent extends React.Component{
     render(){
         return(
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<Navbar collapseOnSelect expand="lg"  bg="light" >
+  <Navbar.Brand>
+  <NavLink to='/'>
+  <span class="my-1" style={{color:'Black',fontSize: '130%'}} >Best  <span class="mr-2" style={{fontSize: '80%',fontWeight: 'bold'}}>Wishes</span></span>
+  </NavLink>
+  </Navbar.Brand>
+  <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+  <Navbar.Collapse id="responsive-navbar-nav">
+    <Nav className="mr-auto">
+    <NavLink to='/'>
+    <Button variant="outline-primary" className="linkStyle" >Home</Button>
+    </NavLink>
+    <NavLink to='/MyEvents'>
+    <Button variant="outline-primary" className="linkStyle" >Events</Button>
+    </NavLink>
+    <NavLink to='/MyWishes'>
+    <Button variant="outline-primary" className="linkStyle" >Wishes</Button>
+    </NavLink>
+
+    <NavLink to='/About'>
+    <Button variant="outline-primary" className="linkStyle">about</Button>
+    </NavLink>
+    </Nav>
+
+    <Nav>
+    
+      <label>sdsasadadd</label>
+  <NavLink to="/Login">
+  {/* <button id="loginbtn" class="navbar btn btn-outline-success my-2 mr-2 my-sm-0" type="submit">Log In</button> */}
+  <Button variant="outline-success" className="linkStyle" >Log In</Button>
+  </NavLink> 
+  <NavLink to="/Register">
+  <Button variant="outline-success" className="linkStyle">SignUp</Button>
+      </NavLink>
+
+    </Nav>
+  </Navbar.Collapse>
+</Navbar>
+
+        );
+    }
+
+}
+ export  default NavBarCoponent
+
+{/* <nav class="navbar navbar-expand-lg navbar-light bg-light">
 <span class="my-1" style={{fontSize: '130%'}} >Best  <span class="mr-2" style={{fontSize: '80%',fontWeight: 'bold'}}>Wishes</span></span>
 
 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
@@ -39,10 +86,4 @@ class NavBarCoponent extends React.Component{
       </NavLink> 
   </form>
 </div>
-</nav>
-        );
-    }
-
-}
- export  default NavBarCoponent
-
+</nav> */}

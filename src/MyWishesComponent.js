@@ -1,20 +1,61 @@
 import React from 'react'
-class MyWishesComponent extends React.Component{
-    render(){
-        return(
+import FilterTool from './FilterTool'
 
-    <section class="jumbotron text-center">
-    <div class="container">
-      <h1 class="jumbotron-heading">My Events</h1>
-      <p class="lead text-muted">Something short and leading about the collection below—its contents, the creator,
-        etc. Make it short and sweet, but not too short so folks don’t simply skip over it entirely.</p>
-      <p>
-        <a href="createEvent.html" class="btn btn-primary my-2">Create A New Event</a>
-        <a href="SearcEvent.html" class="btn btn-secondary my-2">Search  Event</a>
-      </p>
-    </div>
-  </section>
-        )
+
+import { getUsers, myEvents } from './statics/Api'
+import WishCard from './WishCard'
+import { ButtonGroup, CardColumns, ToggleButton, Button, Container, Row, Dropdown, ButtonToolbar, Form, Col, InputGroup, FormControl } from 'react-bootstrap'
+
+class MyWishesComponent extends React.Component {
+  constructor() {
+    super()
+    this.state = {
+      wishes: [],
+      filteredWishes: []
     }
+    this.onInputChange = this.onInputChange.bind(this);
+  }
+  async componentDidMount() {
+    const result = await myEvents();
+    this.setState({
+      wishes: result[0].wishes,
+      filteredWishes: result[0].wishes
+    })
+  }
+  onInputChange(inputText, filterBy) {
+    if (inputText == '') {
+      this.setState({
+        filteredWishes: this.state.wishes,
+      })
+    } else {
+      const temp = this.state.wishes.filter(wish => {
+        if ((wish[`${filterBy}`]).includes(inputText))
+          return true;
+        else
+          return false;
+      });
+      this.setState({
+        filteredWishes: temp
+      })
+    }
+  }
+  render() {
+    return (
+      <>
+        <FilterTool pageTitle='My wishes'
+          filterBy={['from', 'body']}
+          onInputChange={this.onInputChange} />
+        <Row>
+          <Container>
+            <CardColumns>
+              {this.state.filteredWishes.map(wish => <WishCard key={wish.id} wish={wish} />)}
+              {this.state.filteredWishes.map(wish => <WishCard key={wish.id} wish={wish} />)}
+              {this.state.filteredWishes.map(wish => <WishCard key={wish.id} wish={wish} />)}
+            </CardColumns>
+          </Container>
+        </Row>
+      </>
+    )
+  }
 }
-export  default MyWishesComponent
+export default MyWishesComponent

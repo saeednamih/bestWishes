@@ -1,6 +1,7 @@
 import React from 'react'
 import UpcomingComponent from './UpcomingComponent'
 import {NavLink} from 'react-router-dom'
+import background from '../assets/imges/mainPageBackground.jpg'
 class ContentComponent extends React.Component{
     render(){
         return(
