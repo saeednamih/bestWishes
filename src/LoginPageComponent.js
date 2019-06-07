@@ -7,6 +7,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faUser } from '@fortawesome/free-solid-svg-icons'
 import { faEye } from '@fortawesome/free-solid-svg-icons'
 import { Form, Nav, Button, Col, Row, Card, Container } from 'react-bootstrap'
+import bestWisheContext from './bestWisheContext'
 
 export default class LoginPageComponent extends React.Component {
     constructor() {
@@ -22,6 +23,9 @@ export default class LoginPageComponent extends React.Component {
         event.preventDefault();
         const { email, password } = this.state
         const result = await login(this.state.email, this.state.password);
+        if(result.userId!=undefined){
+            this.context.login(email,result.userId,'saeed')
+        }
     }
     onInputChange({ target: { name, value } }) {
         this.setState({
@@ -77,4 +81,4 @@ export default class LoginPageComponent extends React.Component {
         );
     }
 }
-
+LoginPageComponent.contextType = bestWisheContext;

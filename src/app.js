@@ -1,7 +1,6 @@
     import ReactDOM from 'react-dom';//browser
     import React from 'react';
      import NavBarCoponent from './NavBarCoponent';
-
      import MainComponent from './MainComponent';
      import About from './AboutComponent'
      import UpcomingComponent from './UpcomingComponent'
@@ -17,9 +16,36 @@
     import MyWishesComponent from './MyWishesComponent'
     import AddWishToEvent from './AddWishToEvent'
     import {BrowserRouter,Route,Switch} from 'react-router-dom'
+    import bestWisheContext from './bestWisheContext'
         class App extends React.Component{
+            constructor(){
+                super()
+                this.login=this.login.bind(this);
+                this.logout=this.logout.bind(this);
+            this.state={
+                email:'',
+                username:'',
+                id:-1,
+                login:this.login,
+                logout:this.logout
+            }
+
+            }
+            login(email,id,username) {
+                const user = {email,id,username};  
+                this.setState({
+                    ...user,
+                    login:this.login,
+                    logout:this.logout
+                 })
+            console.log(this.state)
+            }
+            logout() {
+                this.setState({ name: '', userID: -1 ,username:'' });
+            }
             render(){
                 return(
+                    <bestWisheContext.Provider value={this.state}>
                     <BrowserRouter>
                     <NavBarCoponent/>
                     <Switch>
@@ -36,6 +62,7 @@
                     <Route  path="/About" component={About} />
                     </Switch>
                     </BrowserRouter>
+                    </bestWisheContext.Provider>
                 );
             }
         }
