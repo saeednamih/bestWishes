@@ -117,7 +117,47 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   }
 
   return newRequire;
-})({"node_modules/@babel/runtime/helpers/classCallCheck.js":[function(require,module,exports) {
+})({"node_modules/@babel/runtime/helpers/defineProperty.js":[function(require,module,exports) {
+function _defineProperty(obj, key, value) {
+  if (key in obj) {
+    Object.defineProperty(obj, key, {
+      value: value,
+      enumerable: true,
+      configurable: true,
+      writable: true
+    });
+  } else {
+    obj[key] = value;
+  }
+
+  return obj;
+}
+
+module.exports = _defineProperty;
+},{}],"node_modules/@babel/runtime/helpers/objectSpread.js":[function(require,module,exports) {
+var defineProperty = require("./defineProperty");
+
+function _objectSpread(target) {
+  for (var i = 1; i < arguments.length; i++) {
+    var source = arguments[i] != null ? arguments[i] : {};
+    var ownKeys = Object.keys(source);
+
+    if (typeof Object.getOwnPropertySymbols === 'function') {
+      ownKeys = ownKeys.concat(Object.getOwnPropertySymbols(source).filter(function (sym) {
+        return Object.getOwnPropertyDescriptor(source, sym).enumerable;
+      }));
+    }
+
+    ownKeys.forEach(function (key) {
+      defineProperty(target, key, source[key]);
+    });
+  }
+
+  return target;
+}
+
+module.exports = _objectSpread;
+},{"./defineProperty":"node_modules/@babel/runtime/helpers/defineProperty.js"}],"node_modules/@babel/runtime/helpers/classCallCheck.js":[function(require,module,exports) {
 function _classCallCheck(instance, Constructor) {
   if (!(instance instanceof Constructor)) {
     throw new TypeError("Cannot call a class as a function");
@@ -33710,23 +33750,6 @@ function _inheritsLoose(subClass, superClass) {
 }
 
 module.exports = _inheritsLoose;
-},{}],"node_modules/@babel/runtime/helpers/defineProperty.js":[function(require,module,exports) {
-function _defineProperty(obj, key, value) {
-  if (key in obj) {
-    Object.defineProperty(obj, key, {
-      value: value,
-      enumerable: true,
-      configurable: true,
-      writable: true
-    });
-  } else {
-    obj[key] = value;
-  }
-
-  return obj;
-}
-
-module.exports = _defineProperty;
 },{}],"node_modules/popper.js/dist/esm/popper.js":[function(require,module,exports) {
 var global = arguments[3];
 "use strict";
@@ -48772,12 +48795,12 @@ function () {
 
 exports.login = login;
 
-var myEvents =
+var SignUp =
 /*#__PURE__*/
 function () {
   var _ref2 = (0, _asyncToGenerator2.default)(
   /*#__PURE__*/
-  _regenerator.default.mark(function _callee2() {
+  _regenerator.default.mark(function _callee2(firstname, lastname, email, password) {
     var result, data;
     return _regenerator.default.wrap(function _callee2$(_context2) {
       while (1) {
@@ -48785,41 +48808,56 @@ function () {
           case 0:
             _context2.prev = 0;
             _context2.next = 3;
-            return _axios.default.get(URL + '/events', {
-              headers: {
-                Authorization: 'Bearer userId:a3c66333-9016-42a9-a5d2-fa432bda0519'
-              }
+            return _axios.default.post(URL + '/register ', {
+              username: "".concat(firstname, " +").concat(lastname),
+              email: email,
+              password: password
             });
 
           case 3:
             result = _context2.sent;
             data = result.data;
-            return _context2.abrupt("return", data);
 
-          case 8:
-            _context2.prev = 8;
+            if (!(data.status.code == 200)) {
+              _context2.next = 9;
+              break;
+            }
+
+            return _context2.abrupt("return", {
+              userId: data.userId
+            });
+
+          case 9:
+            return _context2.abrupt("return", {
+              erorr: data.error
+            });
+
+          case 10:
+            _context2.next = 16;
+            break;
+
+          case 12:
+            _context2.prev = 12;
             _context2.t0 = _context2["catch"](0);
             console.dir(_context2.t0);
             return _context2.abrupt("return", {
               error: _context2.t0
             });
 
-          case 12:
+          case 16:
           case "end":
             return _context2.stop();
         }
       }
-    }, _callee2, null, [[0, 8]]);
+    }, _callee2, null, [[0, 12]]);
   }));
 
-  return function myEvents() {
+  return function SignUp(_x3, _x4, _x5, _x6) {
     return _ref2.apply(this, arguments);
   };
 }();
 
-exports.myEvents = myEvents;
-
-var EventWishes =
+var myEvents =
 /*#__PURE__*/
 function () {
   var _ref3 = (0, _asyncToGenerator2.default)(
@@ -48859,8 +48897,55 @@ function () {
     }, _callee3, null, [[0, 8]]);
   }));
 
-  return function EventWishes() {
+  return function myEvents() {
     return _ref3.apply(this, arguments);
+  };
+}();
+
+exports.myEvents = myEvents;
+
+var EventWishes =
+/*#__PURE__*/
+function () {
+  var _ref4 = (0, _asyncToGenerator2.default)(
+  /*#__PURE__*/
+  _regenerator.default.mark(function _callee4() {
+    var result, data;
+    return _regenerator.default.wrap(function _callee4$(_context4) {
+      while (1) {
+        switch (_context4.prev = _context4.next) {
+          case 0:
+            _context4.prev = 0;
+            _context4.next = 3;
+            return _axios.default.get(URL + '/events', {
+              headers: {
+                Authorization: 'Bearer userId:a3c66333-9016-42a9-a5d2-fa432bda0519'
+              }
+            });
+
+          case 3:
+            result = _context4.sent;
+            data = result.data;
+            return _context4.abrupt("return", data);
+
+          case 8:
+            _context4.prev = 8;
+            _context4.t0 = _context4["catch"](0);
+            console.dir(_context4.t0);
+            return _context4.abrupt("return", {
+              error: _context4.t0
+            });
+
+          case 12:
+          case "end":
+            return _context4.stop();
+        }
+      }
+    }, _callee4, null, [[0, 8]]);
+  }));
+
+  return function EventWishes() {
+    return _ref4.apply(this, arguments);
   };
 }();
 
@@ -61997,7 +62082,29 @@ function (_React$Component) {
 
 var _default = SearchComponent;
 exports.default = _default;
-},{"@babel/runtime/helpers/classCallCheck":"node_modules/@babel/runtime/helpers/classCallCheck.js","@babel/runtime/helpers/createClass":"node_modules/@babel/runtime/helpers/createClass.js","@babel/runtime/helpers/possibleConstructorReturn":"node_modules/@babel/runtime/helpers/possibleConstructorReturn.js","@babel/runtime/helpers/getPrototypeOf":"node_modules/@babel/runtime/helpers/getPrototypeOf.js","@babel/runtime/helpers/inherits":"node_modules/@babel/runtime/helpers/inherits.js","react":"node_modules/react/index.js","./SearchMethods":"src/SearchMethods.js","react-bootstrap":"node_modules/react-bootstrap/es/index.js","./MyEventComponent":"src/MyEventComponent.js"}],"src/CreateEventComponent.js":[function(require,module,exports) {
+},{"@babel/runtime/helpers/classCallCheck":"node_modules/@babel/runtime/helpers/classCallCheck.js","@babel/runtime/helpers/createClass":"node_modules/@babel/runtime/helpers/createClass.js","@babel/runtime/helpers/possibleConstructorReturn":"node_modules/@babel/runtime/helpers/possibleConstructorReturn.js","@babel/runtime/helpers/getPrototypeOf":"node_modules/@babel/runtime/helpers/getPrototypeOf.js","@babel/runtime/helpers/inherits":"node_modules/@babel/runtime/helpers/inherits.js","react":"node_modules/react/index.js","./SearchMethods":"src/SearchMethods.js","react-bootstrap":"node_modules/react-bootstrap/es/index.js","./MyEventComponent":"src/MyEventComponent.js"}],"src/bestWisheContext.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireDefault(require("react"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var bestWisheContext = _react.default.createContext({
+  email: 'aaaa',
+  username: '',
+  id: -1,
+  login: function login(email, id, username) {},
+  logout: function logout() {}
+});
+
+var _default = bestWisheContext;
+exports.default = _default;
+},{"react":"node_modules/react/index.js"}],"src/CreateEventComponent.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -62025,6 +62132,8 @@ var _reactFontawesome = require("@fortawesome/react-fontawesome");
 
 var _freeSolidSvgIcons = require("@fortawesome/free-solid-svg-icons");
 
+var _bestWisheContext = _interopRequireDefault(require("./bestWisheContext"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var CreateEventComponent =
@@ -62040,6 +62149,7 @@ function (_React$Component) {
   (0, _createClass2.default)(CreateEventComponent, [{
     key: "render",
     value: function render() {
+      console.log(this.context);
       return _react.default.createElement(_reactBootstrap.Container, null, _react.default.createElement(_reactBootstrap.Row, null, _react.default.createElement(_reactBootstrap.Col, null, _react.default.createElement("h4", null, "Create New Event"), _react.default.createElement("hr", null))), _react.default.createElement(_reactBootstrap.Form, {
         onSubmit: this.onSubmit
       }, _react.default.createElement(_reactBootstrap.Form.Row, null, _react.default.createElement(_reactBootstrap.Form.Group, {
@@ -62117,7 +62227,8 @@ function (_React$Component) {
 
 var _default = CreateEventComponent;
 exports.default = _default;
-},{"@babel/runtime/helpers/classCallCheck":"node_modules/@babel/runtime/helpers/classCallCheck.js","@babel/runtime/helpers/createClass":"node_modules/@babel/runtime/helpers/createClass.js","@babel/runtime/helpers/possibleConstructorReturn":"node_modules/@babel/runtime/helpers/possibleConstructorReturn.js","@babel/runtime/helpers/getPrototypeOf":"node_modules/@babel/runtime/helpers/getPrototypeOf.js","@babel/runtime/helpers/inherits":"node_modules/@babel/runtime/helpers/inherits.js","react":"node_modules/react/index.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js","react-bootstrap":"node_modules/react-bootstrap/es/index.js","@fortawesome/react-fontawesome":"node_modules/@fortawesome/react-fontawesome/index.es.js","@fortawesome/free-solid-svg-icons":"node_modules/@fortawesome/free-solid-svg-icons/index.es.js"}],"src/CreateWishComponent.js":[function(require,module,exports) {
+CreateEventComponent.contextType = _bestWisheContext.default;
+},{"@babel/runtime/helpers/classCallCheck":"node_modules/@babel/runtime/helpers/classCallCheck.js","@babel/runtime/helpers/createClass":"node_modules/@babel/runtime/helpers/createClass.js","@babel/runtime/helpers/possibleConstructorReturn":"node_modules/@babel/runtime/helpers/possibleConstructorReturn.js","@babel/runtime/helpers/getPrototypeOf":"node_modules/@babel/runtime/helpers/getPrototypeOf.js","@babel/runtime/helpers/inherits":"node_modules/@babel/runtime/helpers/inherits.js","react":"node_modules/react/index.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js","react-bootstrap":"node_modules/react-bootstrap/es/index.js","@fortawesome/react-fontawesome":"node_modules/@fortawesome/react-fontawesome/index.es.js","@fortawesome/free-solid-svg-icons":"node_modules/@fortawesome/free-solid-svg-icons/index.es.js","./bestWisheContext":"src/bestWisheContext.js"}],"src/CreateWishComponent.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -62517,6 +62628,8 @@ var _freeSolidSvgIcons = require("@fortawesome/free-solid-svg-icons");
 
 var _reactBootstrap = require("react-bootstrap");
 
+var _bestWisheContext = _interopRequireDefault(require("./bestWisheContext"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var LoginPageComponent =
@@ -62558,7 +62671,11 @@ function (_React$Component) {
               case 4:
                 result = _context.sent;
 
-              case 5:
+                if (result.userId != undefined) {
+                  this.context.login(email, result.userId, 'saeed');
+                }
+
+              case 6:
               case "end":
                 return _context.stop();
             }
@@ -62637,7 +62754,8 @@ function (_React$Component) {
 }(_react.default.Component);
 
 exports.default = LoginPageComponent;
-},{"@babel/runtime/helpers/defineProperty":"node_modules/@babel/runtime/helpers/defineProperty.js","@babel/runtime/regenerator":"node_modules/@babel/runtime/regenerator/index.js","@babel/runtime/helpers/asyncToGenerator":"node_modules/@babel/runtime/helpers/asyncToGenerator.js","@babel/runtime/helpers/classCallCheck":"node_modules/@babel/runtime/helpers/classCallCheck.js","@babel/runtime/helpers/createClass":"node_modules/@babel/runtime/helpers/createClass.js","@babel/runtime/helpers/possibleConstructorReturn":"node_modules/@babel/runtime/helpers/possibleConstructorReturn.js","@babel/runtime/helpers/getPrototypeOf":"node_modules/@babel/runtime/helpers/getPrototypeOf.js","@babel/runtime/helpers/assertThisInitialized":"node_modules/@babel/runtime/helpers/assertThisInitialized.js","@babel/runtime/helpers/inherits":"node_modules/@babel/runtime/helpers/inherits.js","react":"node_modules/react/index.js","./LoginPageComponent.css":"src/LoginPageComponent.css","./statics/Api":"src/statics/Api.js","../assets/imges/BestWishes.png":"assets/imges/BestWishes.png","@fortawesome/react-fontawesome":"node_modules/@fortawesome/react-fontawesome/index.es.js","@fortawesome/free-solid-svg-icons":"node_modules/@fortawesome/free-solid-svg-icons/index.es.js","react-bootstrap":"node_modules/react-bootstrap/es/index.js"}],"src/MyWishesComponent.js":[function(require,module,exports) {
+LoginPageComponent.contextType = _bestWisheContext.default;
+},{"@babel/runtime/helpers/defineProperty":"node_modules/@babel/runtime/helpers/defineProperty.js","@babel/runtime/regenerator":"node_modules/@babel/runtime/regenerator/index.js","@babel/runtime/helpers/asyncToGenerator":"node_modules/@babel/runtime/helpers/asyncToGenerator.js","@babel/runtime/helpers/classCallCheck":"node_modules/@babel/runtime/helpers/classCallCheck.js","@babel/runtime/helpers/createClass":"node_modules/@babel/runtime/helpers/createClass.js","@babel/runtime/helpers/possibleConstructorReturn":"node_modules/@babel/runtime/helpers/possibleConstructorReturn.js","@babel/runtime/helpers/getPrototypeOf":"node_modules/@babel/runtime/helpers/getPrototypeOf.js","@babel/runtime/helpers/assertThisInitialized":"node_modules/@babel/runtime/helpers/assertThisInitialized.js","@babel/runtime/helpers/inherits":"node_modules/@babel/runtime/helpers/inherits.js","react":"node_modules/react/index.js","./LoginPageComponent.css":"src/LoginPageComponent.css","./statics/Api":"src/statics/Api.js","../assets/imges/BestWishes.png":"assets/imges/BestWishes.png","@fortawesome/react-fontawesome":"node_modules/@fortawesome/react-fontawesome/index.es.js","@fortawesome/free-solid-svg-icons":"node_modules/@fortawesome/free-solid-svg-icons/index.es.js","react-bootstrap":"node_modules/react-bootstrap/es/index.js","./bestWisheContext":"src/bestWisheContext.js"}],"src/MyWishesComponent.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -62844,13 +62962,9 @@ function (_React$Component) {
               case 2:
                 result = _context.sent;
                 console.log(result);
-                this.setState({
-                  events: result[0],
-                  wishes: result[0].wishes
-                });
                 console.log(this.state.events[0]);
 
-              case 6:
+              case 5:
               case "end":
                 return _context.stop();
             }
@@ -62931,6 +63045,8 @@ exports.default = _default;
 },{"@babel/runtime/regenerator":"node_modules/@babel/runtime/regenerator/index.js","@babel/runtime/helpers/asyncToGenerator":"node_modules/@babel/runtime/helpers/asyncToGenerator.js","@babel/runtime/helpers/classCallCheck":"node_modules/@babel/runtime/helpers/classCallCheck.js","@babel/runtime/helpers/createClass":"node_modules/@babel/runtime/helpers/createClass.js","@babel/runtime/helpers/possibleConstructorReturn":"node_modules/@babel/runtime/helpers/possibleConstructorReturn.js","@babel/runtime/helpers/getPrototypeOf":"node_modules/@babel/runtime/helpers/getPrototypeOf.js","@babel/runtime/helpers/inherits":"node_modules/@babel/runtime/helpers/inherits.js","react":"node_modules/react/index.js","./WishCard":"src/WishCard.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js","./statics/Api":"src/statics/Api.js","react-bootstrap":"node_modules/react-bootstrap/es/index.js","@fortawesome/react-fontawesome":"node_modules/@fortawesome/react-fontawesome/index.es.js","@fortawesome/free-solid-svg-icons":"node_modules/@fortawesome/free-solid-svg-icons/index.es.js"}],"src/App.js":[function(require,module,exports) {
 "use strict";
 
+var _objectSpread2 = _interopRequireDefault(require("@babel/runtime/helpers/objectSpread"));
+
 var _classCallCheck2 = _interopRequireDefault(require("@babel/runtime/helpers/classCallCheck"));
 
 var _createClass2 = _interopRequireDefault(require("@babel/runtime/helpers/createClass"));
@@ -62938,6 +63054,8 @@ var _createClass2 = _interopRequireDefault(require("@babel/runtime/helpers/creat
 var _possibleConstructorReturn2 = _interopRequireDefault(require("@babel/runtime/helpers/possibleConstructorReturn"));
 
 var _getPrototypeOf2 = _interopRequireDefault(require("@babel/runtime/helpers/getPrototypeOf"));
+
+var _assertThisInitialized2 = _interopRequireDefault(require("@babel/runtime/helpers/assertThisInitialized"));
 
 var _inherits2 = _interopRequireDefault(require("@babel/runtime/helpers/inherits"));
 
@@ -62977,6 +63095,8 @@ var _AddWishToEvent = _interopRequireDefault(require("./AddWishToEvent"));
 
 var _reactRouterDom = require("react-router-dom");
 
+var _bestWisheContext = _interopRequireDefault(require("./bestWisheContext"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 //browser
@@ -62986,14 +63106,51 @@ function (_React$Component) {
   (0, _inherits2.default)(App, _React$Component);
 
   function App() {
+    var _this;
+
     (0, _classCallCheck2.default)(this, App);
-    return (0, _possibleConstructorReturn2.default)(this, (0, _getPrototypeOf2.default)(App).apply(this, arguments));
+    _this = (0, _possibleConstructorReturn2.default)(this, (0, _getPrototypeOf2.default)(App).call(this));
+    _this.login = _this.login.bind((0, _assertThisInitialized2.default)(_this));
+    _this.logout = _this.logout.bind((0, _assertThisInitialized2.default)(_this));
+    _this.state = {
+      email: '',
+      username: '',
+      id: -1,
+      login: _this.login,
+      logout: _this.logout
+    };
+    return _this;
   }
 
   (0, _createClass2.default)(App, [{
+    key: "login",
+    value: function login(email, id, username) {
+      var user = {
+        email: email,
+        id: id,
+        username: username
+      };
+      this.setState((0, _objectSpread2.default)({}, user, {
+        login: this.login,
+        logout: this.logout
+      }));
+      console.log(this.state);
+    }
+  }, {
+    key: "logout",
+    value: function logout() {
+      this.setState({
+        name: '',
+        userID: -1,
+        username: ''
+      });
+    }
+  }, {
     key: "render",
     value: function render() {
-      return _react.default.createElement(_reactRouterDom.BrowserRouter, null, _react.default.createElement(_NavBarCoponent.default, null), _react.default.createElement(_reactRouterDom.Switch, null, _react.default.createElement(_reactRouterDom.Route, {
+      return _react.default.createElement(_bestWisheContext.default.Provider, {
+        value: this.state
+      }, _react.default.createElement(_reactRouterDom.BrowserRouter, null, _react.default.createElement(_NavBarCoponent.default, null), _react.default.createElement(_reactRouterDom.Switch, null, _react.default.createElement(_reactRouterDom.Route, {
         exact: true,
         path: "/",
         component: _MainComponent.default
@@ -63024,14 +63181,14 @@ function (_React$Component) {
       }), _react.default.createElement(_reactRouterDom.Route, {
         path: "/About",
         component: _AboutComponent.default
-      })));
+      }))));
     }
   }]);
   return App;
 }(_react.default.Component);
 
 _reactDom.default.render(_react.default.createElement(App, null), document.querySelector("#container"));
-},{"@babel/runtime/helpers/classCallCheck":"node_modules/@babel/runtime/helpers/classCallCheck.js","@babel/runtime/helpers/createClass":"node_modules/@babel/runtime/helpers/createClass.js","@babel/runtime/helpers/possibleConstructorReturn":"node_modules/@babel/runtime/helpers/possibleConstructorReturn.js","@babel/runtime/helpers/getPrototypeOf":"node_modules/@babel/runtime/helpers/getPrototypeOf.js","@babel/runtime/helpers/inherits":"node_modules/@babel/runtime/helpers/inherits.js","react-dom":"node_modules/react-dom/index.js","react":"node_modules/react/index.js","./NavBarCoponent":"src/NavBarCoponent.js","./MainComponent":"src/MainComponent.js","./AboutComponent":"src/AboutComponent.js","./UpcomingComponent":"src/UpcomingComponent.js","./ContentComponent":"src/ContentComponent.js","./MyEventComponent":"src/MyEventComponent.js","bootstrap/dist/css/bootstrap.css":"node_modules/bootstrap/dist/css/bootstrap.css","./SearchComponent":"src/SearchComponent.js","./CreateEventComponent":"src/CreateEventComponent.js","./CreateWishComponent":"src/CreateWishComponent.js","./ShowingCreateWishComponent":"src/ShowingCreateWishComponent.js","./RegisterPageComponent":"src/RegisterPageComponent.js","./LoginPageComponent":"src/LoginPageComponent.js","./MyWishesComponent":"src/MyWishesComponent.js","./AddWishToEvent":"src/AddWishToEvent.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"@babel/runtime/helpers/objectSpread":"node_modules/@babel/runtime/helpers/objectSpread.js","@babel/runtime/helpers/classCallCheck":"node_modules/@babel/runtime/helpers/classCallCheck.js","@babel/runtime/helpers/createClass":"node_modules/@babel/runtime/helpers/createClass.js","@babel/runtime/helpers/possibleConstructorReturn":"node_modules/@babel/runtime/helpers/possibleConstructorReturn.js","@babel/runtime/helpers/getPrototypeOf":"node_modules/@babel/runtime/helpers/getPrototypeOf.js","@babel/runtime/helpers/assertThisInitialized":"node_modules/@babel/runtime/helpers/assertThisInitialized.js","@babel/runtime/helpers/inherits":"node_modules/@babel/runtime/helpers/inherits.js","react-dom":"node_modules/react-dom/index.js","react":"node_modules/react/index.js","./NavBarCoponent":"src/NavBarCoponent.js","./MainComponent":"src/MainComponent.js","./AboutComponent":"src/AboutComponent.js","./UpcomingComponent":"src/UpcomingComponent.js","./ContentComponent":"src/ContentComponent.js","./MyEventComponent":"src/MyEventComponent.js","bootstrap/dist/css/bootstrap.css":"node_modules/bootstrap/dist/css/bootstrap.css","./SearchComponent":"src/SearchComponent.js","./CreateEventComponent":"src/CreateEventComponent.js","./CreateWishComponent":"src/CreateWishComponent.js","./ShowingCreateWishComponent":"src/ShowingCreateWishComponent.js","./RegisterPageComponent":"src/RegisterPageComponent.js","./LoginPageComponent":"src/LoginPageComponent.js","./MyWishesComponent":"src/MyWishesComponent.js","./AddWishToEvent":"src/AddWishToEvent.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js","./bestWisheContext":"src/bestWisheContext.js"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -63059,7 +63216,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "52021" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50690" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

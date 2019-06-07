@@ -16,10 +16,7 @@ class AddWishToEvent extends React.Component {
     async componentDidMount() {
         const result = await EventWishes();
         console.log(result)
-        this.setState({
-            events:result[0],
-            wishes:result[0].wishes
-        })
+      
         console.log(this.state.events[0])
     }
     render() {

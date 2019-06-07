@@ -4,12 +4,13 @@ import { ButtonGroup, ToggleButton, Button, Container, Row, Dropdown, ButtonTool
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLocationArrow, faClock, faCalendar, faSearch, faUser, faCity, faTimes, faGift } from "@fortawesome/free-solid-svg-icons";
+import bestWisheContext from './bestWisheContext';
 
 
 
 class CreateEventComponent extends React.Component {
   render() {
-
+console.log(this.context);
     return (
 
       <Container>
@@ -169,4 +170,5 @@ class CreateEventComponent extends React.Component {
     );
   }
 }
-export default CreateEventComponent
+export default CreateEventComponent;
+CreateEventComponent.contextType=bestWisheContext;
